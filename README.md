@@ -2,6 +2,7 @@
 
 ## Convetion
 
-1. develop 브랜치에서 작업한 후
-
-(이슈 브랜치 방식은 긴 프로젝트에서 적합해서 이번 캡디는 main-develop 브랜치 방식으로 Go)
+1. 이슈 브랜치 방식
+develop 브랜치으로 merge 
+그리고 완성 되면 main으로 merge
+회의를 통해 그냥 바로 main으로 가는 방식으로 채택해도 됨
