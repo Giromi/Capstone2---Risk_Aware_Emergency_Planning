@@ -33,17 +33,17 @@
         </a>
       </td>
       <td align="center">
-        <a href="https://github.com/OKsusu1411">
+        <a href="https://github.com/Heriot-Baek">
           기계 19 배우열
         </a>
       </td>
       <td align="center">
-        <a href="https://github.com/Woodaengtang">
+        <a href="https://github.com/devsangho">
           기계 19 윤상호
         </a>
       </td>
  <td align="center">
-        <a href="https://github.com/haechan119">
+        <a href="https://github.com/asd123278">
           기계 19 장우혁
         </a>
       </td>
