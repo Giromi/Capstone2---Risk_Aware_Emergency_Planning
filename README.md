@@ -29,22 +29,22 @@
     <tr>
       <td align="center">
         <a href="https://github.com/Giromi">
-          기계 17 김민수(20170928)
+          기계 17 김민수
         </a>
       </td>
       <td align="center">
         <a href="https://github.com/OKsusu1411">
-          기계 19 배우열(20190000)
+          기계 19 배우열
         </a>
       </td>
       <td align="center">
         <a href="https://github.com/Woodaengtang">
-          기계 19 윤상호(20190000)
+          기계 19 윤상호
         </a>
       </td>
  <td align="center">
         <a href="https://github.com/haechan119">
-          기계 19 장우혁(2019000)
+          기계 19 장우혁
         </a>
       </td>
     </tr>
