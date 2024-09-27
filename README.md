@@ -1,5 +1,56 @@
 # capstone2
 
+이 레포지토리는 **2024년 캡스톤디자인(2) 남우철 교수님 분반 인원들이 작성함**을 밝힙니다.
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/Giromi">
+          <img src="https://avatars.githubusercontent.com/u/60354633?v=4" alt="김민수 프로필" width=200 height=200 />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Heriot-Baek">
+          <img src="https://avatars.githubusercontent.com/u/174169680?v=4" alt="배우열 프로필" width=200 height=200 />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/devsangho">
+          <img src="https://avatars.githubusercontent.com/u/54205862?v=4" alt="윤상호 프로필" width=200 height=200 />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/asd123278">
+          <img src="https://avatars.githubusercontent.com/u/181904972?v=4" alt="장우혁 프로필" width=200 height=200 />
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/Giromi">
+          기계 17 김민수(20170928)
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/OKsusu1411">
+          기계 19 배우열(20190000)
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Woodaengtang">
+          기계 19 윤상호(20190000)
+        </a>
+      </td>
+ <td align="center">
+        <a href="https://github.com/haechan119">
+          기계 19 장우혁(2019000)
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 
 | Category<br> | Description                |
 | ------------ | -------------------------- |
