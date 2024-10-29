@@ -15,13 +15,9 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/CrossRoadsTrafficLight.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/CommercialBuilding.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/FastFoodRestaurant.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/Carwash.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/Museum.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/Hotel.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/BigGlassTower.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/BuildingUnderConstruction.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/Church.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/GasStation.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/ResidentialTower.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/LargeResidentialTower.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/StreetLight.proto"
@@ -33,13 +29,16 @@ WorldInfo {
     "Author: Guillaume Michel <guillaume.michel.202@gmail.com>"
   ]
   title "Human Skin Animation"
+  ERP 0.6
+  basicTimeStep 10
+  lineScale 1
 }
 Viewpoint {
-  orientation 0.13285885110145262 0.39900877378045446 -0.9072709210209596 0.7034608688416449
-  position -105.64870013259673 97.88494334766973 70.97599732417028
+  orientation 0.2307410389616798 0.7834564475085076 -0.5770221553772727 0.9438649655222098
+  position -102.4271104450566 104.28467980150477 212.79270643963616
 }
 TexturedBackground {
-  texture "noon_cloudy_mountains"
+  texture "empty_office"
   luminosity 0.17
 }
 TexturedBackgroundLight {
@@ -281,182 +280,182 @@ CrossRoadsTrafficLight {
   translation 60 0 0
   rotation 0 0 1 1.5708
 }
-StreetLight {
+DEF street_light(1) StreetLight {
   translation 7 -10 0
   rotation 0 0 1 1.5708
   name "street light(1)"
 }
-StreetLight {
+DEF street_light(2) StreetLight {
   translation 17 -10 0
   rotation 0 0 1 1.5708
   name "street light(2)"
 }
-StreetLight {
+DEF street_light(3) StreetLight {
   translation 27 -10 0
   rotation 0 0 1 1.5708
   name "street light(3)"
 }
-StreetLight {
+DEF street_light(4) StreetLight {
   translation 37 -10 0
   rotation 0 0 1 1.5708
   name "street light(4)"
 }
-StreetLight {
+DEF street_light(5) StreetLight {
   translation 76 -10 0
   rotation 0 0 1 1.5708
   name "street light(5)"
 }
-StreetLight {
+DEF street_light(6) StreetLight {
   translation 83 -10 0
   rotation 0 0 1 1.5708
   name "street light(6)"
 }
-StreetLight {
+DEF street_light(7) StreetLight {
   translation 93 -10 0
   rotation 0 0 1 1.5708
   name "street light(7)"
 }
-StreetLight {
+DEF street_light(8) StreetLight {
   translation 103 -10 0
   rotation 0 0 1 1.5708
   name "street light(8)"
 }
-StreetLight {
+DEF street_light(9) StreetLight {
   translation 113 -10 0
   rotation 0 0 1 1.5708
   name "street light(9)"
 }
-StreetLight {
+DEF street_light(10) StreetLight {
   translation 7 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(10)"
 }
-StreetLight {
+DEF street_light(11) StreetLight {
   translation 17 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(11)"
 }
-StreetLight {
+DEF street_light(12) StreetLight {
   translation 27 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(12)"
 }
-StreetLight {
+DEF street_light(13) StreetLight {
   translation 37 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(13)"
 }
-StreetLight {
+DEF street_light(14) StreetLight {
   translation 44 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(14)"
 }
-StreetLight {
+DEF street_light(15) StreetLight {
   translation 83 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(15)"
 }
-StreetLight {
+DEF street_light(16) StreetLight {
   translation 93 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(16)"
 }
-StreetLight {
+DEF street_light(17) StreetLight {
   translation 103 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(17)"
 }
-StreetLight {
+DEF street_light(18) StreetLight {
   translation 113 10 0
   rotation 0 0 1 -1.5707953071795862
   name "street light(18)"
 }
-StreetLight {
+DEF street_light(20) StreetLight {
   translation 50 53 0
   rotation 0 0 1 1.01503e-06
   name "street light(20)"
 }
-StreetLight {
+DEF street_light(19) StreetLight {
   translation 50 43 0
   rotation 0 0 1 1.01503e-06
   name "street light(19)"
 }
-StreetLight {
+DEF street_light(21) StreetLight {
   translation 50 33 0
   rotation 0 0 1 1.01503e-06
   name "street light(21)"
 }
-StreetLight {
+DEF street_light(22) StreetLight {
   translation 50 23 0
   rotation 0 0 1 1.01503e-06
   name "street light(22)"
 }
-StreetLight {
+DEF street_light(23) StreetLight {
   translation 50 -16 0
   rotation 0 0 1 1.01503e-06
   name "street light(23)"
 }
-StreetLight {
+DEF street_light(24) StreetLight {
   translation 50 -23 0
   rotation 0 0 1 1.01503e-06
   name "street light(24)"
 }
-StreetLight {
+DEF street_light(25) StreetLight {
   translation 50 -33 0
   rotation 0 0 1 1.01503e-06
   name "street light(25)"
 }
-StreetLight {
+DEF street_light(26) StreetLight {
   translation 50 -43 0
   rotation 0 0 1 1.01503e-06
   name "street light(26)"
 }
-StreetLight {
+DEF street_light(27) StreetLight {
   translation 50 -53 0
   rotation 0 0 1 1.01503e-06
   name "street light(27)"
 }
-StreetLight {
+DEF street_light(28) StreetLight {
   translation 70 53 0
   rotation 0 0 1 3.14159
   name "street light(28)"
 }
-StreetLight {
+DEF street_light(29) StreetLight {
   translation 70 43 0
   rotation 0 0 1 3.14159
   name "street light(29)"
 }
-StreetLight {
+DEF street_light(30) StreetLight {
   translation 70 33 0
   rotation 0 0 1 3.14159
   name "street light(30)"
 }
-StreetLight {
+DEF street_light(31) StreetLight {
   translation 70 23 0
   rotation 0 0 1 3.14159
   name "street light(31)"
 }
-StreetLight {
+DEF street_light(32) StreetLight {
   translation 70 16 0
   rotation 0 0 1 3.14159
   name "street light(32)"
 }
-StreetLight {
+DEF street_light(33) StreetLight {
   translation 70 -23 0
   rotation 0 0 1 3.14159
   name "street light(33)"
 }
-StreetLight {
+DEF street_light(34) StreetLight {
   translation 70 -33 0
   rotation 0 0 1 3.14159
   name "street light(34)"
 }
-StreetLight {
+DEF street_light(35) StreetLight {
   translation 70 -43 0
   rotation 0 0 1 3.14159
   name "street light(35)"
 }
-StreetLight {
+DEF street_light(36) StreetLight {
   translation 70 -53 0
   rotation 0 0 1 3.14159
   name "street light(36)"
@@ -704,65 +703,56 @@ DEF tree(40) SimpleTree {
 DEF commercial_building CommercialBuilding {
   translation 85.9 -26 0
 }
-FastFoodRestaurant {
+GenericTrafficLight {
+  translation 97 -37 0
+  state "green"
+}
+DEF fast_food_restaurant FastFoodRestaurant {
   translation 40.11 -20 0
   rotation 0 0 1 1.5708
   height 5
 }
-Carwash {
-  translation 101.88 -22 0.45
-  rotation 0 0 1 -1.5707953071795862
-}
-Museum {
+DEF museum Museum {
   translation 81 30 0
   rotation 0 -1 0 -5.307179586466759e-06
 }
-Hotel {
+DEF hotel Hotel {
   translation 105 22 0
 }
-BigGlassTower {
-  translation 39 -52 0
-  rotation 0 0 1 -2.094395307179586
-}
-BuildingUnderConstruction {
-  translation 83 -52 0
-}
-Church {
+DEF church Church {
   translation 29 -22 0
   rotation 0 0 1 1.5708
 }
-GasStation {
-  translation 32 27 0
-  rotation 0 0 1 -1.5707953071795862
-}
-ResidentialTower {
+DEF residential_tower ResidentialTower {
   translation 41 -35 0
   rotation 0 0 1 4.692820414042842e-06
 }
-LargeResidentialTower {
+DEF residential_tower(1) LargeResidentialTower {
   translation 11 -21 0
   rotation 0 0 1 1.5708
   name "residential tower(1)"
 }
 DEF TeslaModel3 TeslaModel3 {
-  hidden translation_1 0 0 0
-  hidden rotation_1 -0.21883777916654232 -0.6899750237668356 0.6899597763546874 3.572566112378685
-  hidden translation_2 0 0 0
-  hidden rotation_2 -0.2193723188992705 0.6898901630588946 -0.6898748789565601 3.5735861886769795
-  hidden translation_3 0 0 0
-  hidden rotation_3 -0.1311688312485965 -0.7009975245609581 0.7009972954785819 3.4024412140758575
-  hidden translation_4 0 0 0
-  hidden rotation_4 -0.13114119476567987 0.7010001099180028 -0.7009998808347817 3.4023868757998974
-  translation 10.413528030461103 -1.9972116484138116 0.392568089443292
-  rotation 0.000134128642682221 -0.9996428606443628 0.026723270238914507 0.010639788154409795
+  hidden position_0_0 0.1889031081364123
+  hidden position2_0_0 40.17675035473043
+  hidden position_0_1 0.21204306628205113
+  hidden position2_0_1 33.891264081191125
+  hidden position_0_2 181.9397286907322
+  hidden position_0_3 162.58016712129208
+  hidden rotation_1 0.4714794451610327 0.6503997587205007 -0.5955562833578024 2.386658238913596
+  hidden rotation_2 0.36352555459499947 -0.6234283828481955 0.6922327806566818 2.3038221503307668
+  hidden rotation_3 -0.7209888329731314 -0.48998737720823743 0.48998721708288895 4.390940926025625
+  hidden rotation_4 -0.9989438301327215 -0.032490190286499514 0.032490179668872944 4.711332579368374
+  translation 0.4680051915092036 0.7208423060094942 0.42815191236262246
+  rotation 0.014267124901088935 -0.09124513397096647 -0.9957262548881981 0.08524116485696304
   engineSound "sounds/engine.wav"
   name "TeslaModel3"
-  controller "autonomous_vehicle"
+  controller "TeslaModel3_controller_1029(box)"
   supervisor TRUE
 }
 DEF ROBERT Robot {
-  translation 73.0000003684099 -10.000000000013323 0.21607628675994095
-  rotation -5.509659439821092e-17 1.090139302433015e-16 0.9999999999999999 1.570805307241476
+  translation 73.0000003684099 -10.000000000013323 0.21877375000000007
+  rotation -1.9037176099573535e-17 3.101106027925311e-17 0.9999999999999999 1.570805307241476
   children [
     CharacterSkin {
       name "Robert"
@@ -785,10 +775,12 @@ DEF ROBERT Robot {
     "-l"
   ]
   supervisor TRUE
+  linearVelocity -1.531825300815605e-17 7.107748234099215e-18 -1.1937117960441212e-15
+  angularVelocity -1.0972395350208637e-16 -3.0744710372627562e-16 -1.1917555958799527e-18
 }
 DEF ROBERT2 Robot {
-  translation 19.999223169365195 -11.53510163816735 0.21607628675994095
-  rotation 2.7561817181073678e-17 -3.024002303640277e-18 1 -3.1200508081344336
+  translation 19.999223169365195 -11.53510163816735 0.21877375000000007
+  rotation -5.957290498627125e-18 -5.07077207849115e-19 1 -3.1200508081344305
   children [
     CharacterSkin {
       name "Robert"
@@ -812,10 +804,12 @@ DEF ROBERT2 Robot {
     "-l"
   ]
   supervisor TRUE
+  linearVelocity 9.096138793633716e-18 1.2278257144254499e-17 -9.379164114029303e-16
+  angularVelocity -2.5187952208137257e-16 1.0921493237526685e-16 1.4275069291779667e-19
 }
 DEF SANDRA Robot {
-  translation 73.08 10 0.21754786489221706
-  rotation -8.494130396575069e-18 -2.3605750180945815e-17 -0.9999999999999999 1.5707953071795862
+  translation 73.08 10 0.21923359375000007
+  rotation 2.3546301772080522e-18 2.5054851243138474e-18 -0.9999999999999999 1.5707953071795862
   children [
     CharacterSkin {
       name "Sandra"
@@ -833,10 +827,12 @@ DEF SANDRA Robot {
     "Sandra"
   ]
   supervisor TRUE
+  linearVelocity 4.348562173910398e-19 -8.512338792125445e-18 -7.617018127285437e-16
+  angularVelocity 1.5673737762344548e-16 3.279546026092774e-18 2.1997691337366405e-20
 }
 DEF SOPHIA Robot {
-  translation 48 -10 0.21803829434129707
-  rotation -2.249283132013191e-18 -7.705940753871393e-18 1 1.5708053071795867
+  translation 48 -10 0.2193868750000001
+  rotation -6.859945909657574e-19 -9.976954318503938e-19 1 1.5708053071795867
   children [
     CharacterSkin {
       name "Sophia"
@@ -860,10 +856,12 @@ DEF SOPHIA Robot {
     "100"
   ]
   supervisor TRUE
+  linearVelocity 1.4264717752776312e-18 -2.9301937724400332e-18 -1.2789769244816532e-15
+  angularVelocity 1.9984800203975313e-17 3.2406640875350524e-17 -1.5293366350188324e-19
 }
 DEF ANTHONY Robot {
-  translation 47 10 0.21754786489221706
-  rotation 1.6087527800993334e-17 -2.4000221575895972e-17 -0.9999999999999999 1.5707953071795862
+  translation 47 10 0.21923359375000007
+  rotation 1.8049945605430188e-18 -1.4809939437875477e-18 -0.9999999999999999 1.5707953071795862
   children [
     CharacterSkin {
       name "Anthony"
@@ -886,4 +884,6 @@ DEF ANTHONY Robot {
     "-l"
   ]
   supervisor TRUE
+  linearVelocity -9.355908501282148e-17 -1.0058922677152364e-18 -7.958078641233335e-16
+  angularVelocity -4.263554008753753e-17 -1.8241818579833316e-15 -4.700897472339275e-19
 }
