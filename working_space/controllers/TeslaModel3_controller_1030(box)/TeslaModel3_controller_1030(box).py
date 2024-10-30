@@ -106,14 +106,14 @@ print("Building names:", building_names)
 building_sizes = [
     [22, 41.5, 22],     # comm(1)
     [5, 3.5, 5],        # fast
-    [31.7, 17.3, 12.2], # museum
+    [12.2, 17.3, 31.7], # museum
     [13.7, 24.8, 13.7], # hotel
-    [15.5, 21, 10],     # church
+    [10, 21, 15.5],     # church
     [5.4, 21, 7.2],     # residen(2)
-    [57.4, 20.2, 14.4], # residen(1)
+    [14.4, 20.2, 57.4], # residen(1)
     [20, 13, 20],       # building(1)
     [22, 41.5, 22],     # comm(2)
-    [12.2, 11, 29.1],   # residen(3)
+    [29.1, 11, 12.2],   # residen(3)
     [20, 13, 20]        # building(2)
 ]
 idx = 0
@@ -203,14 +203,14 @@ else:
 print("car names:", car_names)
 car_dict = {}
 car_sizes = [    # TODO
-    [1.73, 1.44, 5.55],   # car(1)
-    [1.6, 0.9, 3.7],      # car(2)
-    [3.2, 4.5, 14],       # car(3)
-    [1.2, 1.5, 3.5],      # car(4)
-    [2, 0.8, 5.2],        # car(5)
-    [2, 2.1, 5],          # car(6)
-    [1.8, 1.4, 4.2],      # car(7)
-    [2.64, 2.9, 9.73]     # car(8)
+    [5.55, 1.44, 1.73],   # car(1)
+    [3.7, 0.9, 1.6],      # car(2)
+    [14, 4.5, 3.2],       # car(3)
+    [3.5, 1.5, 1.2],      # car(4)
+    [5.2, 0.8, 2],        # car(5)
+    [5, 2.1, 2],          # car(6)
+    [4.2, 1.4, 1.8],      # car(7)
+    [9.73, 2.9, 2.64]     # car(8)
 ]
 idx = 0
 for name in car_names:
@@ -246,11 +246,12 @@ for name in sidewalk_names:
     # with open(file_name, "r") as file:
     #     proto_content = file.read()
     # proto_dict = parse_proto(proto_content)
+    size = [node.getField("size").getSFVec3f()[0], 0, node.getField("size").getSFVec3f()[1]]
 
     fixed_dict['sidewalk_dict'][name] = {
         'pos' : node.getPosition(),
         'ori' : node.getOrientation(),
-        'size' : node.getField("size").getSFVec3f()
+        'size' : size     # node.getField("size").getSFVec3f()
     }
 if node is not None:
     print("bounding box:", fixed_dict['sidewalk_dict'])
