@@ -20,6 +20,7 @@ urls=(
     "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/StreetLight.proto"
 )
 
+
 # 모든 파일 다운로드
 for url in "${urls[@]}"; do
     file_name=$(basename "$url")
