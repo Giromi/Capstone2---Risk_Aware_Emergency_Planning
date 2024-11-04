@@ -25,7 +25,6 @@ def main():
     plt.subplots_adjust(right=0.8)  # 플롯을 오른쪽으로 조정하여 버튼 공간 확보
 
     path: Waypoint = [ 
-                      # np.array([0, 0, np.deg2rad(0.)]),
                       np.array([8.3, -4.9, np.deg2rad(0)]),
                       np.array([61.4, 5.2, np.deg2rad(45.)]),
                       np.array([112.1, 7.2, np.deg2rad(0.)]),

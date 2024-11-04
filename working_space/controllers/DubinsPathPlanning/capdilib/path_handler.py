@@ -3,6 +3,8 @@ from typing import List, Type
 import matplotlib.pyplot as plt
 import numpy as np
 from utils.plot import plot_arrow
+import math
+import time 
 
 
 class PathHanlder:
@@ -29,9 +31,13 @@ class PathHanlder:
         self.path_x, self.path_y, self.path_yaw = np.empty((0,)), np.empty((0,)), np.empty((0,))   # 크기가 0인 객체 배열, [], []
         for i in range(len(self.path) - 1):
             print(f"i: {i}")
+            import time
+            start = time.time()
             path_planner = self.PathPlanner(self.path[i], self.path[i + 1])
             cur_path_x, cur_path_y, cur_path_yaw, \
                 cur_mode, cur_lengths = path_planner.calculate(selected_types)
+            end = time.time()
+            print(f"{end - start:.5f} sec")
              # NaN을 구분자로 삽입
             if i > 0:
                 self.path_x = np.concatenate((self.path_x, [np.nan]))
