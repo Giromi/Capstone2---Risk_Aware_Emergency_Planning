@@ -2,7 +2,7 @@ import time
 from utils.operation import angle_mod
 import numpy as np
 import matplotlib.pyplot as plt
-from capdilib.controller import DiscretPIDController
+from capdilib.discret_pid_tracker import DiscretPIDController
 from capdilib.dubins_path_planner import DubinsPathPlanner
 from capdilib.convention import Waypoint
 from capdilib.state_states import State, State_list
