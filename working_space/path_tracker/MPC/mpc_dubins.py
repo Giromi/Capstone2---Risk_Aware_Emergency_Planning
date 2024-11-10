@@ -643,8 +643,8 @@ def main():
     if show_animation:  # pragma: no cover
         plt.close("all")
         plt.subplots()
-        plt.plot(cx, cy, "-r", label="spline")
-        plt.plot(x, y, "-g", label="tracking")
+        plt.plot(cx, cy, "-r", label="Reference Path")
+        plt.plot(x, y, "-b", label="Tracking Path")
         plt.grid(True)
         plt.axis("equal")
         plt.xlabel("x[m]")
@@ -656,7 +656,7 @@ def main():
         plt.plot(t, v, "-r", label="speed")
         plt.grid(True)
         plt.xlabel("Time [s]")
-        plt.ylabel("Speed [kmh]")
+        plt.ylabel("Speed [m/s]")
 
         plt.show()
 
