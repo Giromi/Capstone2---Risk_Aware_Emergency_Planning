@@ -68,7 +68,6 @@ def main():
         np.array([570.0, 2.0, np.deg2rad(3)]),
         np.array([600.0, 0.0, np.deg2rad(0)])
     ]
-    #
     
     OFFSET = 150 # [m]
     END_TIME = 100.0  # max simulation time
@@ -89,6 +88,7 @@ def main():
     # K_P, K_I, K_D = 0.05, 0.00, 0.200          # Case 7
 
     SPEED = 108.0 # [km/h]
+    # SPEED = 100.0 # [km/h]
     # K_P, K_I, K_D = 0.005, 0.0, 0.0              # Case 6
     # K_P, K_I, K_D = 0.010, 0.0, 0.0              # Case 6
     # K_P, K_I, K_D = 0.020, 0.0, 0.0              # Case 6
@@ -171,6 +171,9 @@ def main():
             plt.axis("equal")
             plt.xlim(state.x - OFFSET, state.x + OFFSET)
             plt.ylim(state.y - OFFSET, state.y + OFFSET)
+            for point in path:
+                cur_x, cur_y, cur_yaw = point
+                plot_arrow(cur_x, cur_y, cur_yaw, length=20, width=10)
             plt.grid(True)
             plt.title("Speed[km/h]:" + str(state.v * 3.6)[:4])
             plt.pause(0.001)
