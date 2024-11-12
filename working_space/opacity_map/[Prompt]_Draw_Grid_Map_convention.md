@@ -39,7 +39,6 @@
 - The human (H) : **brown RGB(65, 41, 35)**
 
 #### Configuration of plot
-- **My Vehicle(M)** is positioned at the origin **(0, 0)**.
 - Set up the plot so that:
     - The **y+ axis** points upward.
     - The **x+ axis** points to the right.
