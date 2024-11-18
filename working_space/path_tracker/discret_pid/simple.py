@@ -141,9 +141,11 @@ def main():
     print(f'taget_path_x : {target_path_x}')
     print(f'taget_path_y : {target_path_y}')
     start = time.time()
+    max_error = 0.0
     total_error = 0.0
     while END_TIME >= check_time and lastIndex > target_index:
         cur_error, target_index = calculate_error(state, target_course, target_index)
+        max_error = max(abs(cur_error), max_error)  # calc
         total_error += cur_error ** 2
         print(f'>>> target_index: {target_index}, cur_error: {cur_error}\n')
         # cur_input = controller.P(cur_error)
@@ -180,10 +182,13 @@ def main():
 
     plt.close("all")
     # Test
+    RSE = (total_error / (len(state_list.x) - 2)) ** 0.5
+    print(f'Max Error: {max_error}')
+    print(f'RSE: {RSE}')
+
     assert lastIndex >= target_index, "Cannot goal"
 
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 4))
-    RSE = (total_error / (len(state_list.x) - 2)) ** 0.5
     if show_animation:  # pragma: no cover
         fig.canvas.mpl_connect(
             'key_release_event',

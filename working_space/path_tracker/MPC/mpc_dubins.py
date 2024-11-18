@@ -401,6 +401,8 @@ def do_simulation(path, cx, cy, cyaw, ck, sp, dl, initial_state):
 
     cyaw = smooth_yaw(cyaw)
 
+    max_error = 0.0
+    total_error = 0.0
     while MAX_TIME >= time:
         xref, target_ind, dref = calc_ref_trajectory(
             state, cx, cy, cyaw, ck, sp, dl, target_ind)
@@ -409,6 +411,12 @@ def do_simulation(path, cx, cy, cyaw, ck, sp, dl, initial_state):
 
         oa, odelta, ox, oy, oyaw, ov = iterative_linear_mpc_control(
             xref, x0, dref, oa, odelta)
+
+        dx = state.x - ox[0]
+        dy = state.y - oy[0]
+        cur_error = math.hypot(dx, dy)
+        max_error = max(abs(cur_error), max_error)  # calc
+        total_error += cur_error ** 2
 
         di, ai = 0.0, 0.0
         if odelta is not None:
@@ -456,6 +464,9 @@ def do_simulation(path, cx, cy, cyaw, ck, sp, dl, initial_state):
                       + ", speed[km/h]:" + str(round(state.v * 3.6, 2)))
             plt.pause(0.0001)
 
+    RSE = (total_error / (len(t) - 2)) ** 0.5
+    print(f'max_error: {max_error}')
+    print(f'RSE: {RSE}')
     return t, x, y, yaw, v, d, a
 
 
@@ -639,6 +650,7 @@ def main():
 
     t, x, y, yaw, v, d, a = do_simulation(path,
         cx, cy, cyaw, ck, sp, dl, initial_state)
+
 
     if show_animation:  # pragma: no cover
         plt.close("all")
