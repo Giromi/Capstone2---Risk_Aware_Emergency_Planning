@@ -1,7 +1,5 @@
 # 2024.11.17 Capdi
 """
-
-
 class TeslaState(){
     self.current_position = ....
     self.current_orentation = ...

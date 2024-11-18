@@ -46,7 +46,7 @@ def main():
     #                          np.array([61.4, 5.2, np.deg2rad(45.)]), # RSR
     #                          np.array([112.1, 7.2, np.deg2rad(0.)]) ]
     path = [
-        np.array([0.0, 0.0, np.deg2rad(0)]),
+        # np.array([0.0, 0.0, np.deg2rad(0)]),
         np.array([30.0, 5.0, np.deg2rad(15)]),
         np.array([60.0, -3.0, np.deg2rad(-15)]),
         np.array([90.0, 8.0, np.deg2rad(20)]),

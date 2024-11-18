@@ -1,7 +1,7 @@
-# 2024.11.17 Capdi
+# 2024.11.17 Capdi main기준
 from controller import Supervisor   # 차후에 webots on/off할 때 필요
 from vehicle import Driver
-from get_information import parse_proto, get_value
+# from utils.get_information import parse_proto, get_value
 
 import numpy as np
 import time    # while문 Hz 추출
@@ -9,7 +9,7 @@ import json
 
 # Convert dictionary to json
 def convert_json(input : dict):         
-    with open("data.json", "w") as f:   # 파일 저장소: TeslaModel3_controller_1029(box).py와 같은 위치
+    with open("data.json", "w") as f:   # 파일 저장소: webots_json.py와 같은 위치
         json.dump(input, f, ensure_ascii=False, indent=4)
 
 # Supervisor 객체 생성 

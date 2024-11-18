@@ -26,7 +26,7 @@ R = np.diag([0.01, 0.01])  # input cost matrix
 Rd = np.diag([0.01, 1.0])  # input difference cost matrix
 Q = np.diag([1.0, 1.0, 0.5, 0.5])  # state cost matrix
 Qf = Q  # state final matrix
-GOAL_DIS = 20.0  # goal distance
+GOAL_DIS = 20.0  # goal distance   TOD
 STOP_SPEED = 10 / 3.6  # stop speed
 MAX_TIME = 500.0  # max simulation time
 
