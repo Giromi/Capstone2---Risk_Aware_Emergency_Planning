@@ -24,16 +24,16 @@ class RRTStar:
         grid,
         start,
         goal,
-        velocity=108,
+        velocity=30, # unit [m/s]
         goal_radius=10,
         max_iter=10000,
         min_turn_radius=TESLA_MIN_RADIUS,
     ):
-        alpha = 10  # 속도에 반비례하여 step size[m] 결정하기 위한 하이퍼 파라미터
+        alpha =  3.6 // 10  # 속도에 반비례하여 step size[m] 결정하기 위한 하이퍼 파라미터
         self.grid = grid
         self.start = Node(*start)
         self.goal = Node(*goal)
-        self.step_size = velocity // alpha
+        self.step_size = velocity * alpha
         self.goal_radius = goal_radius
         self.max_iter = max_iter
         self.min_turn_radius = min_turn_radius
