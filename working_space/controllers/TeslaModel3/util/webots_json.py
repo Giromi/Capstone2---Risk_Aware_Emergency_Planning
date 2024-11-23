@@ -1,7 +1,7 @@
 # 2024.11.17 Capdi main기준
 from controller import Supervisor   # 차후에 webots on/off할 때 필요
 from vehicle import Driver
-# from utils.get_information import parse_proto, get_value
+# from util.get_information import parse_proto, get_value
 
 import numpy as np
 import time    # while문 Hz 추출

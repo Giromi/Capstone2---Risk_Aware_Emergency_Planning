@@ -7,8 +7,11 @@ import matplotlib.pyplot as plt
 import cvxpy
 import math
 import numpy as np
-from util.operator import angle_mod
+from utils.operator import angle_mod
 from lib.tesla_state import IdealState
+
+class
+
 
 class MPCTracker:
     ######### Static Variables #########
@@ -28,26 +31,10 @@ class MPCTracker:
     GOAL_DIS = 20.0  #                  # [m] goal distance
     STOP_SPEED = 10 / 3.6               # [m/s] stop speed
     TARGET_SPEED = 108 / 3.6            # [m/s] target speed
-    DL = 1.0  # course tick
-    N_IND_SEARCH = 10   # Search index number
-    MAX_ACCEL = 3.2  # maximum accel [m/ss]
-    MAX_DSTEER = np.deg2rad(90.0)  # maximum steering speed [rad/s]
-    MAX_SPEED = 261.0 / 3.6  # maximum speed [m/s]  # 261.0 km/h
-    MIN_SPEED = 0  # minimum speed [m/s]
-    # LENGTH = 4.724  # [m]
-    # WIDTH = 1.933  # [m]
-    # BACKTOWHEEL = 1.0  # [m]
-    # WHEEL_LEN = 0.3  # [m]  # 20 inch
-    # WHEEL_WIDTH = 0.2  # [m]
-    # TREAD = 1.584  # [m]
 
-    def __init__(self, points_path, dt, tesla_state):
+
+    def __init__(self, dt):
         self.dt = dt
-        self.cx = None
-        self.cy = None
-
-    def track(self):
-        pass
 
     def calculate_ref_trajectory(self, state, cx, cy, cyaw, sp, dl, pind):
         x_ref = np.zeros((MPCTracker.NX, MPCTracker.T + 1))
@@ -148,15 +135,15 @@ class MPCTracker:
 
             if t < (MPCTracker.T - 1):
                 cost += cvxpy.quad_form(u[:, t + 1] - u[:, t], MPCTracker.Rd)
-                constraints += [cvxpy.abs(u[1, t + 1] - u[1, t]) <= MPCTracker.MAX_DSTEER * self.dt]
+                constraints += [cvxpy.abs(u[1, t + 1] - u[1, t]) <= IdealState.MAX_DSTEER * self.dt]
 
         cost += cvxpy.quad_form(xref[:, MPCTracker.T] - x[:, MPCTracker.T], MPCTracker.Qf)
 
         constraints += [x[:, 0] == x0]
-        constraints += [x[2, :] <= MPCTracker.MAX_SPEED]
-        constraints += [x[2, :] >= MPCTracker.MIN_SPEED]
-        constraints += [cvxpy.abs(u[0, :]) <= MPCTracker.MAX_ACCEL]
-        constraints += [cvxpy.abs(u[1, :]) <= MPCTracker.MAX_STEER]
+        constraints += [x[2, :] <= IdealState.MAX_SPEED]
+        constraints += [x[2, :] >= IdealState.MIN_SPEED]
+        constraints += [cvxpy.abs(u[0, :]) <= IdealState.MAX_ACCEL]
+        constraints += [cvxpy.abs(u[1, :]) <= IdealState.MAX_STEER]
         prob = cvxpy.Problem(cvxpy.Minimize(cost), constraints)
         prob.solve(solver=cvxpy.ECOS, verbose=False)
 
@@ -186,16 +173,16 @@ class MPCTracker:
         A[0, 3] = - self.dt * v * math.sin(phi)
         A[1, 2] = self.dt * math.sin(phi)
         A[1, 3] = self.dt * v * math.cos(phi)
-        A[3, 2] = self.dt * math.tan(delta) / MPCTracker.WB
+        A[3, 2] = self.dt * math.tan(delta) / IdealState.WB
 
         B = np.zeros((MPCTracker.NX, MPCTracker.NU))
         B[2, 0] = self.dt
-        B[3, 1] = self.dt * v / (MPCTracker.WB * math.cos(delta) ** 2)
+        B[3, 1] = self.dt * v / (IdealState.WB * math.cos(delta) ** 2)
 
         C = np.zeros(MPCTracker.NX)
         C[0] = self.dt * v * math.sin(phi) * phi
         C[1] = - self.dt * v * math.cos(phi) * phi
-        C[3] = - self.dt * v * delta / (MPCTracker.WB * math.cos(delta) ** 2)
+        C[3] = - self.dt * v * delta / (IdealState.WB * math.cos(delta) ** 2)
 
         return A, B, C
 
@@ -283,10 +270,3 @@ class MPCTracker:
             mind *= -1
 
         return ind, mind
-
-
-
-
-
-
-

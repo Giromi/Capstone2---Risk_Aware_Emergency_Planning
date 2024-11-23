@@ -1,15 +1,19 @@
 # 2024.11.17 Capdi2
+
+
 from typing import List
 from math import sin, cos, atan2, sqrt, acos, pi, hypot
-from util.operator import rot_mat_to_2d, angle_mod, mod2pi
+from utils.operator import rot_mat_to_2d, angle_mod, mod2pi
 import numpy as np
-from lib.convention import X, Y, YAW
+
+from lib.convention import X, Y, YAW, W, H
+from lib.convention import Waypoint
 
 """ Const Variables """
 
 class DubinsPlanner:
-    def __init__(self, start: np.ndarray, end: np.ndarray, 
-                 curvature: float = 0.09, step_size: float = 0.1):
+    def __init__(self, start: Waypoint, end: Waypoint, 
+                 curvature: float = 0.09 , step_size: float = 0.1):
         if len(start) != 3 or len(end) != 3:
             raise ValueError("start and end should be 3D points")
         self.start = start
@@ -43,6 +47,9 @@ class DubinsPlanner:
         print(f"theta: {theta}, alpha: {alpha}, beta: {beta}")
         return alpha, beta, d
 
+
+
+
     def __find_local_goal(self) -> list:
         l_rot = rot_mat_to_2d(self.start[YAW])
         le_xy = np.stack([self.end[X] - self.start[X], 
@@ -53,7 +60,7 @@ class DubinsPlanner:
 
         return [local_goal_x, local_goal_y, local_goal_yaw]
 
-    def plan(self, selected_types: List[str] = None):
+    def calculate(self, selected_types: List[str] = None):
         self.local_goal = self.__find_local_goal()
         self.alpha, self.beta, self.d = self.__find_from_origin()
         planning_funcs = {
