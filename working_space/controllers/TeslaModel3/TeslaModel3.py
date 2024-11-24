@@ -51,25 +51,27 @@ def webots_sim():    # <Main 문>
         plt.plot(goal[X], goal[Y], "yo", markersize=10, label="LLM(Collision)")
 
         """ RRT* Path Planning """
-        # start_point = np.concatenate((start, np.deg2rad([tesla_state.yaw], None)))
-        # points_waypoint = np.vstack((start_point, np.array(points_collision)))
-        rrt_star = RRTStarPlanner(grid_map, start, goal)
-        points_waypoint=  rrt_star.plan()
-        if points_waypoint is None:
-            print("[INFO] exit")
-            return False
-        plt.plot(points_waypoint[1:-2, X], points_waypoint[1:-2, Y], "ro", markersize=10, label="RRT*(Waypoint)")
+        start_point = np.concatenate((start, np.deg2rad([tesla_state.yaw], None)))
+        points_waypoint = np.vstack((start_point, np.array(points_collision)))
+        # rrt_star = RRTStarPlanner(grid_map, start, goal)
+        # points_waypoint=  rrt_star.plan()
+        # if points_waypoint is None:
+        #     print("[INFO] exit")
+        #     return False
+        # plt.plot(points_waypoint[1:-2, X], points_waypoint[1:-2, Y], "ro", markersize=10, label="RRT*(Waypoint)")
         """ Dubins Path Planning """
         path_handler = PathHanlder(points_waypoint, DubinsPlanner)
         points_path: np.ndarray = path_handler.calculate()
         plt.plot(points_path[1:, X], points_path[1:, Y], "cx", markersize=10, label="Dubins(Path)")
         # """ MPC Tracking """
         mpc = MPCTracker(points_path, dt)
+
+
         mpc.track(tesla_state)
 
 
 if __name__ == '__main__':
     webots_sim()
-    # TEST_06()
+    # TEST_02()
 
 

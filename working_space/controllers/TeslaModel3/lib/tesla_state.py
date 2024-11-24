@@ -82,7 +82,7 @@ class TeslaState(IdealState):
         self.yaw = self.get_yaw()
         self.v = self.get_speed()
 
-        self.set_speed(TARGET_SPEED)
+        self.set_speed(TARGET_SPEED * 3.6) # [km/h]
         self.set_steering_angle(delta)
 
     def set_speed(self, speed):
@@ -108,7 +108,7 @@ class TeslaState(IdealState):
         self.driver.setSteeringAngle(delta)
 
     def get_speed(self):
-        velocity = np.array(self.car_node.getVelocity())
+        velocity = np.array(self.car_node.getVelocity()) # None
         speed = np.linalg.norm(velocity)
         return speed
     

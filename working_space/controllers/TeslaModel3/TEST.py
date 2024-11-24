@@ -79,6 +79,15 @@ def TEST_02_1():
     driver.step()
     tesla_state.update()
     driver.step()
+    tesla_state.set_speed(10)
+    driver.step()
+    driver.step()
+    driver.step()
+    driver.step()
+    driver.step()
+    driver.step()
+    driver.step()
+    driver.step()
 
 def TEST_02_2():
     driver = Driver()

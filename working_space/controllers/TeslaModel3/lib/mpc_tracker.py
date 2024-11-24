@@ -51,21 +51,17 @@ class MPCTracker:
 
             if odelta is not None:
                 cur_delta, cur_accer = odelta[0], oaccer[0]
-                tesla_state.update(0)
+                tesla_state.update() 
                 # tesla_state.update(cur_delta)
-            else:
-                print("No control input available.")
-                break
 
             if self.check_goal(tesla_state, goal, target_index, len(cx)):
                 print("Goal")
-                return True
-            # plt.cla()
+                # break
+            # plt.cla()                                     # 
             plt.plot(tesla_state.x, tesla_state.y, ".r")
             plt.legend(loc="upper right", fontsize=10)      # 여기있어야 라벨 뜸
-            plt.pause(0.0001)                               # 이게 없으면 그래프가 뜨지 않음
+            plt.pause(0.0001)                               # 이게 없으면 그래프가 멈춤
         tesla_state.set_speed(0)
-        return False
     
 
     def calculate_ref_trajectory(self, state, cx, cy, cyaw, sp, dl, pind):
