@@ -1,14 +1,11 @@
 import math
 from util.operator import angle_mod, webots_orientation_to_yaw
 import numpy as np
+from lib.convention import *
 
 class IdealState:
-    # circular import issue으로 인해 여기 있어야 함
-    MAX_STEER = np.deg2rad(35.0)  # maximum steering angle [rad]
-    WB = 2.875          # [m] wheel base of vehicle
-
-    def __init__(self, t, x=0, y=0, yaw=0, v=0):
-        self.t = t
+    def __init__(self, dt, x=0, y=0, yaw=0, v=0):
+        self.dt = dt
         self.t = 0
         self.x = x
         self.y = y
@@ -22,14 +19,14 @@ class IdealState:
     def update(self, cur_time, acceletation, delta):
         self.history.append(cur_time, self)
 
-        if delta >= IdealState.MAX_STEER:
-            delta = IdealState.MAX_STEER
-        elif delta <= -IdealState.MAX_STEER:
-            delta = -IdealState.MAX_STEER
-
-        self.x += self.v * math.cos(self.yaw) * self.dt
+        if delta >= MAX_STEER:
+            delta = MAX_STEER
+        elif delta <= -MAX_STEER:
+            delta = -MAX_STEER
+        self.t = cur_time
+        self.x += self.v * math.cos(self.yaw) * self.dt # 0.008
         self.y += self.v * math.sin(self.yaw) * self.dt
-        self.yaw = self.yaw + self.v / IdealState.WB * math.tan(delta) * self.dt
+        self.yaw = self.yaw + self.v / WB * math.tan(delta) * self.dt
         self.v += acceletation * self.dt
 
     def cal_distance(self, point_x, point_y):
@@ -84,6 +81,8 @@ class TeslaState(IdealState):
         self.x, self.y, _ = self.get_position()
         self.yaw = self.get_yaw()
         self.v = self.get_speed()
+
+        self.set_speed(TARGET_SPEED)
         self.set_steering_angle(delta)
 
     def set_speed(self, speed):
@@ -97,7 +96,6 @@ class TeslaState(IdealState):
     
     def get_yaw(self):
         angle = webots_orientation_to_yaw(self.get_orientation())
-        print('angle :', angle)
         return angle
 
     def get_pose(self): 
@@ -111,7 +109,12 @@ class TeslaState(IdealState):
         self.driver.setSteeringAngle(delta)
 
     def get_speed(self):
-        return self.driver.getCurrentSpeed()
+        velocity = np.array(self.car_node.getVelocity())
+        speed = np.linalg.norm(velocity)
+        return speed
+    
+    def set_speed(self, speed):
+        return self.driver.setCruisingSpeed(speed)
 
     def get_time(self):
         return self.driver.getTime()

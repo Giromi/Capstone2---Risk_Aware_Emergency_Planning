@@ -20,7 +20,7 @@ class PathHanlder:
     def calculate(self, selected_types: list[str] = None):
         path = np.empty((0, 3))  
         for i in range(len(self.waypoints) - 1):
-            print(f"i: {i}")
+            # print(f"i: {i}")
             path_planner = self.PathPlanner(self.waypoints[i], self.waypoints[i + 1])
             cur_path_x, cur_path_y, cur_path_yaw, cur_mode, cur_lengths \
                                             = path_planner.plan(selected_types)

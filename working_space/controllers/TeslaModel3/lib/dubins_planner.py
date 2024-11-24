@@ -39,8 +39,8 @@ class DubinsPlanner:
         theta = mod2pi(atan2(dy, dx))
         alpha = mod2pi(-theta)
         beta = mod2pi(self.local_goal[YAW] - theta)
-        print(f"dx: {dx}, dy: {dy}, d: {d}")
-        print(f"theta: {theta}, alpha: {alpha}, beta: {beta}")
+        # print(f"dx: {dx}, dy: {dy}, d: {d}")
+        # print(f"theta: {theta}, alpha: {alpha}, beta: {beta}")
         return alpha, beta, d
 
     def __find_local_goal(self) -> list:

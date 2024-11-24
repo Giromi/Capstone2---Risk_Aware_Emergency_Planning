@@ -21,11 +21,11 @@ collision = np.array([ np.array([30.0, 5.0, np.deg2rad(15)]),
                 np.array([570.0, 2.0, np.deg2rad(3)]),
                 np.array([600.0, 0.0, np.deg2rad(0)]) ])
 
-one_collision = [ np.array([100.0, 5.0, np.deg2rad(0)]) ]
+one_collision = [ np.array([100.0, 0.0, np.deg2rad(0)]) ]
 
 just_straight = [ np.array([100.0, 5.0, np.deg2rad(0)]),
                   np.array([200.0, 5.0, np.deg2rad(0)]) ]
 
 def request_to_LLM():
-    return one_collision
+    return collision 
           

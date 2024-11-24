@@ -3,55 +3,97 @@
 Path tracking simulation with iterative linear model predictive control for speed and steer control
 author: Atsushi Sakai (@Atsushi_twi)
 """
+
+from debug.debug import dprint
 import matplotlib.pyplot as plt
 import cvxpy
 import math
 import numpy as np
 from util.operator import angle_mod
-from lib.tesla_state import IdealState
+from lib.tesla_state import IdealState, TeslaState
+from lib.convention import *
 
 class MPCTracker:
-    ######### Static Variables #########
-    NX = 4                              # [#] x = x, number
-    NU = 2                              # [#] a = [accel, steer]
-    T = 5                               # [#] horizon length
+    # ######### Static Variables #########
+    # NX = 4                              # [#] x = x, number
+    # NU = 2                              # [#] a = [accel, steer]
+    # T = 5                               # [#] horizon length
 
-    R = np.diag([0.01, 0.01])           # [-] input cost matrix
-    Rd = np.diag([0.01, 1.0])           # [-] input difference cost matrix
-    Q = np.diag([1.0, 1.0, 0.5, 0.5])   # [-] state cost matrix
-    Qf = Q                              # [-] state final matrix
+    # R = np.diag([0.01, 0.01])           # [-] input cost matrix
+    # Rd = np.diag([0.01, 1.0])           # [-] input difference cost matrix
+    # Q = np.diag([1.0, 1.0, 0.5, 0.5])   # [-] state cost matrix
+    # Qf = Q                              # [-] state final matrix
+    # MAX_TIME = 500.0  # max simulation time
+    # MAX_ITER = 3                        # [iter] Max iteration
+    # DU_TH = 0.1                         # [] iteration finish param
+    # N_IND_SEARCH = 10                   # [th] Search indextic Variables
 
-    MAX_ITER = 3                        # [iter] Max iteration
-    DU_TH = 0.1                         # [] iteration finish param
-    N_IND_SEARCH = 10                   # [th] Search indextic Variables
+    # GOAL_DIS = 20.0  #                  # [m] goal distance
+    # STOP_SPEED = 10 / 3.6               # [m/s] stop speed
+    # TARGET_SPEED = 108 / 3.6            # [m/s] target speed
+    # DL = 1.0  # course tick
+    # N_IND_SEARCH = 10   # Search index number
+    # MAX_ACCEL = 3.2  # maximum accel [m/ss]
+    # MAX_DSTEER = np.deg2rad(90.0)  # maximum steering speed [rad/s]
+    # MAX_SPEED = 261.0 / 3.6  # maximum speed [m/s]  # 261.0 km/h
+    # MIN_SPEED = 0  # minimum speed [m/s]
+    # # LENGTH = 4.724  # [m]
+    # # WIDTH = 1.933  # [m]
+    # # BACKTOWHEEL = 1.0  # [m]
+    # # WHEEL_LEN = 0.3  # [m]  # 20 inch
+    # # WHEEL_WIDTH = 0.2  # [m]
+    # # TREAD = 1.584  # [m]
 
-    GOAL_DIS = 20.0  #                  # [m] goal distance
-    STOP_SPEED = 10 / 3.6               # [m/s] stop speed
-    TARGET_SPEED = 108 / 3.6            # [m/s] target speed
-    DL = 1.0  # course tick
-    N_IND_SEARCH = 10   # Search index number
-    MAX_ACCEL = 3.2  # maximum accel [m/ss]
-    MAX_DSTEER = np.deg2rad(90.0)  # maximum steering speed [rad/s]
-    MAX_SPEED = 261.0 / 3.6  # maximum speed [m/s]  # 261.0 km/h
-    MIN_SPEED = 0  # minimum speed [m/s]
-    # LENGTH = 4.724  # [m]
-    # WIDTH = 1.933  # [m]
-    # BACKTOWHEEL = 1.0  # [m]
-    # WHEEL_LEN = 0.3  # [m]  # 20 inch
-    # WHEEL_WIDTH = 0.2  # [m]
-    # TREAD = 1.584  # [m]
-
-    def __init__(self, points_path, dt, tesla_state):
+    def __init__(self, points_path, dt):
+        self.points_path = points_path
         self.dt = dt
-        self.cx = None
-        self.cy = None
+        
 
-    def track(self):
-        pass
+    def track(self, state):
+        goal = np.array([self.points_path[-1, X], self.points_path[-1, Y]])
+
+        # initial yaw compensation
+        if state.yaw - self.points_path[0, YAW] >= math.pi:
+            state.yaw -= math.pi * 2.0
+        elif state.yaw - self.points_path[0, YAW] <= -math.pi:
+            state.yaw += math.pi * 2.0
+
+    
+        print('here')
+        target_index, _ = self.calculate_nearest_index(state, self.points_path[:, X], self.points_path[:, Y], self.points_path[:, YAW], 0)
+        print('target_index :', target_index)
+
+        odelta, oaccer = None, None
+
+        cx = self.points_path[:, X]
+        cy = self.points_path[:, Y]
+        cyaw = self.smooth_yaw(self.points_path[:, YAW])
+        sp = self.calculate_speed_profile(cx, cy, cyaw, TARGET_SPEED)
+        dl = 1.0       # course tick
+
+        print(f'{MAX_TIME} vs {state.get_time()}')
+        # while MAX_TIME >= state.get_time(): # 얘때문에 시간이 갇혀서 , 출력 0 -> 0.008 -> 0.016
+        x_ref, target_index, d_ref = self.calculate_ref_trajectory(state, cx, cy, cyaw, sp, dl, target_index)
+        print('x_ref :', x_ref)
+        x_cur = [state.x, state.y , state.v, state.yaw]
+
+        oaccer, odelta, ox, oy, oyaw, ov = self.iterative_linear_control(
+            x_ref, x_cur, d_ref, oaccer, odelta)
+
+        cur_delta, cur_accer = 0.0, 0.0
+        if odelta is not None:
+            cur_delta, cur_accer = odelta[0], oaccer[0]
+            state.update(cur_delta)
+
+        if self.check_goal(state, goal, target_index, len(cx)):
+            print("Goal")
+            return True
+        return False
+    
 
     def calculate_ref_trajectory(self, state, cx, cy, cyaw, sp, dl, pind):
-        x_ref = np.zeros((MPCTracker.NX, MPCTracker.T + 1))
-        dref = np.zeros((1, MPCTracker.T + 1))
+        x_ref = np.zeros((NX, T + 1))
+        dref = np.zeros((1, T + 1))
         ncourse = len(cx)
         ind, _ = self.calculate_nearest_index(state, cx, cy, cyaw, pind)
 
@@ -65,9 +107,12 @@ class MPCTracker:
         dref[0, 0] = 0.0  # steer operational point should be 0
 
         travel = 0.0
+        print('dl:', dl)
+        print('travel:', travel)
 
-        for i in range(MPCTracker.T + 1):
+        for i in range(T + 1):
             travel += abs(state.v) * self.dt
+            print('travel:', travel)
             dind = int(round(travel / dl))
 
             if (ind + dind) < ncourse:
@@ -129,34 +174,34 @@ class MPCTracker:
         # print('x0 :', x0)
         # print('dref :', dref.shape, dref)
 
-        x = cvxpy.Variable((MPCTracker.NX, MPCTracker.T + 1))
-        u = cvxpy.Variable((MPCTracker.NU, MPCTracker.T))
+        x = cvxpy.Variable((NX, T + 1))
+        u = cvxpy.Variable((NU, T))
 
 
         cost = 0.0
         constraints = []
 
-        for t in range(MPCTracker.T):
-            cost += cvxpy.quad_form(u[:, t], MPCTracker.R)
+        for t in range(T):
+            cost += cvxpy.quad_form(u[:, t], R)
 
             if t != 0:
-                cost += cvxpy.quad_form(xref[:, t] - x[:, t], MPCTracker.Q)
+                cost += cvxpy.quad_form(xref[:, t] - x[:, t], Q)
 
             A, B, C = self.get_linear_model_matrix(
                 xbar[2, t], xbar[3, t], dref[0, t])
             constraints += [x[:, t + 1] == A @ x[:, t] + B @ u[:, t] + C]
 
-            if t < (MPCTracker.T - 1):
-                cost += cvxpy.quad_form(u[:, t + 1] - u[:, t], MPCTracker.Rd)
-                constraints += [cvxpy.abs(u[1, t + 1] - u[1, t]) <= MPCTracker.MAX_DSTEER * self.dt]
+            if t < (T - 1):
+                cost += cvxpy.quad_form(u[:, t + 1] - u[:, t], Rd)
+                constraints += [cvxpy.abs(u[1, t + 1] - u[1, t]) <= MAX_DSTEER * self.dt]
 
-        cost += cvxpy.quad_form(xref[:, MPCTracker.T] - x[:, MPCTracker.T], MPCTracker.Qf)
+        cost += cvxpy.quad_form(xref[:, T] - x[:, T], Qf)
 
         constraints += [x[:, 0] == x0]
-        constraints += [x[2, :] <= MPCTracker.MAX_SPEED]
-        constraints += [x[2, :] >= MPCTracker.MIN_SPEED]
-        constraints += [cvxpy.abs(u[0, :]) <= MPCTracker.MAX_ACCEL]
-        constraints += [cvxpy.abs(u[1, :]) <= MPCTracker.MAX_STEER]
+        constraints += [x[2, :] <= MAX_SPEED]
+        constraints += [x[2, :] >= MIN_SPEED]
+        constraints += [cvxpy.abs(u[0, :]) <= MAX_ACCEL]
+        constraints += [cvxpy.abs(u[1, :]) <= MAX_STEER]
         prob = cvxpy.Problem(cvxpy.Minimize(cost), constraints)
         prob.solve(solver=cvxpy.ECOS, verbose=False)
 
@@ -177,7 +222,7 @@ class MPCTracker:
 
     def get_linear_model_matrix(self, v, phi, delta):
 
-        A = np.zeros((MPCTracker.NX, MPCTracker.NX))
+        A = np.zeros((NX, NX))
         A[0, 0] = 1.0
         A[1, 1] = 1.0
         A[2, 2] = 1.0
@@ -186,16 +231,16 @@ class MPCTracker:
         A[0, 3] = - self.dt * v * math.sin(phi)
         A[1, 2] = self.dt * math.sin(phi)
         A[1, 3] = self.dt * v * math.cos(phi)
-        A[3, 2] = self.dt * math.tan(delta) / MPCTracker.WB
+        A[3, 2] = self.dt * math.tan(delta) / WB
 
-        B = np.zeros((MPCTracker.NX, MPCTracker.NU))
+        B = np.zeros((NX, NU))
         B[2, 0] = self.dt
-        B[3, 1] = self.dt * v / (MPCTracker.WB * math.cos(delta) ** 2)
+        B[3, 1] = self.dt * v / (WB * math.cos(delta) ** 2)
 
-        C = np.zeros(MPCTracker.NX)
+        C = np.zeros(NX)
         C[0] = self.dt * v * math.sin(phi) * phi
         C[1] = - self.dt * v * math.cos(phi) * phi
-        C[3] = - self.dt * v * delta / (MPCTracker.WB * math.cos(delta) ** 2)
+        C[3] = - self.dt * v * delta / (WB * math.cos(delta) ** 2)
 
         return A, B, C
 
@@ -204,9 +249,9 @@ class MPCTracker:
         for i, _ in enumerate(x_cur):
             xbar[i, 0] = x_cur[i]
 
-        state = IdealState(self.dt, x=x_cur[0], y=x_cur[1], yaw=x_cur[3], v=x_cur[2])
-        for (ai, di, i) in zip(oa, od, range(1, MPCTracker.T + 1)):
-            state.update(ai, di)
+        state = IdealState(self.dt, x=x_cur[X], y=x_cur[Y], yaw=x_cur[3], v=x_cur[2])
+        for (ai, di, i) in zip(oa, od, range(1, T + 1)):
+            state.update(None, ai, di)
             xbar[0, i] = state.x
             xbar[1, i] = state.y
             xbar[2, i] = state.v
@@ -219,11 +264,11 @@ class MPCTracker:
         ox, oy, oyaw, ov = None, None, None, None
 
         if oa is None or od is None:
-            oa = np.zeros(MPCTracker.T)  # 크기 T의 0 배열
-            od = np.zeros(MPCTracker.T)
+            oa = np.zeros(T)  # 크기 T의 0 배열
+            od = np.zeros(T)
 
 
-        for i in range(MPCTracker.MAX_ITER):
+        for i in range(MAX_ITER):
             xbar = self.predict_motion(x_cur, oa, od, x_ref)
             poa, pod = oa[:], od[:]
             oa, od, ox, oy, oyaw, ov = self.linear_control(x_ref, xbar, x_cur, dref)
@@ -231,7 +276,7 @@ class MPCTracker:
             # print(f"Updated oa: {oa}, od: {od}")
 
             du = sum(abs(oa - poa)) + sum(abs(od - pod))  # calc u change value
-            if du <= MPCTracker.DU_TH:
+            if du <= DU_TH:
                 break
         else:
             print("Iterative is max iter")
@@ -245,9 +290,9 @@ class MPCTracker:
         dy = state.y - goal[1]
         d = math.hypot(dx, dy)
 
-        print('d :', d, 'vs', MPCTracker.GOAL_DIS)
+        print('d :', d, 'vs', GOAL_DIS)
 
-        isgoal = (d <= MPCTracker.GOAL_DIS)
+        isgoal = (d <= GOAL_DIS)
 
         if abs(tind - nind) >= 5:
             isgoal = False
@@ -264,8 +309,8 @@ class MPCTracker:
 
     def calculate_nearest_index(self, state, cx, cy, cyaw, pind):
 
-        dx = [state.x - icx for icx in cx[pind:(pind + MPCTracker.N_IND_SEARCH)]]
-        dy = [state.y - icy for icy in cy[pind:(pind + MPCTracker.N_IND_SEARCH)]]
+        dx = [state.x - icx for icx in cx[pind:(pind + N_IND_SEARCH)]]
+        dy = [state.y - icy for icy in cy[pind:(pind + N_IND_SEARCH)]]
 
         d = [idx ** 2 + idy ** 2 for (idx, idy) in zip(dx, dy)]
 
@@ -283,6 +328,21 @@ class MPCTracker:
             mind *= -1
 
         return ind, mind
+    
+    def smooth_yaw(self, yaw):
+
+        for i in range(len(yaw) - 1):
+            dyaw = yaw[i + 1] - yaw[i]
+
+            while dyaw >= math.pi / 2.0:
+                yaw[i + 1] -= math.pi * 2.0
+                dyaw = yaw[i + 1] - yaw[i]
+
+            while dyaw <= -math.pi / 2.0:
+                yaw[i + 1] += math.pi * 2.0
+                dyaw = yaw[i + 1] - yaw[i]
+
+        return yaw
 
 
 

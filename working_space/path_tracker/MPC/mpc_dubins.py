@@ -16,6 +16,7 @@ from utils.plot import plot_arrow
 from capdilib.path_handler import PathHanlder
 from capdilib.dubins_path_planner import DubinsPathPlanner
 from CubicSpline import cubic_spline_planner
+from debug.debug import dprint
 
 
 
@@ -659,6 +660,7 @@ def main():
     cx, cy, cyaw, ck = get_my_dubins_course(path, dl)
 
     print('cx size :', len(cx))
+    dprint()
 
 
     sp = calc_speed_profile(cx, cy, cyaw, TARGET_SPEED)
