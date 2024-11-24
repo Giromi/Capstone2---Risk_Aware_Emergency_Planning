@@ -1,6 +1,6 @@
 """ Debug """
 from debug.grid_plot import convert_to_grid_map, grid_plot
-from debug.debug     import check_time
+from debug.debug *
 
 """ Webots """
 from controller import Supervisor   # 차후에 webots on/off할 때 필요
@@ -26,7 +26,10 @@ from lib.convention import X, Y, YAW
 
 # from get_information import parse_proto, get_value
 
-def webots_sim(driver, dt, tesla_state):    # <Main 문>
+def webots_sim():    # <Main 문>
+    driver = Driver()   # 차량, 건물 및 object의 객체
+    dt = driver.getBasicTimeStep() / 1000 # [s] 늘려야할 수도 있음
+    tesla_state = TeslaState(driver, dt)
     ###################################################
     # plt.figure(figsize=(12, 12))
     # plt.title("Path Planning and Tracking", fontsize=16)
@@ -41,14 +44,11 @@ def webots_sim(driver, dt, tesla_state):    # <Main 문>
     # grid_map = convert_to_grid_map("data/[Map]_03_height_C_H.txt")
 
     # points_collision, points_waypoint, points_path = None, None, None
-
-        
+    # driver.step()
 
     """ Consturctor """
     points_collision = request_to_LLM()
-    # for cur_collision in points_collision:
-    for i in range(points_collision.shape[0]):
-        print(f'iter: {i}')
+    for cur_collision in points_collision:
         cur_collision = points_collision[i]
         start = np.array([tesla_state.x, tesla_state.y])
         goal = np.array([cur_collision[X], cur_collision[Y]])
@@ -74,8 +74,6 @@ def webots_sim(driver, dt, tesla_state):    # <Main 문>
         print(tesla_state)
         mpc = MPCTracker(points_path, dt)
         check_goal = mpc.track(tesla_state)
-        if (check_goal == True):
-            i += 1
 
 
     # plt.legend(loc="upper right", fontsize=10)
@@ -83,21 +81,18 @@ def webots_sim(driver, dt, tesla_state):    # <Main 문>
     # plt.show()
 
 if __name__ == '__main__':
-    driver = Driver()   # 차량, 건물 및 object의 객체
-    old_t = driver.getTime()
-    while cur_step := driver.step() != -1:
-        print(f'cur_step: {cur_step}, {type(cur_step)}')
-        now_t = driver.getTime()
-        print(now_t, '>', now_t - old_t) # 0.008             0.00
-        old_t = driver.getTime()
-        # webots_sim(driver, dt, tesla_state)
+    # webots_sim()
+    test_01()
+    # while cur_step := driver.step() != -1:
+    #     print(f'cur_step: {cur_step}, {type(cur_step)}')
+    #     now_at = driver.getTime()
+    #     print(now_at, '>', now_at - old_at) # 0.008             0.00
+    #     old_at = driver.getTime()
 
     # points_collision = None
     # points_waypoint = None
     # points_path = None
     # 
-    # dt = driver.getBasicTimeStep() / 1000 # [s] 늘려야할 수도 있음
-    # tesla_state = TeslaState(driver, dt)
     # tesla_state.set_speed(72) # [km/h]
     # tesla_state.update()
     # #####

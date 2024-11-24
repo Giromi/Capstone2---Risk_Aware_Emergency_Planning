@@ -105,7 +105,6 @@ class TeslaState(IdealState):
         return self.car_node.getBasicTimeStep()
 
     def set_steering_angle(self, delta):
-        print(delta)
         self.driver.setSteeringAngle(delta)
 
     def get_speed(self):

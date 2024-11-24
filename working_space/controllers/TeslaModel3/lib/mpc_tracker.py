@@ -72,22 +72,22 @@ class MPCTracker:
         dl = 1.0       # course tick
 
         print(f'{MAX_TIME} vs {state.get_time()}')
-        # while MAX_TIME >= state.get_time(): # 얘때문에 시간이 갇혀서 , 출력 0 -> 0.008 -> 0.016
-        x_ref, target_index, d_ref = self.calculate_ref_trajectory(state, cx, cy, cyaw, sp, dl, target_index)
-        print('x_ref :', x_ref)
-        x_cur = [state.x, state.y , state.v, state.yaw]
+        while MAX_TIME >= state.get_time(): # 얘때문에 시간이 갇혀서 , 출력 0 -> 0.008 -> 0.016
+            x_ref, target_index, d_ref = self.calculate_ref_trajectory(state, cx, cy, cyaw, sp, dl, target_index)
+            print('x_ref :', x_ref)
+            x_cur = [state.x, state.y , state.v, state.yaw]
 
-        oaccer, odelta, ox, oy, oyaw, ov = self.iterative_linear_control(
-            x_ref, x_cur, d_ref, oaccer, odelta)
+            oaccer, odelta, ox, oy, oyaw, ov = self.iterative_linear_control(
+                x_ref, x_cur, d_ref, oaccer, odelta)
 
-        cur_delta, cur_accer = 0.0, 0.0
-        if odelta is not None:
-            cur_delta, cur_accer = odelta[0], oaccer[0]
-            state.update(cur_delta)
+            cur_delta, cur_accer = 0.0, 0.0
+            if odelta is not None:
+                cur_delta, cur_accer = odelta[0], oaccer[0]
+                state.update(cur_delta)
 
-        if self.check_goal(state, goal, target_index, len(cx)):
-            print("Goal")
-            return True
+            if self.check_goal(state, goal, target_index, len(cx)):
+                print("Goal")
+                return True
         return False
     
 
