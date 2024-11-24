@@ -14,35 +14,6 @@ from lib.tesla_state import IdealState, TeslaState
 from lib.convention import *
 
 class MPCTracker:
-    # ######### Static Variables #########
-    # NX = 4                              # [#] x = x, number
-    # NU = 2                              # [#] a = [accel, steer]
-    # T = 5                               # [#] horizon length
-
-    # R = np.diag([0.01, 0.01])           # [-] input cost matrix
-    # Rd = np.diag([0.01, 1.0])           # [-] input difference cost matrix
-    # Q = np.diag([1.0, 1.0, 0.5, 0.5])   # [-] state cost matrix
-    # Qf = Q                              # [-] state final matrix
-    # MAX_TIME = 500.0  # max simulation time
-    # MAX_ITER = 3                        # [iter] Max iteration
-    # DU_TH = 0.1                         # [] iteration finish param
-    # N_IND_SEARCH = 10                   # [th] Search indextic Variables
-
-    # GOAL_DIS = 20.0  #                  # [m] goal distance
-    # STOP_SPEED = 10 / 3.6               # [m/s] stop speed
-    # TARGET_SPEED = 108 / 3.6            # [m/s] target speed
-    # DL = 1.0  # course tick
-    # N_IND_SEARCH = 10   # Search index number
-    # MAX_ACCEL = 3.2  # maximum accel [m/ss]
-    # MAX_DSTEER = np.deg2rad(90.0)  # maximum steering speed [rad/s]
-    # MAX_SPEED = 261.0 / 3.6  # maximum speed [m/s]  # 261.0 km/h
-    # MIN_SPEED = 0  # minimum speed [m/s]
-    # # LENGTH = 4.724  # [m]
-    # # WIDTH = 1.933  # [m]
-    # # BACKTOWHEEL = 1.0  # [m]
-    # # WHEEL_LEN = 0.3  # [m]  # 20 inch
-    # # WHEEL_WIDTH = 0.2  # [m]
-    # # TREAD = 1.584  # [m]
 
     def __init__(self, points_path, dt):
         self.points_path = points_path
@@ -57,12 +28,7 @@ class MPCTracker:
             tesla_state.yaw -= math.pi * 2.0
         elif tesla_state.yaw - self.points_path[0, YAW] <= -math.pi:
             tesla_state.yaw += math.pi * 2.0
-
-    
-        print('here')
         target_index, _ = self.calculate_nearest_index(tesla_state, self.points_path[:, X], self.points_path[:, Y], self.points_path[:, YAW], 0)
-        print('target_index :', target_index)
-
         odelta, oaccer = None, None
 
         cx = self.points_path[:, X]
@@ -70,24 +36,34 @@ class MPCTracker:
         cyaw = self.smooth_yaw(self.points_path[:, YAW])
         sp = self.calculate_speed_profile(cx, cy, cyaw, TARGET_SPEED)
         dl = 1.0       # course tick
+        tesla_state.update()
 
         while tesla_state.is_simulation_pending():
-            print('state :', tesla_state)
+
             x_ref, target_index, d_ref = self.calculate_ref_trajectory(tesla_state, cx, cy, cyaw, sp, dl, target_index)
-            print('x_ref :', x_ref)
             x_cur = [tesla_state.x, tesla_state.y , tesla_state.v, tesla_state.yaw]
 
             oaccer, odelta, ox, oy, oyaw, ov = self.iterative_linear_control(
                 x_ref, x_cur, d_ref, oaccer, odelta)
+            print(tesla_state.x)
 
             cur_delta, cur_accer = 0.0, 0.0
+
             if odelta is not None:
                 cur_delta, cur_accer = odelta[0], oaccer[0]
-                tesla_state.update(cur_delta)
+                tesla_state.update(0)
+                # tesla_state.update(cur_delta)
+            else:
+                print("No control input available.")
+                break
 
             if self.check_goal(tesla_state, goal, target_index, len(cx)):
                 print("Goal")
                 return True
+            # plt.cla()
+            plt.plot(tesla_state.x, tesla_state.y, ".r")
+            plt.legend(loc="upper right", fontsize=10)      # 여기있어야 라벨 뜸
+            plt.pause(0.0001)                               # 이게 없으면 그래프가 뜨지 않음
         tesla_state.set_speed(0)
         return False
     
@@ -108,12 +84,11 @@ class MPCTracker:
         dref[0, 0] = 0.0  # steer operational point should be 0
 
         travel = 0.0
-        print('dl:', dl)
-        print('travel:', travel)
+        # print('dl:', dl)
+        # print('travel:', travel)
 
         for i in range(T + 1):
             travel += abs(state.v) * self.dt
-            print('travel:', travel)
             dind = int(round(travel / dl))
 
             if (ind + dind) < ncourse:
@@ -128,7 +103,6 @@ class MPCTracker:
                 x_ref[2, i] = sp[ncourse - 1]
                 x_ref[3, i] = cyaw[ncourse - 1]
                 dref[0, i] = 0.0
-        print("x_ref : ", x_ref)
 
         return x_ref, ind, dref
 
@@ -290,8 +264,6 @@ class MPCTracker:
         dx = state.x - goal[0]
         dy = state.y - goal[1]
         d = math.hypot(dx, dy)
-
-        print('d :', d, 'vs', GOAL_DIS)
 
         isgoal = (d <= GOAL_DIS)
 

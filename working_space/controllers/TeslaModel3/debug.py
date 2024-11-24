@@ -47,9 +47,7 @@ def dprint(val):
 
 
 def webots_sim_only_from(driver):    # <Main 문>
-    ###################################################
     dt = driver.getBasicTimeStep() / 1000 # [s]
-    ###################################################
     grid_map = np.zeros((700, 700))
     tesla_state = TeslaState(driver, dt)
     tesla_state.update()

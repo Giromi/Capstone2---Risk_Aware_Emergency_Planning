@@ -2,7 +2,7 @@ from debug import *
 
 
 """ Webots """
-from controller import Supervisor   # 차후에 webots on/off할 때 필요
+from controller import Supervisor, Robot, Display, Camera   # 차후에 webots on/off할 때 필요
 from vehicle import Driver
 
 """ Standard """
@@ -159,4 +159,28 @@ is_simulation_pending 은  TeslaState에 넣는 것이 효율적일 것 같다.
 '''
 
 
+def TEST_06():
+    driver = Driver()
+    timestep = int(driver.getBasicTimeStep())
 
+    camera = driver.getCamera('camera')
+    camera.enable(timestep)
+    width = camera.getWidth()
+    height = camera.getHeight()
+    display = driver.getDisplay('display');
+
+    while driver.step(32) != -1:
+        data = camera.getImage()
+        if data:
+            ir = display.imageNew(data, Display.BGRA, width, height)
+            display.imagePaste(ir, 0, 0, False)
+            display.imageDelete(ir)
+
+
+
+    # driver.getWidth
+    #
+    # width = wb_display_get_width(display);
+    # height = wb_display_get_height(display);
+    # wb_display_fill_rectangle(display,0,0,width,height);
+    # wb_display_set_color(display,LIGHT_GREY);

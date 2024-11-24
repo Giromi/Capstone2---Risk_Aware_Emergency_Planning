@@ -69,7 +69,6 @@ class MPCTracker:
                 x_ref[2, i] = sp[ncourse - 1]
                 x_ref[3, i] = cyaw[ncourse - 1]
                 dref[0, i] = 0.0
-        print("x_ref : ", x_ref)
 
         return x_ref, ind, dref
 
