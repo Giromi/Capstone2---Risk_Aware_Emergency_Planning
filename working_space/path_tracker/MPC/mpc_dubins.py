@@ -16,6 +16,9 @@ from utils.plot import plot_arrow
 from capdilib.path_handler import PathHanlder
 from capdilib.dubins_path_planner import DubinsPathPlanner
 from CubicSpline import cubic_spline_planner
+from debug.debug import dprint
+
+
 
 NX = 4  # x = x, y, v, yaw
 NU = 2  # a = [accel, steer]
@@ -209,6 +212,8 @@ def calc_nearest_index(state, cx, cy, cyaw, pind):
 
 def predict_motion(x0, oa, od, xref):
     xbar = xref * 0.0
+    # print('xbar :', xbar.shape)
+    # print('x_cur :', len(x0))
     for i, _ in enumerate(x0):
         xbar[i, 0] = x0[i]
 
@@ -227,15 +232,19 @@ def iterative_linear_mpc_control(xref, x0, dref, oa, od):
     """
     MPC control with updating operational point iteratively
     """
+
     ox, oy, oyaw, ov = None, None, None, None
 
     if oa is None or od is None:
         oa = [0.0] * T
         od = [0.0] * T
+    # print('type oa:', type(oa), len(oa), oa)
+    # print('type od:', type(od), len(od), od)
 
     for i in range(MAX_ITER):
         xbar = predict_motion(x0, oa, od, xref)
         poa, pod = oa[:], od[:]
+        # print(f"Predicted oa: {poa}, od: {pod}")
         oa, od, ox, oy, oyaw, ov = linear_mpc_control(xref, xbar, x0, dref)
         du = sum(abs(oa - poa)) + sum(abs(od - pod))  # calc u change value
         if du <= DU_TH:
@@ -255,6 +264,12 @@ def linear_mpc_control(xref, xbar, x0, dref):
     x0: initial state
     dref: reference steer angle
     """
+
+    # print('xref :', xref.shape, xref)
+    # print('xbar :', xbar.shape, xbar)
+    # print('x0 :', x0)
+    # print('dref :', dref.shape, dref)
+
 
     x = cvxpy.Variable((NX, T + 1))
     u = cvxpy.Variable((NU, T))
@@ -337,6 +352,7 @@ def calc_ref_trajectory(state, cx, cy, cyaw, ck, sp, dl, pind):
             xref[2, i] = sp[ncourse - 1]
             xref[3, i] = cyaw[ncourse - 1]
             dref[0, i] = 0.0
+    print("xref : ", xref)
 
     return xref, ind, dref
 
@@ -348,7 +364,7 @@ def check_goal(state, goal, tind, nind):
     dy = state.y - goal[1]
     d = math.hypot(dx, dy)
 
-    print('d :', d, 'vs', GOAL_DIS)
+    # print('d :', d, 'vs', GOAL_DIS)
 
     isgoal = (d <= GOAL_DIS)
 
@@ -396,6 +412,7 @@ def do_simulation(path, cx, cy, cyaw, ck, sp, dl, initial_state):
     d = [0.0]
     a = [0.0]
     target_ind, _ = calc_nearest_index(state, cx, cy, cyaw, 0)
+    print('target_ind :', target_ind)
 
     odelta, oa = None, None
 
@@ -406,6 +423,7 @@ def do_simulation(path, cx, cy, cyaw, ck, sp, dl, initial_state):
     while MAX_TIME >= time:
         xref, target_ind, dref = calc_ref_trajectory(
             state, cx, cy, cyaw, ck, sp, dl, target_ind)
+        print('x_ref :', xref)
 
         x0 = [state.x, state.y, state.v, state.yaw]  # current state
 
@@ -642,11 +660,12 @@ def main():
     cx, cy, cyaw, ck = get_my_dubins_course(path, dl)
 
     print('cx size :', len(cx))
+    dprint()
 
 
     sp = calc_speed_profile(cx, cy, cyaw, TARGET_SPEED)
 
-    initial_state = State(x=cx[0], y=cy[0], yaw=cyaw[0], v=30.0)
+    initial_state = State(x=cx[0], y=cy[0], yaw=cyaw[0], v=0.0)
 
     t, x, y, yaw, v, d, a = do_simulation(path,
         cx, cy, cyaw, ck, sp, dl, initial_state)

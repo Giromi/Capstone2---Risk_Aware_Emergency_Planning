@@ -30,7 +30,7 @@ class PathHanlder:
         self.path_x_list, self.path_y_list, self.path_yaw_list = [], [], []
         self.path_x, self.path_y, self.path_yaw = np.empty((0,)), np.empty((0,)), np.empty((0,))   # 크기가 0인 객체 배열, [], []
         for i in range(len(self.path) - 1):
-            print(f"i: {i}")
+            # print(f"i: {i}")
             import time
             start = time.time()
             path_planner = self.PathPlanner(self.path[i], self.path[i + 1])
