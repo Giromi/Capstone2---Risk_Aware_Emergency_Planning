@@ -2736,7 +2736,7 @@ DEF sidewalk_block(11) Floor {
   size 45.5 83.5
   tileSize 1 0.5
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(1) Robot {
   translation 12.332293357778502 9.126766209853741 0.18927324588747596
   rotation -0.10882065430068574 6.449307850549088e-05 -0.9940613970164085 0.001192388298631729
   children [
@@ -2767,7 +2767,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(2) Robot {
   translation 52.14901118005364 50.532276000526664 0.18925685976642515
   rotation -0.7153241256371096 0.6987928127910841 -8.545733636188961e-06 3.1415566636031533
   children [
@@ -2798,7 +2798,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(3) Robot {
   translation 53.84760277720829 8.80546335893156 0.18934615247125086
   rotation -6.0774644249606196e-05 -0.10254486221620458 -0.9947283787745791 0.0011915887828308912
   children [
@@ -2829,7 +2829,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(4) Robot {
   translation 108.46218395076916 8.47568680308868 0.18960369023614665
   rotation 0.5791651286774566 -0.0035646436057570254 -0.8152024576999195 0.000510740706031132
   children [
@@ -2860,7 +2860,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(5) Robot {
   translation 122.71298956682851 46.287878190387495 0.18939365048750112
   rotation 6.105860395002294e-08 0.00010325653824760204 0.9999999946690419 3.1404100000063075
   children [
@@ -2891,7 +2891,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(6) Robot {
   translation 188.1050227266488 8.999012183026622 0.18958075291778342
   rotation 0.00010697110239513521 -0.00010709804774679802 0.9999999885435956 1.5696100114569655
   children [
@@ -2922,7 +2922,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(7) Robot {
   translation 229.3190757946982 10.445347614489117 0.1895631962942933
   rotation 0.000200649359160142 0.00020041093272491655 -0.9999999597876456 1.571985347391913
   children [
@@ -2953,7 +2953,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(8) Robot {
   translation 196.93605740197216 49.04447500095429 0.1893470635494423
   rotation -0.16609365690770078 -0.9861099789396326 8.105988200809271e-05 -3.1414282493822463
   children [
@@ -2984,7 +2984,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(9) Robot {
   translation 3.7593252163208395 -63.357695024707034 0.1895140996996446
   rotation -0.46660698191164257 -0.8844647615771485 -9.97977241423656e-05 -3.1412682489517256
   children [
@@ -3015,7 +3015,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(10) Robot {
   translation 123.6310098686483 -26.12052939565499 0.18937625203028563
   rotation 9.414572090743928e-05 9.403479389014586e-05 -0.9999999911470203 1.5719753160325665
   children [
@@ -3046,7 +3046,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(11) Robot {
   translation 192.49349052593735 -59.99471009341366 0.18945703618999699
   rotation -0.7203701860181285 0.6935897882974394 2.5801552122852984e-05 -3.1413365769283836
   children [
@@ -3077,7 +3077,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(12) Robot {
   translation 228.57860366548638 -23.92793941775283 0.1895455046860396
   rotation 0.7510669809972635 -0.6602260134402423 -3.510642838855307e-05 3.1412712835011907
   children [
@@ -3108,7 +3108,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(13) Robot {
   translation 228.26410086081611 -60.09762814321879 0.1894331212644954
   rotation 0.7113146193220801 -0.7028737318251546 -0.00017160671686433098 -3.1415471523440686
   children [
@@ -3139,7 +3139,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(14) Robot {
   translation 229.37900857129094 -103.97575999879044 0.1893639795184482
   rotation 7.930447842729246e-05 -7.939822654853606e-05 0.9999999937033607 1.5696100062954672
   children [
@@ -3170,7 +3170,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(15) Robot {
   translation 186.09283347953206 -77.24548945796654 0.18930167843818935
   rotation 0.6418926845799251 0.7667944831259361 4.615631532047191e-05 3.1414858750515777
   children [
@@ -3201,7 +3201,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(16) Robot {
   translation 136.39601898087406 -55.47870690271608 0.18953382007080932
   rotation 0.8937840905670352 -0.4484974642876228 0.00015484453656953708 -3.141507372961281
   children [
@@ -3232,7 +3232,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(17) Robot {
   translation 14.728322236943242 -145.97325541893585 0.189559575407113
   rotation 0.000198398149911104 -0.00019863365282559876 0.9999999605914224 1.5696100394085317
   children [
@@ -3263,7 +3263,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(18) Robot {
   translation 190.14544086694607 -125.57013253574753 0.1894230784240889
   rotation 0.0001242966907883378 0.00010767657684323 0.9999999864780437 3.1404121631914417
   children [
@@ -3294,7 +3294,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(19) Robot {
   translation -30.258204566541153 -22.99418191953482 0.18938601685622813
   rotation 0.7517283890864499 -0.6594728269603146 0.0001397943570667781 3.141528072320839
   children [
@@ -3325,7 +3325,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(20) Robot {
   translation -31.107156173082075 17.246010246907694 0.18940560927506422
   rotation -0.7635811019162047 -0.6457119167806302 0.00014602711870545943 -3.141592232814801
   children [
@@ -3356,7 +3356,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(21) Robot {
   translation 42.2641 18.5105 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3387,7 +3387,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(22) Robot {
   translation 17.0315 8.0317 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -3418,7 +3418,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(23) Robot {
   translation 56.5261 37.1962 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -3449,7 +3449,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(24) Robot {
   translation 61.6217 8.4311 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -3480,7 +3480,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(25) Robot {
   translation 77.3853 44.8537 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3511,7 +3511,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(26) Robot {
   translation 91.5538 52.0278 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3542,7 +3542,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(27) Robot {
   translation 118.191 9.2374 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -3573,7 +3573,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(28) Robot {
   translation 100.79 23.4689 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3604,7 +3604,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(29) Robot {
   translation 104.009 46.7069 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -3635,7 +3635,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(30) Robot {
   translation 115.346 37.1245 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -3666,7 +3666,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(31) Robot {
   translation 156.819 8.7363 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -3697,7 +3697,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(32) Robot {
   translation 189.26 23.3689 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3728,7 +3728,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(33) Robot {
   translation 193.199 55.9453 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3759,7 +3759,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(34) Robot {
   translation 134.997 54.126 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3790,7 +3790,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(35) Robot {
   translation 232.51 64.1513 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3821,7 +3821,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(36) Robot {
   translation 234.137 13.7102 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -3852,7 +3852,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(37) Robot {
   translation 3.58397 -40.2246 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3883,7 +3883,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(38) Robot {
   translation 96.569 -44.5138 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3914,7 +3914,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(39) Robot {
   translation 194.661 -8.16922 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3945,7 +3945,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(40) Robot {
   translation 151.423 -50.5666 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -3976,7 +3976,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(41) Robot {
   translation 137.323 -58.2388 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4007,7 +4007,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(42) Robot {
   translation 137.169 -10.6179 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -4038,7 +4038,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(43) Robot {
   translation 231.847 -29.7487 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4069,7 +4069,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(44) Robot {
   translation 268.705 -31.5714 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4100,7 +4100,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(45) Robot {
   translation 263.595 -57.9744 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4131,7 +4131,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(46) Robot {
   translation 248.618 -45.5251 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -4162,7 +4162,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(47) Robot {
   translation 297.08 -60.5617 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -4193,7 +4193,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(48) Robot {
   translation 317.469 -18.5947 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -4224,7 +4224,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(49) Robot {
   translation 183.888 -87.7848 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4255,7 +4255,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(50) Robot {
   translation 192.266 -78.5735 0.13
   rotation 1.55955e-18 3.31972e-17 1 1.56961
   children [
@@ -4286,7 +4286,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(51) Robot {
   translation 227.692 -81.3743 0.13
   rotation 1.55955e-18 3.31972e-17 1 1.56961
   children [
@@ -4317,7 +4317,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(52) Robot {
   translation 252.869 -69.8333 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -4348,7 +4348,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(53) Robot {
   translation 84.8626 -133.833 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4379,7 +4379,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(54) Robot {
   translation 138.349 -128.265 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -4410,7 +4410,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(55) Robot {
   translation 52.0139 -132.371 0.13
   rotation 1.73681e-17 1.58094e-17 1 3.1404
   children [
@@ -4441,7 +4441,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(56) Robot {
   translation -29.5039 -139.323 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4472,7 +4472,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(57) Robot {
   translation -28.9853 -123.671 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -4503,7 +4503,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(58) Robot {
   translation -29.6609 -10.54 0.13
   rotation 1.55955e-18 3.31972e-17 1 1.56961
   children [
@@ -4534,7 +4534,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(59) Robot {
   translation -28.6002 23.66 0.13
   rotation 3.31578e-17 -1.5577e-18 1 -1.5719853071795864
   children [
@@ -4565,7 +4565,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(60) Robot {
   translation -63.8041 11.953 0.13
   rotation -2.65932e-14 2.92149e-14 -1 0.00118899
   children [
@@ -6309,152 +6309,152 @@ DEF car_rangerover(9) RangeRoverSportSVRSimple {
   rotation 0 0 1 1.5708
   name "vehicle(29)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(10) RangeRoverSportSVRSimple {
   translation -18.1702 38.2493 0.4
   rotation 0 0 -1 1.5708
   name "vehicle(194)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(11) RangeRoverSportSVRSimple {
   translation -22.6401 42.9294 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(195)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(12) RangeRoverSportSVRSimple {
   translation -6.04029 27.4793 0.4
   rotation 0 0 1 1.5708
   name "vehicle(196)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(13) RangeRoverSportSVRSimple {
   translation -6.36008 -27.8607 0.4
   rotation 0 0 1 1.5708
   name "vehicle(197)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(14) RangeRoverSportSVRSimple {
   translation -2.82 -54.0009 0.4
   rotation 0 0 1 1.5708
   name "vehicle(198)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(15) RangeRoverSportSVRSimple {
   translation -18.82 -85.641 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(199)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(16) RangeRoverSportSVRSimple {
   translation -15.35 -28.6408 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(200)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(17) RangeRoverSportSVRSimple {
   translation 45.47 -99.5406 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(201)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(18) RangeRoverSportSVRSimple {
   translation 84.87 -102.67 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(202)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(19) RangeRoverSportSVRSimple {
   translation -6.35966 -146.261 0.4
   rotation 0 0 1 1.5708
   name "vehicle(203)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(20) RangeRoverSportSVRSimple {
   translation 172.82 -110.87 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(204)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(21) RangeRoverSportSVRSimple {
   translation 159.63 -118.66 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(205)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(22) RangeRoverSportSVRSimple {
   translation 223.88 -133.64 0.4
   rotation 0 0 1 1.5708
   name "vehicle(206)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(23) RangeRoverSportSVRSimple {
   translation 212.64 -147.89 0.4
   rotation 0 0 1 1.5708
   name "vehicle(207)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(24) RangeRoverSportSVRSimple {
   translation 314.49 -2.86941 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(208)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(25) RangeRoverSportSVRSimple {
   translation 250.51 0.62013 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(209)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(26) RangeRoverSportSVRSimple {
   translation 273.33 -60.7299 0.4
   rotation 0 0 1 1.5708
   name "vehicle(210)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(27) RangeRoverSportSVRSimple {
   translation 204.88 -37.6601 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(211)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(28) RangeRoverSportSVRSimple {
   translation 224.04 -29.17 0.4
   rotation 0 0 1 1.5708
   name "vehicle(212)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(29) RangeRoverSportSVRSimple {
   translation 220.76 -24.6601 0.4
   rotation 0 0 1 1.5708
   name "vehicle(213)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(30) RangeRoverSportSVRSimple {
   translation 205.64 21.4599 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(214)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(31) RangeRoverSportSVRSimple {
   translation 146.42 4.49954 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(215)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(32) RangeRoverSportSVRSimple {
   translation 48.4496 67.8295 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(216)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(33) RangeRoverSportSVRSimple {
   translation 75.44 43.4493 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(217)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(34) RangeRoverSportSVRSimple {
   translation 142.96 -54.0003 0.4
   rotation 0 0 1 1.5708
   name "vehicle(218)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(35) RangeRoverSportSVRSimple {
   translation 128.34 -16.3504 0.4
   rotation 0 0 1 1.5708
   name "vehicle(219)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(36) RangeRoverSportSVRSimple {
   translation 168.35 -68.0701 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(220)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(37) RangeRoverSportSVRSimple {
   translation 132.44 27.5897 0.4
   rotation 0 0 1 1.5708
   name "vehicle(221)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(38) RangeRoverSportSVRSimple {
   translation 113.94 43.3596 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(222)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(39) RangeRoverSportSVRSimple {
   translation 180.23 41.9499 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(223)"
@@ -6465,241 +6465,241 @@ DEF car_bmw(1) BmwX5Simple {
   color 0.5 0.26 0
   name "vehicle(33)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(2) BmwX5Simple {
   translation -14.61 23.88 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(34)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(3) BmwX5Simple {
   translation -22.7 36.8 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(35)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(4) BmwX5Simple {
   translation -14.59 53.66 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(36)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(5) BmwX5Simple {
   translation -6.75 -21.56 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(37)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(6) BmwX5Simple {
   translation -38.44 -1.22992 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(38)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(7) BmwX5Simple {
   translation -22.5799 -80.88 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(39)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(8) BmwX5Simple {
   translation -18.3103 -34.86 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(40)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(9) BmwX5Simple {
   translation 44.8998 -92.3 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(41)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(10) BmwX5Simple {
   translation 73.1198 -93.0401 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(42)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(11) BmwX5Simple {
   translation 7.70969 -99.95 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(43)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(12) BmwX5Simple {
   translation -6.54038 -135.45 0.4
   rotation 0 0 1 1.57079
   color 0.5 0.26 0
   name "vehicle(44)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(13) BmwX5Simple {
   translation -9.89037 -163.48 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(45)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(14) BmwX5Simple {
   translation 168.79 -118.581 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(46)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(15) BmwX5Simple {
   translation 154.94 -107.131 0.4
   rotation 0 0 -1 5.92017e-06
   color 0.5 0.26 0
   name "vehicle(47)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(16) BmwX5Simple {
   translation 21.3097 -115.29 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(48)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(17) BmwX5Simple {
   translation 220.27 -140.76 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(49)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(18) BmwX5Simple {
   translation 205.35 -136.87 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(50)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(19) BmwX5Simple {
   translation 216.67 -174.51 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(51)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(20) BmwX5Simple {
   translation 286.26 -15.6509 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(52)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(21) BmwX5Simple {
   translation 253.15 -3.0706 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(53)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(22) BmwX5Simple {
   translation 269.95 5.07935 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(54)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(23) BmwX5Simple {
   translation 216.76 -22.3305 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(55)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(24) BmwX5Simple {
   translation 220.37 -77.3805 0.4
   rotation 0 0 1 1.57079
   color 0.5 0.26 0
   name "vehicle(56)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(25) BmwX5Simple {
   translation 223.88 -35.8306 0.4
   rotation 0 0 1 1.57079
   color 0.5 0.26 0
   name "vehicle(57)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(26) BmwX5Simple {
   translation 205.23 -73.9905 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(58)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(27) BmwX5Simple {
   translation 197.96 -84.5205 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(59)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(28) BmwX5Simple {
   translation 308.53 -66.0209 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(60)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(29) BmwX5Simple {
   translation 257.9 -66.5106 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(61)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(30) BmwX5Simple {
   translation 205.54 36.4495 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(62)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(31) BmwX5Simple {
   translation 208.98 65.8496 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(63)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(32) BmwX5Simple {
   translation 147.38 -1.68029 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(64)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(33) BmwX5Simple {
   translation 170.25 7.63964 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(65)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(34) BmwX5Simple {
   translation 38.2 -68.3697 0.4
   rotation 0 0 -1 5.92017e-06
   color 0.5 0.26 0
   name "vehicle(66)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(35) BmwX5Simple {
   translation 148.23 -68.3603 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(67)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(36) BmwX5Simple {
   translation 131.94 -25.5003 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(68)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(37) BmwX5Simple {
   translation 47.1901 47.23 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(69)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(38) BmwX5Simple {
   translation 68.6001 42.3599 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(70)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(39) BmwX5Simple {
   translation 155.74 43.6396 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(71)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(40) BmwX5Simple {
   translation 22.65 4.89004 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(72)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(41) BmwX5Simple {
   translation 83.34 -1.7101 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
@@ -6710,202 +6710,202 @@ DEF car_CitroenCZero(1) CitroenCZeroSimple {
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(31)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(2) CitroenCZeroSimple {
   translation -22.89 23.97 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(74)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(3) CitroenCZeroSimple {
   translation -15.01 29.6 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(75)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(4) CitroenCZeroSimple {
   translation -14.01 42.08 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(76)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(5) CitroenCZeroSimple {
   translation -43.82 4.73005 0.4
   rotation 0 0 -1 5.61305e-06
   name "vehicle(77)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(6) CitroenCZeroSimple {
   translation -2.83001 -39.07 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(78)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(7) CitroenCZeroSimple {
   translation -19.1101 -52.29 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(79)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(8) CitroenCZeroSimple {
   translation -22.8301 -86.68 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(80)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(9) CitroenCZeroSimple {
   translation 10.4597 -103.13 0.4
   rotation 0 0 1 3.14159
   name "vehicle(81)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(10) CitroenCZeroSimple {
   translation 141.85 -99.12 0.4
   rotation 0 0 1 3.14159
   name "vehicle(82)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(11) CitroenCZeroSimple {
   translation 103.83 -95.4202 0.4
   rotation 0 0 1 3.14159
   name "vehicle(83)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(12) CitroenCZeroSimple {
   translation -2.27034 -151.8 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(84)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(13) CitroenCZeroSimple {
   translation -10.7303 -143.79 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(85)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(14) CitroenCZeroSimple {
   translation 154.11 -110.381 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(86)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(15) CitroenCZeroSimple {
   translation 172.79 -114.49 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(87)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(16) CitroenCZeroSimple {
   translation 130.15 -110.55 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(88)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(17) CitroenCZeroSimple {
   translation 212.92 -141.57 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(89)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(18) CitroenCZeroSimple {
   translation 224.16 -147.03 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(90)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(19) CitroenCZeroSimple {
   translation 216.4 -151.931 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(91)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(20) CitroenCZeroSimple {
   translation 260.64 4.45929 0.4
   rotation 0 0 1 3.14159
   name "vehicle(92)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(21) CitroenCZeroSimple {
   translation 316.66 -7.8408 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(93)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(22) CitroenCZeroSimple {
   translation 326.49 5.30913 0.4
   rotation 0 0 1 3.14159
   name "vehicle(94)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(23) CitroenCZeroSimple {
   translation 212.3 -38.1306 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(95)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(24) CitroenCZeroSimple {
   translation 213.31 -84.8806 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(96)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(25) CitroenCZeroSimple {
   translation 216.78 -16.6405 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(97)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(26) CitroenCZeroSimple {
   translation 201.39 -85.3205 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(98)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(27) CitroenCZeroSimple {
   translation 205.61 -63.3205 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(99)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(28) CitroenCZeroSimple {
   translation 268.81 -38.9907 0.4
   rotation 0 0 1 3.14159
   name "vehicle(100)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(29) CitroenCZeroSimple {
   translation 273.2 -66.4708 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(101)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(30) CitroenCZeroSimple {
   translation 202.16 20.8395 0.4
   rotation 0 0 -1 1.5708
   name "vehicle(102)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(31) CitroenCZeroSimple {
   translation 216.48 35.5495 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(103)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(32) CitroenCZeroSimple {
   translation 168.17 3.9896 0.4
   rotation 0 0 1 3.14159
   name "vehicle(104)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(33) CitroenCZeroSimple {
   translation 147.11 1.17963 0.4
   rotation 0 0 1 3.14159
   name "vehicle(105)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(34) CitroenCZeroSimple {
   translation 111.55 -65.1702 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(106)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(35) CitroenCZeroSimple {
   translation 118.33 -68.2903 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(107)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(36) CitroenCZeroSimple {
   translation 128.38 -23.4403 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(108)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(37) CitroenCZeroSimple {
   translation 48.0002 62.0599 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(109)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(38) CitroenCZeroSimple {
   translation 95.8401 72.9598 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(110)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(39) CitroenCZeroSimple {
   translation 126.98 40.7697 0.4
   rotation 0 0 1 3.14159
   name "vehicle(111)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(40) CitroenCZeroSimple {
   translation 13.42 3.99001 0.4
   rotation 0 0 1 3.14159
   name "vehicle(112)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(41) CitroenCZeroSimple {
   translation 31.51 -5.15003 0.4
   rotation 0 0 1 3.14159
   name "vehicle(113)"
@@ -6915,202 +6915,202 @@ DEF car_lincolnMKZ(1) LincolnMKZSimple {
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(32)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(2) LincolnMKZSimple {
   translation -18.71 50.37 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(114)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(3) LincolnMKZSimple {
   translation -14.45 47.61 0.4
   rotation 0 0 -1 1.5708
   name "vehicle(115)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(4) LincolnMKZSimple {
   translation -51.11 1.79008 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(116)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(5) LincolnMKZSimple {
   translation -6.46 -68.93 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(117)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(6) LincolnMKZSimple {
   translation -10.24 -22.7399 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(118)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(7) LincolnMKZSimple {
   translation -22.6201 -59.11 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(119)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(8) LincolnMKZSimple {
   translation -14.6101 -70.86 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(120)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(9) LincolnMKZSimple {
   translation 15.8997 -94.7601 0.4
   rotation 0 0 1 3.14159
   name "vehicle(121)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(10) LincolnMKZSimple {
   translation 112.61 -100.05 0.4
   rotation 0 0 1 3.14159
   name "vehicle(122)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(11) LincolnMKZSimple {
   translation 5.24975 -91.93 0.4
   rotation 0 0 1 3.14159
   name "vehicle(123)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(12) LincolnMKZSimple {
   translation -6.45036 -158.92 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(124)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(13) LincolnMKZSimple {
   translation -10.1303 -135.5 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(125)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(14) LincolnMKZSimple {
   translation 47.12 -107.601 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(126)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(15) LincolnMKZSimple {
   translation 150.29 -114.861 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(127)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(16) LincolnMKZSimple {
   translation 164.09 -110.781 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(128)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(17) LincolnMKZSimple {
   translation 220.51 -148.37 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(129)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(18) LincolnMKZSimple {
   translation 213.09 -134.58 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(130)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(19) LincolnMKZSimple {
   translation 223.86 -140.33 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(131)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(20) LincolnMKZSimple {
   translation 241.97 0.899349 0.4
   rotation 0 0 1 3.14159
   name "vehicle(132)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(21) LincolnMKZSimple {
   translation 262.99 1.03929 0.4
   rotation 0 0 1 3.14159
   name "vehicle(133)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(22) LincolnMKZSimple {
   translation 250.81 4.87933 0.4
   rotation 0 0 1 3.14159
   name "vehicle(134)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(23) LincolnMKZSimple {
   translation 224.15 -22.1506 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(135)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(24) LincolnMKZSimple {
   translation 213.17 -19.1706 0.4
   rotation 0 0 1 1.57079
   name "vehicle(136)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(25) LincolnMKZSimple {
   translation 219.94 -32.0306 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(137)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(26) LincolnMKZSimple {
   translation 208.98 -83.62 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(138)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(27) LincolnMKZSimple {
   translation 197.67 -20.2905 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(139)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(28) LincolnMKZSimple {
   translation 298.83 -67.0209 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(140)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(29) LincolnMKZSimple {
   translation 376.49 -67.2914 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(141)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(30) LincolnMKZSimple {
   translation 197.8 42.7695 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(142)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(31) LincolnMKZSimple {
   translation 208.79 30.4495 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(143)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(32) LincolnMKZSimple {
   translation 141.12 1.36963 0.4
   rotation 0 0 1 3.14159
   name "vehicle(144)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(33) LincolnMKZSimple {
   translation 154.72 -1.49038 0.4
   rotation 0 0 1 3.14159
   name "vehicle(145)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(34) LincolnMKZSimple {
   translation 132.29 -18.6603 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(146)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(35) LincolnMKZSimple {
   translation 99.28 -64.9002 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(147)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(36) LincolnMKZSimple {
   translation 185.9 -64.6306 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(148)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(37) LincolnMKZSimple {
   translation 47.2901 14.1699 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(149)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(38) LincolnMKZSimple {
   translation 91.1701 42.6898 0.4
   rotation 0 0 1 3.14159
   name "vehicle(150)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(39) LincolnMKZSimple {
   translation 128.54 21.3997 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(151)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(40) LincolnMKZSimple {
   translation 7.33 4.83003 0.4
   rotation 0 0 1 3.14159
   name "vehicle(152)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(41) LincolnMKZSimple {
   translation 36.64 5.51995 0.4
   rotation 0 0 1 3.14159
   name "vehicle(153)"
@@ -7126,241 +7126,241 @@ DEF car_bsnzs(2) MercedesBenzSprinterSimple {
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(1)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(3) MercedesBenzSprinterSimple {
   translation -22.87 52.09 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(2)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(4) MercedesBenzSprinterSimple {
   translation -39.34 -4.75994 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(3)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(5) MercedesBenzSprinterSimple {
   translation -9.93001 -48.98 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(4)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(6) MercedesBenzSprinterSimple {
   translation -2.03 -23.2999 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(5)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(7) MercedesBenzSprinterSimple {
   translation -18.5201 -73.74 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(6)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(8) MercedesBenzSprinterSimple {
   translation -14.5101 -77.62 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(7)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(9) MercedesBenzSprinterSimple {
   translation 8.0999 -96.07 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(8)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(10) MercedesBenzSprinterSimple {
   translation 132.65 -100.33 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(9)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(11) MercedesBenzSprinterSimple {
   translation 21.4098 -92.46 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(10)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(12) MercedesBenzSprinterSimple {
   translation -7.16032 -168.5 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(11)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(13) MercedesBenzSprinterSimple {
   translation -1.92033 -143.71 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(12)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(14) MercedesBenzSprinterSimple {
   translation 164.65 -114.73 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(13)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(15) MercedesBenzSprinterSimple {
   translation 170.99 -107.661 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(14)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(16) MercedesBenzSprinterSimple {
   translation 70.9297 -114.98 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(15)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(17) MercedesBenzSprinterSimple {
   translation 213.01 -155.68 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(16)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(18) MercedesBenzSprinterSimple {
   translation 216.62 -135.63 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(17)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(19) MercedesBenzSprinterSimple {
   translation 201.31 -175.36 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(18)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(20) MercedesBenzSprinterSimple {
   translation 243.16 -3.21062 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(19)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(21) MercedesBenzSprinterSimple {
   translation 279.3 -11.7507 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(20)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(22) MercedesBenzSprinterSimple {
   translation 350.72 -3.41094 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(21)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(23) MercedesBenzSprinterSimple {
   translation 224.41 -57.6706 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(22)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(24) MercedesBenzSprinterSimple {
   translation 219.83 -42.0305 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(23)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(25) MercedesBenzSprinterSimple {
   translation 213.01 -27.6605 0.4
   rotation 0 0 1 1.57079
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(24)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(26) MercedesBenzSprinterSimple {
   translation 205.49 -83.07 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(25)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(27) MercedesBenzSprinterSimple {
   translation 197.93 -74.6405 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(26)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(28) MercedesBenzSprinterSimple {
   translation 273.64 -51.1507 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(27)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(29) MercedesBenzSprinterSimple {
   translation 330.18 -65.8411 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(28)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(30) MercedesBenzSprinterSimple {
   translation 197.99 24.5794 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(29)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(31) MercedesBenzSprinterSimple {
   translation 205.51 29.0594 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(30)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(32) MercedesBenzSprinterSimple {
   translation 141.37 -2.06033 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(31)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(33) MercedesBenzSprinterSimple {
   translation 155.13 4.69962 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(32)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(34) MercedesBenzSprinterSimple {
   translation 59.44 -65.0101 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(33)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(35) MercedesBenzSprinterSimple {
   translation 182.93 -68.1006 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(34)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(36) MercedesBenzSprinterSimple {
   translation 143.49 -40.7203 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(35)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(37) MercedesBenzSprinterSimple {
   translation 58.9301 43.0899 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(36)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(38) MercedesBenzSprinterSimple {
   translation 96.7901 19.3098 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(37)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(39) MercedesBenzSprinterSimple {
   translation 129.27 63.5397 0.4
   rotation 0 0 1 1.57079
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(38)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(40) MercedesBenzSprinterSimple {
   translation 189.57 42.2295 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(39)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(41) MercedesBenzSprinterSimple {
   translation 106.45 -4.16021 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(40)"
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(42) MercedesBenzSprinterSimple {
   translation 44.85 -3.41003 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
@@ -7371,202 +7371,202 @@ DEF car_toyota(1) ToyotaPriusSimple {
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(30)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(2) ToyotaPriusSimple {
   translation -22.79 30.51 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(154)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(3) ToyotaPriusSimple {
   translation -14.6 35.57 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(155)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(4) ToyotaPriusSimple {
   translation -2.17 -30.1999 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(156)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(5) ToyotaPriusSimple {
   translation -10.34 -13.89 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(157)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(6) ToyotaPriusSimple {
   translation -58.6 -1.43987 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(158)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(7) ToyotaPriusSimple {
   translation -22.6001 -65.33 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(159)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(8) ToyotaPriusSimple {
   translation -14.2701 -84.97 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(160)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(9) ToyotaPriusSimple {
   translation 5.72975 -103.23 0.4
   rotation 0 0 1 3.14159
   name "vehicle(161)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(10) ToyotaPriusSimple {
   translation 175.07 -91.7004 0.4
   rotation 0 0 1 3.14159
   name "vehicle(162)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(11) ToyotaPriusSimple {
   translation 11.6598 -92.04 0.4
   rotation 0 0 1 3.14159
   name "vehicle(163)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(12) ToyotaPriusSimple {
   translation -6.1503 -141.26 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(164)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(13) ToyotaPriusSimple {
   translation -6.49032 -152.73 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(165)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(14) ToyotaPriusSimple {
   translation 157.12 -114.76 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(166)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(15) ToyotaPriusSimple {
   translation 163.02 -107.021 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(167)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(16) ToyotaPriusSimple {
   translation 112.18 -110.72 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(168)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(17) ToyotaPriusSimple {
   translation 220.41 -134.54 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(169)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(18) ToyotaPriusSimple {
   translation 220.51 -154.771 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(170)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(19) ToyotaPriusSimple {
   translation 216.5 -145.33 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(171)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(20) ToyotaPriusSimple {
   translation 277.02 1.01929 0.4
   rotation 0 0 1 3.14159
   name "vehicle(172)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(21) ToyotaPriusSimple {
   translation 242.73 4.83936 0.4
   rotation 0 0 1 3.14159
   name "vehicle(173)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(22) ToyotaPriusSimple {
   translation 264.23 -3.2507 0.4
   rotation 0 0 1 3.14159
   name "vehicle(174)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(23) ToyotaPriusSimple {
   translation 216.39 -36.4605 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(175)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(24) ToyotaPriusSimple {
   translation 216.68 -29.4406 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(176)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(25) ToyotaPriusSimple {
   translation 220.05 -17.3006 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(177)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(26) ToyotaPriusSimple {
   translation 201.45 -44.2905 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(178)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(27) ToyotaPriusSimple {
   translation 208.67 -75.1405 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(179)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(28) ToyotaPriusSimple {
   translation 234.91 -39.6207 0.4
   rotation 0 0 1 3.14159
   name "vehicle(180)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(29) ToyotaPriusSimple {
   translation 352 -67.3409 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(181)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(30) ToyotaPriusSimple {
   translation 198.38 33.0995 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(182)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(31) ToyotaPriusSimple {
   translation 208.99 21.6395 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(183)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(32) ToyotaPriusSimple {
   translation 139.32 4.26965 0.4
   rotation 0 0 1 3.14159
   name "vehicle(184)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(33) ToyotaPriusSimple {
   translation 152.79 1.68964 0.4
   rotation 0 0 1 3.14159
   name "vehicle(185)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(34) ToyotaPriusSimple {
   translation 117.46 -65.4002 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(186)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(35) ToyotaPriusSimple {
   translation 177.63 -65.1405 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(187)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(36) ToyotaPriusSimple {
   translation 132.71 -44.1303 0.4
   rotation 0 0 1 1.57079
   name "vehicle(188)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(37) ToyotaPriusSimple {
   translation 96.2201 56.5198 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(189)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(38) ToyotaPriusSimple {
   translation 49.3101 30.7599 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(190)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(39) ToyotaPriusSimple {
   translation 132.73 52.2097 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(191)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(40) ToyotaPriusSimple {
   translation 21.85 -5.06 0.4
   rotation 0 0 1 3.14159
   name "vehicle(192)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(41) ToyotaPriusSimple {
   translation 7.91 -5.34997 0.4
   rotation 0 0 1 3.14159
   name "vehicle(193)"
@@ -7902,7 +7902,7 @@ DEF building_hollow(2) HollowBuilding {
   translation 24 58 0
   name "hollow building(3)"
 }
-DEF human_ROBERT Robot {
+DEF human_ROBERT(61) Robot {
   translation -30.8264 -124.535 0.18970456143186065
   rotation 3.1325115381030703e-14 2.831675878244871e-13 -0.9999999999999999 0.0011853071795862656
   children [
@@ -7933,7 +7933,7 @@ DEF human_ROBERT Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(1) Robot {
   translation 40.2199 8.55032 0.18981541953686198
   rotation -1.112678340474105e-16 8.615119678700685e-17 1 -3.141585307179586
   children [
@@ -7958,7 +7958,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(2) Robot {
   translation 91.63726406209291 19.100300053096422 0.1894499791827423
   rotation -9.00754287179151e-05 -3.273030329089575e-10 0.9999999959432087 -3.1415853071796036
   children [
@@ -7983,7 +7983,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(3) Robot {
   translation 92.03310472486399 51.76560899552121 0.18958124813320787
   rotation 0.9586023684397215 0.28474811720754406 -9.470224591198087e-05 -3.141275877506302
   children [
@@ -8008,7 +8008,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(4) Robot {
   translation 111.20000002121971 45.55461975189949 0.18946155893861572
   rotation -7.380998398880705e-05 7.380971320937365e-05 0.9999999945521061 1.5708000054478932
   children [
@@ -8033,7 +8033,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(5) Robot {
   translation 122.51354384819203 7.946819727129209 0.1895517820005983
   rotation 0.9999213249776308 -0.01254304397681085 0.00012610620662872494 3.1414505667571633
   children [
@@ -8058,7 +8058,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(6) Robot {
   translation 132.2933346494203 64.51154546157012 0.1896239346824381
   rotation 0.8670976797829114 -0.4981381086588437 0.00019600224959332365 -3.1415707971970654
   children [
@@ -8083,7 +8083,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(7) Robot {
   translation 192.209999947446 11.540800496839985 0.18953170129569197
   rotation 0.9996961770944209 2.6538187534097815e-06 0.024648600279878762 0.00021531362852681327
   children [
@@ -8108,7 +8108,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(8) Robot {
   translation 229.2798656127988 30.45212078555751 0.1895007354377889
   rotation -8.849181685929942e-05 9.029672112149537e-05 0.9999999920078503 1.5708000152026613
   children [
@@ -8133,7 +8133,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(9) Robot {
   translation 50.700749457889856 -7.091727187305474 0.18967656262136212
   rotation 0.3499847241954365 0.936755386071528 -0.00019873557014266424 3.1415345272597865
   children [
@@ -8158,7 +8158,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(10) Robot {
   translation 123.75068060064555 -72.30277533794339 0.1895094575405929
   rotation -0.5617336895410928 0.8273181132464764 3.910040666938443e-05 3.1412867915913485
   children [
@@ -8183,7 +8183,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(11) Robot {
   translation 136.29313840319912 -53.25930003641146 0.18949198090660047
   rotation -2.6515168340249267e-06 0.9994582546708648 0.032911960792970145 0.00016125382526494924
   children [
@@ -8208,7 +8208,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(12) Robot {
   translation 187.4900000343914 -10.33864780905173 0.18943333963381614
   rotation -0.0001101081398660267 0.00011010773375209413 0.9999999878762423 1.5708000121237555
   children [
@@ -8233,7 +8233,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(13) Robot {
   translation 266.7076155732895 -21.501623933433564 0.18974477357395536
   rotation 0.42827418719316784 -0.9036488364732247 3.0407546171481853e-05 3.141395372531883
   children [
@@ -8258,7 +8258,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(14) Robot {
   translation 229.91999995132554 -49.33127423698412 0.18948541195728863
   rotation 0.0001191141582153581 0.00011911497471361994 -0.9999999858117199 1.5707900141885074
   children [
@@ -8283,7 +8283,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(15) Robot {
   translation 0.21242725581193217 -82.7256751418537 0.18950956656844553
   rotation 0.41238768471328563 0.9110084453646683 9.985522555884504e-05 -3.14156309638527
   children [
@@ -8308,7 +8308,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(16) Robot {
   translation 232.42291233576245 -86.91144711052196 0.18969102530024395
   rotation -0.9202187440907146 0.3914044462643596 0.00014989529003798515 3.1413873191810526
   children [
@@ -8333,7 +8333,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(17) Robot {
   translation 49.45090008220622 -126.3311811905581 0.1894918897994028
   rotation -4.0906121711259624e-10 0.00011113020412072397 0.999999993825039 -3.1415853071796365
   children [
@@ -8358,7 +8358,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(18) Robot {
   translation 186.8611613633407 -123.0360218328881 0.1897583046511464
   rotation -0.7441942235167904 -0.66796328787798 -6.108584286524146e-05 3.1414721525698157
   children [
@@ -8383,7 +8383,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(19) Robot {
   translation 12.8899 9.3999 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8408,7 +8408,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(20) Robot {
   translation 41.34 14.8501 0.13
   rotation 4.31287e-17 -3.43188e-19 1 1.5708
   children [
@@ -8433,7 +8433,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(21) Robot {
   translation 75.83 9.7403 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8458,7 +8458,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(22) Robot {
   translation 54.15 9.5401 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -8483,7 +8483,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(23) Robot {
   translation 84.5598 47.4301 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8508,7 +8508,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(24) Robot {
   translation 63.2898 46.1304 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -8533,7 +8533,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(25) Robot {
   translation 122.03 8.9804 0.13
   rotation -3.43189e-19 -4.31289e-17 1 -1.5707953071795862
   children [
@@ -8558,7 +8558,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(26) Robot {
   translation 112.14 37.6702 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8583,7 +8583,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(27) Robot {
   translation 125.4 68.9798 0.13
   rotation -3.43189e-19 -4.31289e-17 1 -1.5707953071795862
   children [
@@ -8608,7 +8608,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(28) Robot {
   translation 100.48 45.6598 0.13
   rotation -3.43189e-19 -4.31289e-17 1 -1.5707953071795862
   children [
@@ -8633,7 +8633,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(29) Robot {
   translation 176.49 46.0106 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8658,7 +8658,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(30) Robot {
   translation 185.68 45.4409 0.13
   rotation 4.31287e-17 -3.43188e-19 1 1.5708
   children [
@@ -8683,7 +8683,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(31) Robot {
   translation 259.51 12.9214 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8708,7 +8708,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(32) Robot {
   translation 236.7 10.2416 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -8733,7 +8733,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(33) Robot {
   translation 193.13 12.9909 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8758,7 +8758,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(34) Robot {
   translation 144.09 10.2006 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8783,7 +8783,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(35) Robot {
   translation 108.49 -26.3897 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8808,7 +8808,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(36) Robot {
   translation 5.3403 -45.6402 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8833,7 +8833,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(37) Robot {
   translation 120.48 -55.3696 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8858,7 +8858,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(38) Robot {
   translation 190.25 -16.2594 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -8883,7 +8883,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(39) Robot {
   translation 140.49 -21.4696 0.13
   rotation 4.31287e-17 -3.43188e-19 1 1.5708
   children [
@@ -8908,7 +8908,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(40) Robot {
   translation 173.42 -57.8589 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -8933,7 +8933,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(41) Robot {
   translation 246.12 -19.3783 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -8958,7 +8958,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(42) Robot {
   translation 230.53 -27.229 0.13
   rotation 4.31287e-17 -3.43188e-19 1 1.5708
   children [
@@ -8983,7 +8983,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(43) Robot {
   translation 184.02 -83.8192 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9008,7 +9008,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(44) Robot {
   translation 7.5604 -75.6803 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9033,7 +9033,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(45) Robot {
   translation 263.09 -62.4189 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9058,7 +9058,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(46) Robot {
   translation 243.42 -44.579 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -9083,7 +9083,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(47) Robot {
   translation 383.3 -59.6481 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -9108,7 +9108,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(48) Robot {
   translation 282.42 -19.239 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -9133,7 +9133,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(49) Robot {
   translation 230.161 -124.319 0.13
   rotation -3.43189e-19 -4.31289e-17 1 -1.5707953071795862
   children [
@@ -9158,7 +9158,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(50) Robot {
   translation 231.89 -76.0992 0.13
   rotation 4.31287e-17 -3.43188e-19 1 1.5708
   children [
@@ -9183,7 +9183,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(51) Robot {
   translation 187.291 -121.969 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9208,7 +9208,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(52) Robot {
   translation 63.9209 -153.53 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9233,7 +9233,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(53) Robot {
   translation 183.151 -168.669 0.13
   rotation 4.31287e-17 -3.43188e-19 1 1.5708
   children [
@@ -9258,7 +9258,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(54) Robot {
   translation 86.9508 -135.519 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -9283,7 +9283,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(55) Robot {
   translation -39.8494 -121.83 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9308,7 +9308,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(56) Robot {
   translation -30.2896 -62.8704 0.13
   rotation 4.31287e-17 -3.43196e-19 1 1.5708
   children [
@@ -9333,7 +9333,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(57) Robot {
   translation -32.2898 -11.4404 0.13
   rotation 2.13928e-17 -2.1736e-17 1 -3.1415853071795863
   children [
@@ -9358,7 +9358,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(58) Robot {
   translation -53.9201 26.2294 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9383,7 +9383,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(59) Robot {
   translation -28.92 15.5696 0.13
   rotation -8.19117e-12 -8.06184e-12 -1 -5.307179586466759e-06
   children [
@@ -9408,7 +9408,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SANDRA Robot {
+DEF human_SANDRA(60) Robot {
   translation -30.13 -13.2001 0.13
   rotation 2.9733365955361237e-17 -2.3659787741149413e-19 1 1.5708000000000004
   children [
@@ -9433,7 +9433,7 @@ DEF human_SANDRA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(1) Robot {
   translation 41.4365 7.75155 0.1898892523408804
   rotation -1.7172680074870634e-11 4.50008369067184e-11 1 5.307179586572813e-06
   children [
@@ -9460,7 +9460,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(2) Robot {
   translation 53.701085019016276 47.02129998428364 0.1897690857635913
   rotation -0.00016077824856359878 0.00016077808463775285 -0.9999999741503808 1.5707953330292048
   children [
@@ -9487,7 +9487,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(3) Robot {
   translation 73.34700001005496 7.5216654003713534 0.18959234909936618
   rotation -9.458131689095846e-05 -9.458141830902659e-05 -0.9999999910543649 1.570795316125243
   children [
@@ -9514,7 +9514,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(4) Robot {
   translation 100.8033870054187 45.34200005419793 0.18955636044992408
   rotation -7.267338304197727e-05 -2.6620371711849416e-10 0.9999999973592898 -3.1415853071796023
   children [
@@ -9541,7 +9541,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(5) Robot {
   translation 135.4849998825796 55.27547194817499 0.1896000005068158
   rotation 9.975841980787118e-05 -9.975752330873551e-05 0.9999999900483469 1.5708053171312364
   children [
@@ -9568,7 +9568,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(6) Robot {
   translation 109.42600001205624 37.86942190772652 0.18949289047520468
   rotation -0.9989857791451743 -2.6438036450573517e-06 0.04502680378084978 0.0001178671176897518
   children [
@@ -9595,7 +9595,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(7) Robot {
   translation 155.74998100218912 8.422409242569092 0.18974646473979284
   rotation -0.7064206608250247 0.707792224166491 0.00013179145320681891 -3.141316994221859
   children [
@@ -9622,7 +9622,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(8) Robot {
   translation 250.9870041692383 10.082999938045363 0.189541445450365
   rotation 0.00012161661146340527 3.9084992251447444e-10 0.9999999926047 -3.141585307179212
   children [
@@ -9649,7 +9649,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(9) Robot {
   translation 125.34838812060234 -8.988694015821675 0.1894827149121776
   rotation -0.4299742679407471 0.9028411410404099 -5.434767055044987e-05 3.141508027737735
   children [
@@ -9676,7 +9676,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(10) Robot {
   translation 98.71649994732964 -9.268374648638725 0.18956970680324492
   rotation 0.9996893049112159 2.652107696187788e-06 0.024925762557970542 0.00021291944646225744
   children [
@@ -9703,7 +9703,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(11) Robot {
   translation 137.06599999648958 -59.35525750875931 0.18948876403538017
   rotation 4.6543586414204974e-05 4.654363388150599e-05 -0.9999999978336922 1.5707953093458944
   children [
@@ -9730,7 +9730,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(12) Robot {
   translation 163.37841674829363 -10.157699982246061 0.1895162200908318
   rotation -2.091683883391965e-05 -7.682747986952703e-11 0.999999999781243 -3.1415853071795876
   children [
@@ -9757,7 +9757,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(13) Robot {
   translation 232.66734987943545 -22.89538757336756 0.18952855811447544
   rotation 0.6986958412959804 -0.7154188427160347 -2.902674164802692e-05 3.141499788616895
   children [
@@ -9784,7 +9784,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(14) Robot {
   translation 231.15700416966584 -44.267700024365006 0.18954144541030027
   rotation -5.461024540995297e-08 0.9997620437160212 0.02181412259893569 0.00024329110460895344
   children [
@@ -9811,7 +9811,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(15) Robot {
   translation 81.32936950930655 -88.43240317216097 0.18958268587921656
   rotation -0.7225662361668254 -0.6913016876401069 -0.00010496498350864324 3.141364070006945
   children [
@@ -9838,7 +9838,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(16) Robot {
   translation 231.716999919134 -124.97783113650418 0.1895601870600514
   rotation 4.4339639639768637e-10 -0.00012505132813628802 0.9999999921810826 -3.1415853071795157
   children [
@@ -9865,7 +9865,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(17) Robot {
   translation 143.5646060789557 -165.87448723715627 0.18983203051173514
   rotation 8.783399929469828e-05 8.010017629924783e-05 0.9999999929345751 1.5708032774243919
   children [
@@ -9892,7 +9892,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(18) Robot {
   translation -28.480283938756216 -128.53900003927816 0.18954964238102967
   rotation -2.5872332525361764e-06 0.9993502575886047 0.03604251171735508 0.00014724777344717096
   children [
@@ -9919,7 +9919,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(19) Robot {
   translation -29.88233113647689 46.671200011410534 0.1895601870624598
   rotation 0.00012505145533295005 -0.00012505132721900267 -0.9999999843621494 1.5707953228174396
   children [
@@ -9946,7 +9946,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(20) Robot {
   translation 42.1265 10.7513 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -9973,7 +9973,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(21) Robot {
   translation 25.8065 8.0712 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10000,7 +10000,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(22) Robot {
   translation 90.776 31.7213 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10027,7 +10027,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(23) Robot {
   translation 64.5665 8.5113 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10054,7 +10054,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(24) Robot {
   translation 51.9765 55.2912 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10081,7 +10081,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(25) Robot {
   translation 91.9565 64.7812 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10108,7 +10108,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(26) Robot {
   translation 100.666 31.7213 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10135,7 +10135,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(27) Robot {
   translation 116.166 8.9314 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10162,7 +10162,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(28) Robot {
   translation 121.536 44.8714 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10189,7 +10189,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(29) Robot {
   translation 106.836 44.8513 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10216,7 +10216,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(30) Robot {
   translation 192.876 51.6615 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10243,7 +10243,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(31) Robot {
   translation 139.096 45.3013 0.13
   rotation -9.04008e-19 1.49563e-17 1 1.5708
   children [
@@ -10270,7 +10270,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(32) Robot {
   translation 267.166 13.0915 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10297,7 +10297,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(33) Robot {
   translation 230.276 13.5414 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10324,7 +10324,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(34) Robot {
   translation 95.2664 -8.8887 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10351,7 +10351,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(35) Robot {
   translation 44.736 -8.6486 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10378,7 +10378,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(36) Robot {
   translation 188.376 -9.28856 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10405,7 +10405,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(37) Robot {
   translation 140.936 -23.6187 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10432,7 +10432,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(38) Robot {
   translation 150.396 -41.9987 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10459,7 +10459,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(39) Robot {
   translation 189.916 -34.4786 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10486,7 +10486,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(40) Robot {
   translation 170.266 8.0214 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10513,7 +10513,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(41) Robot {
   translation 146.556 9.4013 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10540,7 +10540,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(42) Robot {
   translation 261.486 -31.5987 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10567,7 +10567,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(43) Robot {
   translation 294.746 -55.5786 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10594,7 +10594,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(44) Robot {
   translation 44.6266 -88.1187 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10621,7 +10621,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(45) Robot {
   translation 153.716 -88.2986 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10648,7 +10648,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(46) Robot {
   translation 231.346 -51.5786 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10675,7 +10675,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(47) Robot {
   translation 240.146 -61.8986 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10702,7 +10702,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(48) Robot {
   translation 66.6966 -124.949 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10729,7 +10729,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(49) Robot {
   translation 110.087 -134.769 0.13
   rotation -9.04008e-19 1.49563e-17 1 1.5708
   children [
@@ -10756,7 +10756,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(50) Robot {
   translation 73.2067 -164.529 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10783,7 +10783,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(51) Robot {
   translation -31.3733 -86.3588 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10810,7 +10810,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(52) Robot {
   translation -27.3234 -59.3688 0.13
   rotation -9.04008e-19 1.49563e-17 1 1.5708
   children [
@@ -10837,7 +10837,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(53) Robot {
   translation -47.5233 -114.469 0.13
   rotation -1.56287e-11 1.38471e-11 1 1.01503e-06
   children [
@@ -10864,7 +10864,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(54) Robot {
   translation 230.456 -99.908 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10891,7 +10891,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(55) Robot {
   translation 228.897 -126.209 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10918,7 +10918,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(56) Robot {
   translation 306.946 -61.0984 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10945,7 +10945,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(57) Robot {
   translation 326.926 -19.0385 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -10972,7 +10972,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(58) Robot {
   translation -52.5135 31.7212 0.13
   rotation 1.49563e-17 9.04009e-19 1 -1.5707953071795862
   children [
@@ -10999,7 +10999,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(59) Robot {
   translation -34.3635 39.3112 0.13
   rotation 7.02614e-18 7.93015e-18 1 3.14159
   children [
@@ -11026,7 +11026,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_SOPHIA Robot {
+DEF human_SOPHIA(60) Robot {
   translation 20.5772 -126.759 0.13
   rotation 7.02614e-18 7.93015e-18 1 -3.1415853071795863
   children [
@@ -11053,7 +11053,7 @@ DEF human_SOPHIA Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(1) Robot {
   translation 24.07 7.85002 0.18988925234088025
   rotation 1.5815833275711242e-16 1.283170832110949e-16 -0.9999999999999999 1.5707953071795862
   children [
@@ -11083,7 +11083,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(2) Robot {
   translation 73.33069973369119 8.249809998142625 0.18955341105592988
   rotation -0.0001803205379876977 2.3938083696800377e-10 0.9999999837422517 3.1415900000000434
   children [
@@ -11113,7 +11113,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(3) Robot {
   translation 100.50000000059019 7.630458826777867 0.18948566100330708
   rotation 0.00021134334134259496 -0.00021134355684228418 0.9999999553339456 1.5707953518456417
   children [
@@ -11143,7 +11143,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(4) Robot {
   translation 136.29999999635055 9.348592357658353 0.18949853079757376
   rotation -0.9998987390733493 2.653378141214076e-06 -0.014230656783358967 0.00037293988644785547
   children [
@@ -11173,7 +11173,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(5) Robot {
   translation 61.52985027496004 45.731684670561556 0.18974934192190107
   rotation 0.00028323562876811446 -3.2128755843846183e-06 -0.9999999598836271 1.5850257129836176
   children [
@@ -11203,7 +11203,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(6) Robot {
   translation 126.30287520284632 47.38949217665812 0.18984133360804542
   rotation 3.989876015271158e-05 -0.00011251225566445229 0.9999999928745408 -3.1171117478929147
   children [
@@ -11233,7 +11233,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(7) Robot {
   translation 164.50089230123749 45.919995203262985 0.18975186798395743
   rotation -1.9673108752767442e-06 -0.00025949164391199234 0.9999999663301076 1.7800958983880124
   children [
@@ -11263,7 +11263,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(8) Robot {
   translation 231.4900000022134 24.34921706668531 0.18947949186734506
   rotation 0.9996534995303814 -2.6525700512407383e-06 -0.02632263037056783 0.00020162041155031947
   children [
@@ -11293,7 +11293,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(9) Robot {
   translation 4.39486714035454 -59.960901181474895 0.1897968960380413
   rotation 0.0003135870895778282 2.6317681190284148e-05 -0.9999999504852571 1.4315738169753554
   children [
@@ -11323,7 +11323,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(10) Robot {
   translation 62.889238631431844 -60.63009999824482 0.18953449721892832
   rotation 0.00019180090615814196 -2.5453364245862437e-10 0.9999999816062062 3.1415900000000496
   children [
@@ -11353,7 +11353,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(11) Robot {
   translation 135.6728334425846 -7.820838716493511 0.18984660158437647
   rotation 0.00014454534375909535 6.367248347455063e-05 0.9999999875262292 1.560634187927565
   children [
@@ -11383,7 +11383,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(12) Robot {
   translation 160.81523331759914 -60.35593805241178 0.1897945071158258
   rotation -0.0004831156047188506 0.00039330525792678257 0.9999998059551245 0.6222557262224532
   children [
@@ -11413,7 +11413,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(13) Robot {
   translation 231.24000000064234 -28.42043002516673 0.18947358583787374
   rotation -0.00018569401698869436 -0.0001856942063078135 -0.9999999655176962 1.57079534166189
   children [
@@ -11443,7 +11443,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(14) Robot {
   translation 242.7342978744601 -62.381655325403784 0.18980799929582076
   rotation -0.00017910578676521283 1.4744670973063045e-05 0.9999999838518558 3.1415567860624436
   children [
@@ -11473,7 +11473,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(15) Robot {
   translation 193.16077188512358 -73.40882099060352 0.1898070728758512
   rotation 0.00022109119361179397 -0.00016048567613591124 0.9999999626815151 1.5733848823391392
   children [
@@ -11503,7 +11503,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(16) Robot {
   translation 169.258890800971 -136.258088559017 0.18984920155217697
   rotation -0.11364456958704777 0.020558815693164707 -0.9933087369497308 0.0017964983618304802
   children [
@@ -11533,7 +11533,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(17) Robot {
   translation 7.232179719786457 -133.37916955653228 0.18982613181939265
   rotation 0.00011853544007325456 -0.00016897583203879537 -0.9999999786982585 1.5729254232792476
   children [
@@ -11563,7 +11563,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(18) Robot {
   translation -49.98167065972002 -11.999042455597895 0.18980890863273694
   rotation 0.0001800928272480142 2.6653802593349643e-05 0.9999999834280741 -3.139094367824135
   children [
@@ -11593,7 +11593,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(19) Robot {
   translation -57.78821821074255 8.546836563408686 0.18980507863797982
   rotation -0.00017410020737839902 0.00014568036010793555 0.9999999742331749 1.5748880650638055
   children [
@@ -11623,7 +11623,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(20) Robot {
   translation 43.86 28.58 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11653,7 +11653,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(21) Robot {
   translation 1.21996 11.6301 0.13
   rotation -2.24649e-17 2.18712e-17 1 3.14159
   children [
@@ -11683,7 +11683,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(22) Robot {
   translation 51.95 16.9401 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11713,7 +11713,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(23) Robot {
   translation 91.77 10.3901 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11743,7 +11743,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(24) Robot {
   translation 80.79 45.3598 0.13
   rotation -2.24649e-17 2.18712e-17 1 3.14159
   children [
@@ -11773,7 +11773,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(25) Robot {
   translation 90.19 57.67 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11803,7 +11803,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(26) Robot {
   translation 99.13 54.6 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11833,7 +11833,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(27) Robot {
   translation 101.55 44.67 0.13
   rotation 4.23041e-11 4.34524e-11 1 -5.307179586466759e-06
   children [
@@ -11863,7 +11863,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(28) Robot {
   translation 123.04 28.58 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11893,7 +11893,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(29) Robot {
   translation 100.71 28.58 0.13
   rotation -5.93695e-19 4.43361e-17 1 -1.5707953071795862
   children [
@@ -11923,7 +11923,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(30) Robot {
   translation 134.94 28.5799 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11953,7 +11953,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(31) Robot {
   translation 192.81 18.2798 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -11983,7 +11983,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(32) Robot {
   translation 190.45 54.0698 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12013,7 +12013,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(33) Robot {
   translation 164.63 45.5989 0.13
   rotation 4.23041e-11 4.34524e-11 1 -5.307179586466759e-06
   children [
@@ -12043,7 +12043,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(34) Robot {
   translation 230.25 19.1598 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12073,7 +12073,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(35) Robot {
   translation 340.87 9.26807 0.13
   rotation 4.23041e-11 4.34524e-11 1 -5.307179586466759e-06
   children [
@@ -12103,7 +12103,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(36) Robot {
   translation 4.09 -30.5299 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12133,7 +12133,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(37) Robot {
   translation 117.11 -10.2907 0.13
   rotation 4.23041e-11 4.34524e-11 1 -5.307179586466759e-06
   children [
@@ -12163,7 +12163,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(38) Robot {
   translation 137.01 -61.77 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12193,7 +12193,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(39) Robot {
   translation 190.81 -26.9999 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12223,7 +12223,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(40) Robot {
   translation 153.74 -60.7909 0.13
   rotation 1.06714e-11 1.0961e-11 1 -5.307179586466759e-06
   children [
@@ -12253,7 +12253,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(41) Robot {
   translation 189.56 -58.0401 0.13
   rotation -5.93695e-19 4.43361e-17 1 -1.5707953071795862
   children [
@@ -12283,7 +12283,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(42) Robot {
   translation 258.42 -27.2302 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12313,7 +12313,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(43) Robot {
   translation 354.99 -19.2002 0.13
   rotation 4.23041e-11 4.34524e-11 1 -5.307179586466759e-06
   children [
@@ -12343,7 +12343,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(44) Robot {
   translation 337.18 -58.4902 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12373,7 +12373,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(45) Robot {
   translation 284.61 -45.5607 0.13
   rotation -2.24649e-17 2.18712e-17 1 3.14159
   children [
@@ -12403,7 +12403,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(46) Robot {
   translation 258.39 -45.9802 0.13
   rotation -5.93695e-19 4.43361e-17 1 -1.5707953071795862
   children [
@@ -12433,7 +12433,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(47) Robot {
   translation 231.73 -51.7901 0.13
   rotation -5.93695e-19 4.43361e-17 1 -1.5707953071795862
   children [
@@ -12463,7 +12463,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(48) Robot {
   translation 121.99 -88.0401 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12493,7 +12493,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(49) Robot {
   translation 29.4899 -87.5299 0.13
   rotation -2.24649e-17 2.18712e-17 1 3.14159
   children [
@@ -12523,7 +12523,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(50) Robot {
   translation 230.31 -105.33 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12553,7 +12553,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(51) Robot {
   translation 229.52 -186.85 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12583,7 +12583,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(52) Robot {
   translation 109.11 -158.371 0.13
   rotation 4.23041e-11 4.34524e-11 1 -5.307179586466759e-06
   children [
@@ -12613,7 +12613,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(53) Robot {
   translation 187.97 -139.74 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12643,7 +12643,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(54) Robot {
   translation 6.4898 -159.7 0.13
   rotation -5.93695e-19 4.43361e-17 1 -1.5707953071795862
   children [
@@ -12673,7 +12673,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(55) Robot {
   translation -28.0601 -96.8999 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12703,7 +12703,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(56) Robot {
   translation -29.1102 -192.17 0.13
   rotation -4.433613635748091e-17 -5.936958106028239e-19 0.9999999999999999 1.5707953071795862
   children [
@@ -12733,7 +12733,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(57) Robot {
   translation -45.32 28.5801 0.13
   rotation -5.93695e-19 4.43361e-17 1 -1.5707953071795862
   children [
@@ -12763,7 +12763,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(58) Robot {
   translation -36.9001 -130.32 0.13
   rotation -2.24649e-17 2.18712e-17 1 3.14159
   children [
@@ -12793,7 +12793,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(59) Robot {
   translation -29.22 28.5801 0.13
   rotation -5.93695e-19 4.43361e-17 1 -1.5707953071795862
   children [
@@ -12823,7 +12823,7 @@ DEF human_ANTHONY Robot {
   ]
   supervisor TRUE
 }
-DEF human_ANTHONY Robot {
+DEF human_ANTHONY(60) Robot {
   translation 232.63 -74.2511 0.13
   rotation 4.23041e-11 4.34524e-11 1 -5.307179586466759e-06
   children [
