@@ -55,13 +55,12 @@ def webots_sim(driver, tesla_state):    # <Main 문>
         plt.plot(goal[X], goal[Y], "yo", markersize=10, label="LLM(Collision)")
 
         """ RRT* Path Planning """
-        rrt_star = RRTStarPlanner(grid_map, start, goal)
+        rrt_star = RRTStarPlanner(grid_map, start, goal, tesla_state.v)
         points_waypoint = rrt_star.plan()
         plt.plot(points_waypoint[1:-2, X], points_waypoint[1:-2, Y], "ro", markersize=10, label="RRT*(Waypoint)")
         # points_waypoint = np.vstack((start, np.array(points_collision)))
         # points_waypoint = np.hstack((points_waypoint, np.zeros((points_waypoint.shape[0], 1))))
         # plt.plot(points_waypoint[:, X], points_waypoint[:, Y], "ro", markersize=10, label="RRT*(Waypoint)")
-
 
         """ Spline2D Path Planning """
         spline2d_planner = Spline2dPlanner(points_waypoint, 'linear') # 'linear', 'quadratic' 'cubic'
