@@ -41,8 +41,6 @@ def mark_occupied(name, file, pos, size, ori):
 
 
     file.write(f'{name} : ({min_x}, {min_y}, {max_x}, {max_y})\n')
-    
-    
 
 def simplify_grid_map(json_file):
 
@@ -55,11 +53,12 @@ def simplify_grid_map(json_file):
 
     output = open('output.txt', 'w')
     output.write(f'Map size: {grid_width}, {grid_height}\n\n')
-    # output.write('# min_x, min_y, max_x, max_y\n')
-    output.write('# x, y, w, h\n')
+    output.write('# min_x, min_y, max_x, max_y\n')
+    # output.write('# x, y, w, h\n')
+
 
     for obj_dict in [data["building_dict"], data["car_dict"], data["tree_dict"]]:
-
+        count = 0
         for key, value in obj_dict.items():
             pos, size, ori = [], [], []
             try:
@@ -71,8 +70,11 @@ def simplify_grid_map(json_file):
                     pos = value["pos"]
                     size = [value["radius"] * 2, 0, value['radius'] * 2]
                     ori = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
-            output.write(f'{key} : ({pos[X]}, {pos[Y]}, {size[W]}, {size[H]})\n')
-            # mark_occupied(key, output, pos, size, ori)
+            # output.write(f'{key} : ({pos[X]}, {pos[Y]}, {size[W]}, {size[H]})\n')
+            mark_occupied(key, output, pos, size, ori)
+            count += 1
+        output.write('-------------------------\n')
+        output.write(f'Total Count : {count}\n\n')
     output.close()
 
 
