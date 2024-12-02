@@ -1,57 +1,16 @@
-"""my_controller controller."""
+from vehicle import Driver
+import numpy as np
 
-# You may need to import some classes of the controller module. Ex:
-#  from controller import Robot, Motor, DistanceSensor
+driver = Driver()
+car_node = driver.getFromDef("vehicle")  
+driver.setCruisingSpeed(100)
 
-
-# from vehicle import Driver # <- inherit from this class
-# from controller import GPS # <- Not need
-import math 
-from vehicle import Car
-# from controller import Supervisor
-
-car = Car()
-# supervisor = Supervisor()
-car_node = car.getFromDef("TeslaModel3")
-# car_node = supervisor.getFromDef("car")
-if car_node is None:
-    print("Node not found")
-    exit(1)
-
-car.setSteeringAngle(0.2)
-car.setCruisingSpeed(20)
-
-#  ds = robot.getDevice('dsname')
-#  ds.enable(timestep)
-
-# print("Device", car.devices)
-# Main loop:
-# - perform simulation steps until Webots is stopping the controller
-while car.step() != -1:
-    print(' \n  \n-------- START --------')
-    print("Time : ", car.getTime())
-    print(" \nSpeed : ", car.getCurrentSpeed())
-    print(" \nPosition : ", car_node.getPosition())
-    print(" \nOrientation : ", car_node.getOrientation())
-    print(' \nTransformation matrix :\n', car_node.getPose())
-    print('-------- END --------')
-
-
-
-# while supervisor.step() != -1:
-#     print("time: ", supervisor.getTime())
-#     print("position: ", car_node.getPosition())
-
-    # print("position: ", driver.getPosition())
-    # print("angle: ", driver.getCurrentAngle())
-    # print("distance: ", driver.getDistanceAt(0))
-    # Read the sensors:
-    # Enter here functions to read sensor data, like:
-    #  val = ds.getValue()
-
-    # Process sensor data here.
-
-    # Enter here functions to send actuator commands, like:
-    #  motor.setPosition(10.0)
-
-# Enter here exit cleanup code.
+while driver.step() != -1:
+    orientation = car_node.getOrientation()
+    rotation_matrix = np.array(orientation).reshape(3, 3)
+    yaw = np.arctan2(rotation_matrix[1, 0], rotation_matrix[0, 0])
+    print("car yaw :", yaw)
+    print('new')
+    cur_delta = np.deg2rad(0)  
+    print("current_delta:", cur_delta)
+    driver.setSteeringAngle(cur_delta)

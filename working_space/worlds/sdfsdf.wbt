@@ -1,0 +1,44 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.3507951615181369 0.10043124959461282 0.931051190193283 2.140721097621571
+  position 26.098135163986385 -39.518818783699615 21.642757964027613
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+  translation 500 0 0
+  size 1000 100
+}
+DEF vehicle BmwX5 {
+  hidden position_0_0 0.0005619864290376318
+  hidden position2_0_0 29.014509696781882
+  hidden position_0_1 0.0005620279742155796
+  hidden position2_0_1 29.014774987630176
+  hidden position_0_2 14.40198332618267
+  hidden position_0_3 14.032572632952995
+  hidden position_0_9 0.326012301822147
+  hidden translation_1 0 0 0
+  hidden rotation_1 -0.0002809932091513672 -0.9999999545792359 0.0001090153328264216 3.881768437430967
+  hidden translation_2 0 0 0
+  hidden rotation_2 0.0002810139817378364 0.9999999545678434 0.00010906627980231743 3.8820337282626793
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 -1 0 1.8356127118234968
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 1 0 1.466202018593822
+  hidden translation_20 -0.03993441665399988 0.6619800576416031 -0.04482434522387779
+  hidden rotation_20 0.7466598432279096 0 -0.6652060421485012 0.3260123018221477
+  translation 0 0 0.3
+  rotation 0 0 1 -0.7
+  controller "my_controller"
+  supervisor TRUE
+}

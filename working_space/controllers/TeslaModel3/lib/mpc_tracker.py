@@ -35,11 +35,12 @@ class MPCTracker:
         cx = self.points_path[:, X]
         cy = self.points_path[:, Y]
         cyaw = self.smooth_yaw(self.points_path[:, YAW])
-        sp = self.calculate_speed_profile(cx, cy, cyaw, TARGET_SPEED)
+        # sp = self.calculate_speed_profile(cx, cy, cyaw, TARGET_SPEED)
         dl = 1.0       # course tick
 
         while ideal_state.is_simulation_pending(driver):
-            x_ref, target_index, d_ref = self.calculate_ref_trajectory(ideal_state, cx, cy, cyaw, sp, dl, target_index)
+            x_ref, target_index, d_ref = self.calculate_ref_trajectory(ideal_state,
+                                                   cx, cy, cyaw, dl, target_index)
             x_cur = [ideal_state.x, ideal_state.y , ideal_state.v, ideal_state.yaw]
 
             oaccer, odelta, ox, oy, oyaw, ov = self.iterative_linear_control(
@@ -76,19 +77,21 @@ class MPCTracker:
         cx = self.points_path[:, X]
         cy = self.points_path[:, Y]
         cyaw = self.smooth_yaw(self.points_path[:, YAW])
-        sp = self.calculate_speed_profile(cx, cy, cyaw, TARGET_SPEED)
+        # sp = self.calculate_speed_profile(cx, cy, cyaw, TARGET_SPEED)
         dl = 1.0       # course tick
 
         while tesla_state.is_simulation_pending():
+            tesla_state.update()
             x_ref, target_index, d_ref = self.calculate_ref_trajectory(
-                                tesla_state, cx, cy, cyaw, sp, dl, target_index)
+                                tesla_state, cx, cy, cyaw, dl, target_index)
             x_cur = [tesla_state.x, tesla_state.y , tesla_state.v, tesla_state.yaw]
-            oaccel, odelta, ox, oy, oyaw, ov = self.iterative_linear_control(
-                x_ref, x_cur, d_ref, oaccel, odelta)
-            cur_delta, cur_accel = 0.0, 0.0
+            odelta, ox, oy, oyaw = self.iterative_linear_control(x_ref, x_cur, d_ref, 
+                                                                    oaccel, odelta)
+            cur_delta = 0.0
             if odelta is not None:
-                cur_delta, cur_accel = odelta[0], oaccel[0]
-                tesla_state.update(delta=cur_delta) 
+                cur_delta = odelta[0]
+                tesla_state.set_steering_angle(cur_delta)
+
             print(f"Tesla State : {tesla_state.v * 3.6}")
 
             if self.check_goal(tesla_state, goal, target_index, len(cx)):
@@ -98,20 +101,19 @@ class MPCTracker:
 
     
 
-    def calculate_ref_trajectory(self, state, cx, cy, cyaw, sp, dl, pind):
-        x_ref = np.zeros((NX, HORIZON_T + 1))
-        dref = np.zeros((1, HORIZON_T + 1))
+    def calculate_ref_trajectory(self, state, cx, cy, cyaw, dl, pind):
+        z_ref = np.zeros((NX, HORIZON_T + 1))
+        d_ref = np.zeros((1, HORIZON_T + 1))
         ncourse = len(cx)
         ind, _ = self.calculate_nearest_index(state, cx, cy, cyaw, pind)
 
         if pind >= ind:
             ind = pind
 
-        x_ref[0, 0] = cx[ind]
-        x_ref[1, 0] = cy[ind]
-        x_ref[2, 0] = sp[ind]
-        x_ref[3, 0] = cyaw[ind]
-        dref[0, 0] = 0.0  # steer operational point should be 0
+        z_ref[0, 0] = cx[ind]
+        z_ref[1, 0] = cy[ind]
+        z_ref[2, 0] = cyaw[ind]
+        d_ref[0, 0] = 0.0  # steer operational point should be 0
 
         travel = 0.0
         # print('dl:', dl)
@@ -122,19 +124,17 @@ class MPCTracker:
             dind = int(round(travel / dl))
 
             if (ind + dind) < ncourse:
-                x_ref[0, i] = cx[ind + dind]
-                x_ref[1, i] = cy[ind + dind]
-                x_ref[2, i] = sp[ind + dind]
-                x_ref[3, i] = cyaw[ind + dind]
-                dref[0, i] = 0.0
+                z_ref[0, i] = cx[ind + dind]
+                z_ref[1, i] = cy[ind + dind]
+                z_ref[2, i] = cyaw[ind + dind]
+                d_ref[0, i] = 0.0
             else:
-                x_ref[0, i] = cx[ncourse - 1]
-                x_ref[1, i] = cy[ncourse - 1]
-                x_ref[2, i] = sp[ncourse - 1]
-                x_ref[3, i] = cyaw[ncourse - 1]
-                dref[0, i] = 0.0
+                z_ref[0, i] = cx[ncourse - 1]
+                z_ref[1, i] = cy[ncourse - 1]
+                z_ref[2, i] = cyaw[ncourse - 1]
+                d_ref[0, i] = 0.0
 
-        return x_ref, ind, dref
+        return z_ref, ind, d_ref
 
 
 
@@ -164,55 +164,43 @@ class MPCTracker:
         
         return speed_profile
 
-    def iterative_linear_control(self, x_ref, x_cur, dref, oa, od):
-        ox, oy, oyaw, ov = None, None, None, None
+    def iterative_linear_control(self, z_ref, z_cur, d_ref, oa, od):
+        ox, oy, oyaw = None, None, None
 
-        if oa is None or od is None:
-            oa = np.zeros(HORIZON_T)  # 크기 T의 0 배열
+        if od is None:
             od = np.zeros(HORIZON_T)
 
-
-        for i in range(MAX_ITER):
-            xbar = self.predict_motion(x_cur, oa, od, x_ref)
-            poa, pod = oa[:], od[:]
-            oa, od, ox, oy, oyaw, ov = self.linear_control(x_ref, xbar, x_cur, dref)
+        for _ in range(MAX_ITER):
+            z_bar = self.predict_motion(z_cur, oa, od, z_ref)
+            pod = od[:]
+            od, ox, oy, oyaw = self.linear_control(z_ref, z_bar, z_cur, d_ref)
 
             ################
             if oa is None or od is None:
-                oa = poa[:]
                 od = pod[:]
                 print("Error: Cannot solve mpc..")
                 break
             ################
 
-
-            du = sum(abs(oa - poa)) + sum(abs(od - pod))  # calc u change value
+            du = sum(abs(od - pod))  # calc u change value
             if du <= DU_TH:
                 break
         else:
             print("Iterative is max iter")
+        return od, ox, oy, oyaw
 
-        return oa, od, ox, oy, oyaw, ov
 
-
-    def linear_control(self, xref, xbar, x0, dref):
+    def linear_control(self, z_ref, z_bar, x0, dref):
         """
         linear mpc control
-
-        xref: reference point
-        xbar: operational point
+        z_ref: reference point
+        z_bar: operational point
         x0: initial state
         dref: reference steer angle
         """
 
-        # print('xref :', xref.shape, xref)
-        # print('xbar :', xbar.shape, xbar)
-        # print('x0 :', x0)
-        # print('dref :', dref.shape, dref)
-
-        x = cvxpy.Variable((NX, HORIZON_T + 1))
+        z = cvxpy.Variable((NX, HORIZON_T + 1))
         u = cvxpy.Variable((NU, HORIZON_T))
-
 
         cost = 0.0
         constraints = []
@@ -221,79 +209,69 @@ class MPCTracker:
             cost += cvxpy.quad_form(u[:, t], R)
 
             if t != 0:
-                cost += cvxpy.quad_form(xref[:, t] - x[:, t], Q)
+                cost += cvxpy.quad_form(z_ref[:, t] - z[:, t], Q)
 
-            A, B, C = self.get_linear_model_matrix(
-                xbar[2, t], xbar[3, t], dref[0, t])
-            constraints += [x[:, t + 1] == A @ x[:, t] + B @ u[:, t] + C]
+            A, B, C = self.get_linear_model_matrix(z_bar[2, t], dref[0, t])
+            constraints += [ z[:, t + 1] == A @ z[:, t] + B @ u[:, t] + C ]
 
             if t < (HORIZON_T - 1):
                 cost += cvxpy.quad_form(u[:, t + 1] - u[:, t], Rd)
-                constraints += [cvxpy.abs(u[1, t + 1] - u[1, t]) <= MAX_DSTEER * self.dt]
+                constraints += [cvxpy.abs(u[1, t + 1] - u[1, t]) 
+                                                    <= MAX_DSTEER * self.dt]
 
-        cost += cvxpy.quad_form(xref[:, HORIZON_T] - x[:, HORIZON_T], Qf)
+        cost += cvxpy.quad_form(z_ref[:, HORIZON_T] - z[:, HORIZON_T], Qf)
 
-        constraints += [x[:, 0] == x0]
-        constraints += [x[2, :] <= MAX_SPEED]
-        constraints += [x[2, :] >= MIN_SPEED]
-        constraints += [cvxpy.abs(u[0, :]) <= MAX_ACCEL]
-        constraints += [cvxpy.abs(u[1, :]) <= MAX_STEER]
+        constraints += [z[:, 0] == x0]
+        constraints += [cvxpy.abs(u[0, :]) <= MAX_STEER]
         prob = cvxpy.Problem(cvxpy.Minimize(cost), constraints)
         prob.solve(solver=cvxpy.ECOS, verbose=False)
 
         if prob.status == cvxpy.OPTIMAL or prob.status == cvxpy.OPTIMAL_INACCURATE:
-            ox = self.get_nparray_from_matrix(x.value[0, :])
-            oy = self.get_nparray_from_matrix(x.value[1, :])
-            ov = self.get_nparray_from_matrix(x.value[2, :])
-            oyaw = self.get_nparray_from_matrix(x.value[3, :])
-            oa = self.get_nparray_from_matrix(u.value[0, :])
-            odelta = self.get_nparray_from_matrix(u.value[1, :])
-
+            ox = self.get_nparray_from_matrix(z.value[0, :])
+            oy = self.get_nparray_from_matrix(z.value[1, :])
+            # ov = self.get_nparray_from_matrix(z.value[2, :])
+            oyaw = self.get_nparray_from_matrix(z.value[2, :])
+            # oa = self.get_nparray_from_matrix(u.value[0, :])
+            odelta = self.get_nparray_from_matrix(u.value[0, :])
         else:
             print("Error: Cannot solve mpc..")
-            oa, odelta, ox, oy, oyaw, ov = None, None, None, None, None, None
+            odelta, ox, oy, oyaw = None, None, None, None
+        return odelta, ox, oy, oyaw
 
-        return oa, odelta, ox, oy, oyaw, ov
 
-
-    def get_linear_model_matrix(self, v, phi, delta):
-
+    def get_linear_model_matrix(self, phi, delta):
         A = np.zeros((NX, NX))
         A[0, 0] = 1.0
         A[1, 1] = 1.0
         A[2, 2] = 1.0
-        A[3, 3] = 1.0
-        A[0, 2] = self.dt * math.cos(phi)
-        A[0, 3] = - self.dt * v * math.sin(phi)
-        A[1, 2] = self.dt * math.sin(phi)
-        A[1, 3] = self.dt * v * math.cos(phi)
-        A[3, 2] = self.dt * math.tan(delta) / WB
+        A[0, 2] = - self.dt * v * math.sin(phi)
+        A[1, 2] = self.dt * v * math.cos(phi)
+
 
         B = np.zeros((NX, NU))
-        B[2, 0] = self.dt
-        B[3, 1] = self.dt * v / (WB * math.cos(delta) ** 2)
+        B[2, 0] = self.dt * v_bar / (WB * math.cos(delta) ** 2)
 
         C = np.zeros(NX)
-        C[0] = self.dt * v * math.sin(phi) * phi
-        C[1] = - self.dt * v * math.cos(phi) * phi
-        C[3] = - self.dt * v * delta / (WB * math.cos(delta) ** 2)
+        C[0] = self.dt * v_bar * math.sin(phi) * phi
+        C[1] = - self.dt * v_bar * math.cos(phi) * phi
+        C[3] = - self.dt * v_bar * delta / (WB * math.cos(delta) ** 2)
 
         return A, B, C
 
     def predict_motion(self, x_cur, oa, od, x_ref):
-        xbar = x_ref * 0.0
+        z_bar = x_ref * 0.0
         for i, _ in enumerate(x_cur):
-            xbar[i, 0] = x_cur[i]
+            z_bar[i, 0] = x_cur[i]
 
         state = IdealState(self.dt, x=x_cur[X], y=x_cur[Y], yaw=x_cur[3], v=x_cur[2])
         for (ai, di, i) in zip(oa, od, range(1, HORIZON_T + 1)):
-            state.update(ai, di)
-            xbar[0, i] = state.x
-            xbar[1, i] = state.y
-            xbar[2, i] = state.v
-            xbar[3, i] = state.yaw
+            state.update(di)
+            z_bar[0, i] = state.x
+            z_bar[1, i] = state.y
+            # z_bar[2, i] = state.v
+            z_bar[2, i] = state.yaw
 
-        return xbar
+        return z_bar
 
 
     def check_goal(self, state, goal, tind, nind):

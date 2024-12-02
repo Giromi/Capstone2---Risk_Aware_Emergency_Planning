@@ -47,19 +47,22 @@ def make_situation(driver, dt):
     tesla_state.update()
     init_x, init_y = tesla_state.x, tesla_state.y
 
-    standard_speed = (TARGET_SPEED - 10) * 3.6
+    standard_speed = TARGET_SPEED - 3 # [m/s]
+    tesla_state.set_speed(TARGET_SPEED * 3.6) # [km/h]
     print(f'[Moral Machine] : {standard_speed * 3.6:.2f}[km/h] 속도를 감지하겠습니다.')
-    tesla_state.set_speed(TARGET_SPEED)
-    while driver.step() != -1 and tesla_state.v <= standard_speed: # [km/h]
+    while driver.step() != -1 and tesla_state.v <= standard_speed: # [m/s]
         tesla_state.update()
-        print(f'Target  speed (km/h): {tesla_state.get_target_speed()}')
-        print(f'current speed 1(km/h): {tesla_state.get_speed() * 3.6}')
+        # print(f'Target  speed (km/h): {tesla_state.get_target_seed() * 3.6}')
+        print(f'current speed (km/h): {tesla_state.v * 3.6}')
         # print(f'current speed 2(km/h): {tesla_state.get_speed_km_h()}')
     print('[Moral Machine] : 이제부터, 이 핸들은 제껍니다.')
     distance = np.linalg.norm([tesla_state.x - init_x, tesla_state.y - init_y])
     driver.simulationSetMode(driver.SIMULATION_MODE_PAUSE)
     print(f'Accuration distance : {distance}')
     return tesla_state
+
+###############################################################################
+
 
 # def test_simulation(driver, dt):
 #     tesla_state = TeslaState(driver, dt)

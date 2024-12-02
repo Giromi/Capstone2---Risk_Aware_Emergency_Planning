@@ -233,8 +233,8 @@ class MPCTracker:
         cost += cvxpy.quad_form(xref[:, HORIZON_T] - x[:, HORIZON_T], Q)
 
         constraints += [x[:, 0] == x0]
-        # constraints += [x[2, :] <= MAX_SPEED]
-        # constraints += [x[2, :] >= MIN_SPEED]
+        constraints += [x[2, :] <= MAX_SPEED]
+        constraints += [x[2, :] >= MIN_SPEED]
         constraints += [cvxpy.abs(u[0, :]) <= MAX_ACCEL]
         constraints += [cvxpy.abs(u[1, :]) <= MAX_STEER]
         prob = cvxpy.Problem(cvxpy.Minimize(cost), constraints)

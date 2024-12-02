@@ -227,8 +227,14 @@ def TEST_07(): # 그냥 앞으로 가는 테스트
     driver = Driver()
     dt = driver.getBasicTimeStep() / 1000 # [s] 늘려야할 수도 있음
     tesla_state = TeslaState(driver, dt)
-    tesla_state.set_speed(MAX_SPEED)  # 초기 속도 설정 [m/s]
 
+    # if tesla_state.node is None:
+    #     print('node is None')
+    #     exit(1)
+    # else:
+    #     print('node exists')
+
+    tesla_state.set_speed(MAX_SPEED)  # 초기 속도 설정 [m/s]
     tesla_state.update()
     INIT_YAW = tesla_state.yaw
     cx, cy = np.array([25.0]), np.array([-25.0])

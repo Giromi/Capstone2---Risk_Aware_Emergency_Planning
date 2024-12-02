@@ -40,7 +40,6 @@ def check_contact_to_ground(driver, tesla_state):
         break
 
 def webots_sim():
-    plot_init()
     driver = Driver()   # 차량, 건물 및 object의 객체
     dt = driver.getBasicTimeStep() / 1000
     tesla_state = make_situation(driver, dt)
@@ -135,6 +134,7 @@ def webots_ideal():    # <Main 문>
 
 if __name__ == '__main__':
     plot_init()
-    # webots_sim(driver, dt, tesla_state)
+    webots_sim()
     # webots_ideal(driver, dt, ideal_state)
-    TEST_07()
+
+    # TEST_07()

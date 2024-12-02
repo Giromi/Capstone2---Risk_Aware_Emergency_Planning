@@ -15,12 +15,12 @@ NX                  = 3                                 # [#] x = x, number(4)
 Q                   = np.diag([1.0, 1.0, 20.0])    # [-] state cost matrix([1.0, 1.0, 0.5, 0.5])
 MAX_TIME            = 500.0                             # max simulation time
 MAX_ITER            = 3                                 # [iter] Max iteration
-DU_TH               = 0.1                               # [] iteration fnish param
+DU_TH               = 0.05                               # [] iteration finish param(0.1)
 N_IND_SEARCH        = 10                                # [th] Search indextic Variables()
 
 GOAL_DIS            = 10.0  #                           # [m] goal distance
 STOP_SPEED          = 10 / 3.6                          # [m/s] stop speed
-TARGET_SPEED        = 130 / 3.6                         # [m/s] target speed
+TARGET_SPEED        = 108 / 3.6                         # [m/s] target speed
 DL                  = 1.0                               # course tick
 N_IND_SEARCH        = 10                                # Search index number
 MAX_ACCEL           = 3.2                               # maximum accel [m/ss]

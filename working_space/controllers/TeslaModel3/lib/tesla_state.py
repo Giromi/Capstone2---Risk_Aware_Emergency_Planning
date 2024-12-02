@@ -17,7 +17,7 @@ class IdealState:
     def __str__(self):
         return f't : {self.t}\nx : {self.x}\ny : {self.y}\nyaw : {self.yaw}\nv : {self.v}'
 
-    def update(self, acceletation, delta):
+    def update(self, delta):
         # self.history.append(self.t, self)
 
         if delta >= MAX_STEER:
@@ -73,12 +73,10 @@ class History:  # Singleton Pattern
         self.yaw.clear()
         self.v.clear()
 
-
-
 class TeslaState(IdealState): 
     def __init__(self, driver, dt, def_name='TeslaModel3'):
         self.driver = driver
-        self.node = driver.getFromDef(def_name)
+        self.node = self.driver.getFromDef(def_name)
         super().__init__(dt, x=None, y=None, yaw=None, v=None) #  << self.history
         self.update()
 
@@ -86,11 +84,13 @@ class TeslaState(IdealState):
         pos, ori, speed = self.get_all()
         self.set_state(pos, ori, speed)
 
-    def update(self): # Different Parameter for blocking Parent's Method
+    def update(self, delta=0.0):
+        # Different Parameter for blocking Parent's Method
         # self.history.append(self.get_time(), self)
         self.x, self.y, self.z = self.get_position()
         self.yaw = self.get_yaw()
         self.v = self.get_speed() #self.get_speed_km_h() / 3.6
+
         # self.set_speed(TARGET_SPEED * 3.6)
         # self.yaw = self.v / WB * math.tan(delta) * self.dt
         # else: # 잘 안됨. 멈춰버림
@@ -146,4 +146,5 @@ class TeslaState(IdealState):
         pitch = math.atan2(rotation[2], math.sqrt(rotation[0]**2 + rotation[1]**2))
         z_front = z_back + WB * math.sin(pitch)  # 앞바퀴 중심의 z좌표
         return z_front
+
 
