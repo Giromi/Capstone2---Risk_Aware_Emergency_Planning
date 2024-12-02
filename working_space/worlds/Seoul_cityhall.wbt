@@ -21,13 +21,13 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Pavement.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/trees/protos/SimpleTree.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/generic/BusSimple.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/range_rover/RangeRoverSportSVRSimple.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5Simple.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/citroen/CitroenCZeroSimple.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/lincoln/LincolnMKZSimple.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/mercedes_benz/MercedesBenzSprinterSimple.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/toyota/ToyotaPriusSimple.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/generic/Bus.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/range_rover/RangeRoverSportSVR.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/citroen/CitroenCZero.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/lincoln/LincolnMKZ.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/mercedes_benz/MercedesBenzSprinter.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/toyota/ToyotaPrius.proto"
 
 WorldInfo {
   info [
@@ -6152,1421 +6152,1421 @@ DEF tree(234) SimpleTree {
   type "hackberry tree"
   radius 1.5
 }
-DEF car_bus(1) BusSimple {
+DEF car_bus(1) Bus {
   translation -23 -13 0.55
   rotation 0 0 1 -1.5707953071795862
 }
-DEF car_bus(2) BusSimple {
+DEF car_bus(2) Bus {
   translation -2.5 -133 0.55
   rotation 0 0 1 1.5708
   name "vehicle(1)"
 }
-DEF car_bus(3) BusSimple {
+DEF car_bus(3) Bus {
   translation -2.5 -162 0.55
   rotation 0 0 1 1.5708
   name "vehicle(2)"
 }
-DEF car_bus(4) BusSimple {
+DEF car_bus(4) Bus {
   translation -23 -147 0.55
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(3)"
 }
-DEF car_bus(5) BusSimple {
+DEF car_bus(5) Bus {
   translation 135 -92 0.55
   rotation 0 0 1 3.14159
   color 0 0.8 0.88
   name "vehicle(4)"
 }
-DEF car_bus(6) BusSimple {
+DEF car_bus(6) Bus {
   translation 201.5 -77 0.55
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(5)"
 }
-DEF car_bus(7) BusSimple {
+DEF car_bus(7) Bus {
   translation 209 -27 0.55
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(13)"
 }
-DEF car_bus(8) BusSimple {
+DEF car_bus(8) Bus {
   translation 201.5 30.56 0.55
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(14)"
 }
-DEF car_bus(9) BusSimple {
+DEF car_bus(9) Bus {
   translation 201.5 43.61 0.55
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(16)"
 }
-DEF car_bus(10) BusSimple {
+DEF car_bus(10) Bus {
   translation 224 67 0.55
   rotation 0 0 1 1.5708
   name "vehicle(15)"
 }
-DEF car_bus(11) BusSimple {
+DEF car_bus(11) Bus {
   translation 298 1 0.55
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(17)"
 }
-DEF car_bus(12) BusSimple {
+DEF car_bus(12) Bus {
   translation 360.5 1 1.55
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(18)"
 }
-DEF car_bus(13) BusSimple {
+DEF car_bus(13) Bus {
   translation 342 -15 0.55
   rotation 0 0 1 7.33682e-06
   name "vehicle(19)"
 }
-DEF car_bus(14) BusSimple {
+DEF car_bus(14) Bus {
   translation 205.5 -156 0.55
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(11)"
 }
-DEF car_bus(15) BusSimple {
+DEF car_bus(15) Bus {
   translation 213 -185 0.55
   rotation 0 0 1 1.5708
   color 1 0 0
   name "vehicle(12)"
 }
-DEF car_bus(16) BusSimple {
+DEF car_bus(16) Bus {
   translation 197.5 -140.5 0.55
   rotation 0 0 1 -1.5707953071795862
   color 1 1 1
   name "vehicle(6)"
 }
-DEF car_bus(17) BusSimple {
+DEF car_bus(17) Bus {
   translation 197.5 -151 0.55
   rotation 0 0 1 -1.5707953071795862
   color 1 1 1
   name "vehicle(7)"
 }
-DEF car_bus(18) BusSimple {
+DEF car_bus(18) Bus {
   translation 197.5 -162 0.55
   rotation 0 0 1 -1.5707953071795862
   color 1 1 1
   name "vehicle(8)"
 }
-DEF car_bus(19) BusSimple {
+DEF car_bus(19) Bus {
   translation 197.5 -173 0.55
   rotation 0 0 1 -1.5707953071795862
   color 1 1 1
   name "vehicle(9)"
 }
-DEF car_bus(20) BusSimple {
+DEF car_bus(20) Bus {
   translation 225 -162.5 1.55
   rotation 0 0 1 1.5708
   color 1 1 1
   name "vehicle(10)"
 }
-DEF car_bus(21) BusSimple {
+DEF car_bus(21) Bus {
   translation 117 -22 0.55
   rotation 0 0 1 -1.5707953071795862
   color 1 1 1
   name "vehicle(23)"
 }
-DEF car_rangerover(1) RangeRoverSportSVRSimple {
+DEF car_rangerover(1) RangeRoverSportSVR {
   translation 15.01 -4.90002 0.4
   rotation 0 0 1 3.14159
   name "vehicle(20)"
 }
-DEF car_rangerover(2) RangeRoverSportSVRSimple {
+DEF car_rangerover(2) RangeRoverSportSVR {
   translation 57.82 1.6299 0.4
   rotation 0 0 1 3.14159
   name "vehicle(21)"
 }
-DEF car_rangerover(3) RangeRoverSportSVRSimple {
+DEF car_rangerover(3) RangeRoverSportSVR {
   translation 104.65 5.47989 0.4
   rotation 0 0 1 3.14159
   name "vehicle(22)"
 }
-DEF car_rangerover(4) RangeRoverSportSVRSimple {
+DEF car_rangerover(4) RangeRoverSportSVR {
   translation 177.07 -4.76019 0.4
   rotation 0 0 1 3.14159
   name "vehicle(24)"
 }
-DEF car_rangerover(5) RangeRoverSportSVRSimple {
+DEF car_rangerover(5) RangeRoverSportSVR {
   translation 201.59 53.2698 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(25)"
 }
-DEF car_rangerover(6) RangeRoverSportSVRSimple {
+DEF car_rangerover(6) RangeRoverSportSVR {
   translation 215.78 -1.43023 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(26)"
 }
-DEF car_rangerover(7) RangeRoverSportSVRSimple {
+DEF car_rangerover(7) RangeRoverSportSVR {
   translation 220.38 56.5797 0.4
   rotation 0 0 1 1.5708
   name "vehicle(27)"
 }
-DEF car_rangerover(8) RangeRoverSportSVRSimple {
+DEF car_rangerover(8) RangeRoverSportSVR {
   translation 216.45 78.9697 0.4
   rotation 0 0 1 1.5708
   name "vehicle(28)"
 }
-DEF car_rangerover(9) RangeRoverSportSVRSimple {
+DEF car_rangerover(9) RangeRoverSportSVR {
   translation 216.5 -54 0.4
   rotation 0 0 1 1.5708
   name "vehicle(29)"
 }
-DEF car_rangerover(10) RangeRoverSportSVRSimple {
+DEF car_rangerover(10) RangeRoverSportSVR {
   translation -18.1702 38.2493 0.4
   rotation 0 0 -1 1.5708
   name "vehicle(194)"
 }
-DEF car_rangerover(11) RangeRoverSportSVRSimple {
+DEF car_rangerover(11) RangeRoverSportSVR {
   translation -22.6401 42.9294 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(195)"
 }
-DEF car_rangerover(12) RangeRoverSportSVRSimple {
+DEF car_rangerover(12) RangeRoverSportSVR {
   translation -6.04029 27.4793 0.4
   rotation 0 0 1 1.5708
   name "vehicle(196)"
 }
-DEF car_rangerover(13) RangeRoverSportSVRSimple {
+DEF car_rangerover(13) RangeRoverSportSVR {
   translation -6.36008 -27.8607 0.4
   rotation 0 0 1 1.5708
   name "vehicle(197)"
 }
-DEF car_rangerover(14) RangeRoverSportSVRSimple {
+DEF car_rangerover(14) RangeRoverSportSVR {
   translation -2.82 -54.0009 0.4
   rotation 0 0 1 1.5708
   name "vehicle(198)"
 }
-DEF car_rangerover(15) RangeRoverSportSVRSimple {
+DEF car_rangerover(15) RangeRoverSportSVR {
   translation -18.82 -85.641 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(199)"
 }
-DEF car_rangerover(16) RangeRoverSportSVRSimple {
+DEF car_rangerover(16) RangeRoverSportSVR {
   translation -15.35 -28.6408 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(200)"
 }
-DEF car_rangerover(17) RangeRoverSportSVRSimple {
+DEF car_rangerover(17) RangeRoverSportSVR {
   translation 45.47 -99.5406 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(201)"
 }
-DEF car_rangerover(18) RangeRoverSportSVRSimple {
+DEF car_rangerover(18) RangeRoverSportSVR {
   translation 84.87 -102.67 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(202)"
 }
-DEF car_rangerover(19) RangeRoverSportSVRSimple {
+DEF car_rangerover(19) RangeRoverSportSVR {
   translation -6.35966 -146.261 0.4
   rotation 0 0 1 1.5708
   name "vehicle(203)"
 }
-DEF car_rangerover(20) RangeRoverSportSVRSimple {
+DEF car_rangerover(20) RangeRoverSportSVR {
   translation 172.82 -110.87 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(204)"
 }
-DEF car_rangerover(21) RangeRoverSportSVRSimple {
+DEF car_rangerover(21) RangeRoverSportSVR {
   translation 159.63 -118.66 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(205)"
 }
-DEF car_rangerover(22) RangeRoverSportSVRSimple {
+DEF car_rangerover(22) RangeRoverSportSVR {
   translation 223.88 -133.64 0.4
   rotation 0 0 1 1.5708
   name "vehicle(206)"
 }
-DEF car_rangerover(23) RangeRoverSportSVRSimple {
+DEF car_rangerover(23) RangeRoverSportSVR {
   translation 212.64 -147.89 0.4
   rotation 0 0 1 1.5708
   name "vehicle(207)"
 }
-DEF car_rangerover(24) RangeRoverSportSVRSimple {
+DEF car_rangerover(24) RangeRoverSportSVR {
   translation 314.49 -2.86941 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(208)"
 }
-DEF car_rangerover(25) RangeRoverSportSVRSimple {
+DEF car_rangerover(25) RangeRoverSportSVR {
   translation 250.51 0.62013 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(209)"
 }
-DEF car_rangerover(26) RangeRoverSportSVRSimple {
+DEF car_rangerover(26) RangeRoverSportSVR {
   translation 273.33 -60.7299 0.4
   rotation 0 0 1 1.5708
   name "vehicle(210)"
 }
-DEF car_rangerover(27) RangeRoverSportSVRSimple {
+DEF car_rangerover(27) RangeRoverSportSVR {
   translation 204.88 -37.6601 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(211)"
 }
-DEF car_rangerover(28) RangeRoverSportSVRSimple {
+DEF car_rangerover(28) RangeRoverSportSVR {
   translation 224.04 -29.17 0.4
   rotation 0 0 1 1.5708
   name "vehicle(212)"
 }
-DEF car_rangerover(29) RangeRoverSportSVRSimple {
+DEF car_rangerover(29) RangeRoverSportSVR {
   translation 220.76 -24.6601 0.4
   rotation 0 0 1 1.5708
   name "vehicle(213)"
 }
-DEF car_rangerover(30) RangeRoverSportSVRSimple {
+DEF car_rangerover(30) RangeRoverSportSVR {
   translation 205.64 21.4599 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(214)"
 }
-DEF car_rangerover(31) RangeRoverSportSVRSimple {
+DEF car_rangerover(31) RangeRoverSportSVR {
   translation 146.42 4.49954 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(215)"
 }
-DEF car_rangerover(32) RangeRoverSportSVRSimple {
+DEF car_rangerover(32) RangeRoverSportSVR {
   translation 48.4496 67.8295 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(216)"
 }
-DEF car_rangerover(33) RangeRoverSportSVRSimple {
+DEF car_rangerover(33) RangeRoverSportSVR {
   translation 75.44 43.4493 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(217)"
 }
-DEF car_rangerover(34) RangeRoverSportSVRSimple {
+DEF car_rangerover(34) RangeRoverSportSVR {
   translation 142.96 -54.0003 0.4
   rotation 0 0 1 1.5708
   name "vehicle(218)"
 }
-DEF car_rangerover(35) RangeRoverSportSVRSimple {
+DEF car_rangerover(35) RangeRoverSportSVR {
   translation 128.34 -16.3504 0.4
   rotation 0 0 1 1.5708
   name "vehicle(219)"
 }
-DEF car_rangerover(36) RangeRoverSportSVRSimple {
+DEF car_rangerover(36) RangeRoverSportSVR {
   translation 168.35 -68.0701 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(220)"
 }
-DEF car_rangerover(37) RangeRoverSportSVRSimple {
+DEF car_rangerover(37) RangeRoverSportSVR {
   translation 132.44 27.5897 0.4
   rotation 0 0 1 1.5708
   name "vehicle(221)"
 }
-DEF car_rangerover(38) RangeRoverSportSVRSimple {
+DEF car_rangerover(38) RangeRoverSportSVR {
   translation 113.94 43.3596 0.4
   rotation 0 0 1 -3.1415853071795863
   name "vehicle(222)"
 }
-DEF car_rangerover(39) RangeRoverSportSVRSimple {
+DEF car_rangerover(39) RangeRoverSportSVR {
   translation 180.23 41.9499 0.4
   rotation 0 0 -1 -5.307179586466759e-06
   name "vehicle(223)"
 }
-DEF car_bmw(1) BmwX5Simple {
+DEF car_bmw(1) BmwX5 {
   translation -2.8801 -15.5799 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(33)"
 }
-DEF car_bmw(2) BmwX5Simple {
+DEF car_bmw(2) BmwX5 {
   translation -14.61 23.88 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(34)"
 }
-DEF car_bmw(3) BmwX5Simple {
+DEF car_bmw(3) BmwX5 {
   translation -22.7 36.8 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(35)"
 }
-DEF car_bmw(4) BmwX5Simple {
+DEF car_bmw(4) BmwX5 {
   translation -14.59 53.66 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(36)"
 }
-DEF car_bmw(5) BmwX5Simple {
+DEF car_bmw(5) BmwX5 {
   translation -6.75 -21.56 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(37)"
 }
-DEF car_bmw(6) BmwX5Simple {
+DEF car_bmw(6) BmwX5 {
   translation -38.44 -1.22992 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(38)"
 }
-DEF car_bmw(7) BmwX5Simple {
+DEF car_bmw(7) BmwX5 {
   translation -22.5799 -80.88 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(39)"
 }
-DEF car_bmw(8) BmwX5Simple {
+DEF car_bmw(8) BmwX5 {
   translation -18.3103 -34.86 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(40)"
 }
-DEF car_bmw(9) BmwX5Simple {
+DEF car_bmw(9) BmwX5 {
   translation 44.8998 -92.3 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(41)"
 }
-DEF car_bmw(10) BmwX5Simple {
+DEF car_bmw(10) BmwX5 {
   translation 73.1198 -93.0401 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(42)"
 }
-DEF car_bmw(11) BmwX5Simple {
+DEF car_bmw(11) BmwX5 {
   translation 7.70969 -99.95 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(43)"
 }
-DEF car_bmw(12) BmwX5Simple {
+DEF car_bmw(12) BmwX5 {
   translation -6.54038 -135.45 0.4
   rotation 0 0 1 1.57079
   color 0.5 0.26 0
   name "vehicle(44)"
 }
-DEF car_bmw(13) BmwX5Simple {
+DEF car_bmw(13) BmwX5 {
   translation -9.89037 -163.48 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(45)"
 }
-DEF car_bmw(14) BmwX5Simple {
+DEF car_bmw(14) BmwX5 {
   translation 168.79 -118.581 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(46)"
 }
-DEF car_bmw(15) BmwX5Simple {
+DEF car_bmw(15) BmwX5 {
   translation 154.94 -107.131 0.4
   rotation 0 0 -1 5.92017e-06
   color 0.5 0.26 0
   name "vehicle(47)"
 }
-DEF car_bmw(16) BmwX5Simple {
+DEF car_bmw(16) BmwX5 {
   translation 21.3097 -115.29 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(48)"
 }
-DEF car_bmw(17) BmwX5Simple {
+DEF car_bmw(17) BmwX5 {
   translation 220.27 -140.76 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(49)"
 }
-DEF car_bmw(18) BmwX5Simple {
+DEF car_bmw(18) BmwX5 {
   translation 205.35 -136.87 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(50)"
 }
-DEF car_bmw(19) BmwX5Simple {
+DEF car_bmw(19) BmwX5 {
   translation 216.67 -174.51 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(51)"
 }
-DEF car_bmw(20) BmwX5Simple {
+DEF car_bmw(20) BmwX5 {
   translation 286.26 -15.6509 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(52)"
 }
-DEF car_bmw(21) BmwX5Simple {
+DEF car_bmw(21) BmwX5 {
   translation 253.15 -3.0706 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(53)"
 }
-DEF car_bmw(22) BmwX5Simple {
+DEF car_bmw(22) BmwX5 {
   translation 269.95 5.07935 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(54)"
 }
-DEF car_bmw(23) BmwX5Simple {
+DEF car_bmw(23) BmwX5 {
   translation 216.76 -22.3305 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(55)"
 }
-DEF car_bmw(24) BmwX5Simple {
+DEF car_bmw(24) BmwX5 {
   translation 220.37 -77.3805 0.4
   rotation 0 0 1 1.57079
   color 0.5 0.26 0
   name "vehicle(56)"
 }
-DEF car_bmw(25) BmwX5Simple {
+DEF car_bmw(25) BmwX5 {
   translation 223.88 -35.8306 0.4
   rotation 0 0 1 1.57079
   color 0.5 0.26 0
   name "vehicle(57)"
 }
-DEF car_bmw(26) BmwX5Simple {
+DEF car_bmw(26) BmwX5 {
   translation 205.23 -73.9905 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(58)"
 }
-DEF car_bmw(27) BmwX5Simple {
+DEF car_bmw(27) BmwX5 {
   translation 197.96 -84.5205 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(59)"
 }
-DEF car_bmw(28) BmwX5Simple {
+DEF car_bmw(28) BmwX5 {
   translation 308.53 -66.0209 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(60)"
 }
-DEF car_bmw(29) BmwX5Simple {
+DEF car_bmw(29) BmwX5 {
   translation 257.9 -66.5106 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(61)"
 }
-DEF car_bmw(30) BmwX5Simple {
+DEF car_bmw(30) BmwX5 {
   translation 205.54 36.4495 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(62)"
 }
-DEF car_bmw(31) BmwX5Simple {
+DEF car_bmw(31) BmwX5 {
   translation 208.98 65.8496 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(63)"
 }
-DEF car_bmw(32) BmwX5Simple {
+DEF car_bmw(32) BmwX5 {
   translation 147.38 -1.68029 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(64)"
 }
-DEF car_bmw(33) BmwX5Simple {
+DEF car_bmw(33) BmwX5 {
   translation 170.25 7.63964 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(65)"
 }
-DEF car_bmw(34) BmwX5Simple {
+DEF car_bmw(34) BmwX5 {
   translation 38.2 -68.3697 0.4
   rotation 0 0 -1 5.92017e-06
   color 0.5 0.26 0
   name "vehicle(66)"
 }
-DEF car_bmw(35) BmwX5Simple {
+DEF car_bmw(35) BmwX5 {
   translation 148.23 -68.3603 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(67)"
 }
-DEF car_bmw(36) BmwX5Simple {
+DEF car_bmw(36) BmwX5 {
   translation 131.94 -25.5003 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(68)"
 }
-DEF car_bmw(37) BmwX5Simple {
+DEF car_bmw(37) BmwX5 {
   translation 47.1901 47.23 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.5 0.26 0
   name "vehicle(69)"
 }
-DEF car_bmw(38) BmwX5Simple {
+DEF car_bmw(38) BmwX5 {
   translation 68.6001 42.3599 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(70)"
 }
-DEF car_bmw(39) BmwX5Simple {
+DEF car_bmw(39) BmwX5 {
   translation 155.74 43.6396 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.5 0.26 0
   name "vehicle(71)"
 }
-DEF car_bmw(40) BmwX5Simple {
+DEF car_bmw(40) BmwX5 {
   translation 22.65 4.89004 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(72)"
 }
-DEF car_bmw(41) BmwX5Simple {
+DEF car_bmw(41) BmwX5 {
   translation 83.34 -1.7101 0.4
   rotation 0 0 1 3.14159
   color 0.5 0.26 0
   name "vehicle(73)"
 }
-DEF car_CitroenCZero(1) CitroenCZeroSimple {
+DEF car_CitroenCZero(1) CitroenCZero {
   translation -6.39 -14.8499 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(31)"
 }
-DEF car_CitroenCZero(2) CitroenCZeroSimple {
+DEF car_CitroenCZero(2) CitroenCZero {
   translation -22.89 23.97 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(74)"
 }
-DEF car_CitroenCZero(3) CitroenCZeroSimple {
+DEF car_CitroenCZero(3) CitroenCZero {
   translation -15.01 29.6 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(75)"
 }
-DEF car_CitroenCZero(4) CitroenCZeroSimple {
+DEF car_CitroenCZero(4) CitroenCZero {
   translation -14.01 42.08 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(76)"
 }
-DEF car_CitroenCZero(5) CitroenCZeroSimple {
+DEF car_CitroenCZero(5) CitroenCZero {
   translation -43.82 4.73005 0.4
   rotation 0 0 -1 5.61305e-06
   name "vehicle(77)"
 }
-DEF car_CitroenCZero(6) CitroenCZeroSimple {
+DEF car_CitroenCZero(6) CitroenCZero {
   translation -2.83001 -39.07 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(78)"
 }
-DEF car_CitroenCZero(7) CitroenCZeroSimple {
+DEF car_CitroenCZero(7) CitroenCZero {
   translation -19.1101 -52.29 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(79)"
 }
-DEF car_CitroenCZero(8) CitroenCZeroSimple {
+DEF car_CitroenCZero(8) CitroenCZero {
   translation -22.8301 -86.68 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(80)"
 }
-DEF car_CitroenCZero(9) CitroenCZeroSimple {
+DEF car_CitroenCZero(9) CitroenCZero {
   translation 10.4597 -103.13 0.4
   rotation 0 0 1 3.14159
   name "vehicle(81)"
 }
-DEF car_CitroenCZero(10) CitroenCZeroSimple {
+DEF car_CitroenCZero(10) CitroenCZero {
   translation 141.85 -99.12 0.4
   rotation 0 0 1 3.14159
   name "vehicle(82)"
 }
-DEF car_CitroenCZero(11) CitroenCZeroSimple {
+DEF car_CitroenCZero(11) CitroenCZero {
   translation 103.83 -95.4202 0.4
   rotation 0 0 1 3.14159
   name "vehicle(83)"
 }
-DEF car_CitroenCZero(12) CitroenCZeroSimple {
+DEF car_CitroenCZero(12) CitroenCZero {
   translation -2.27034 -151.8 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(84)"
 }
-DEF car_CitroenCZero(13) CitroenCZeroSimple {
+DEF car_CitroenCZero(13) CitroenCZero {
   translation -10.7303 -143.79 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(85)"
 }
-DEF car_CitroenCZero(14) CitroenCZeroSimple {
+DEF car_CitroenCZero(14) CitroenCZero {
   translation 154.11 -110.381 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(86)"
 }
-DEF car_CitroenCZero(15) CitroenCZeroSimple {
+DEF car_CitroenCZero(15) CitroenCZero {
   translation 172.79 -114.49 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(87)"
 }
-DEF car_CitroenCZero(16) CitroenCZeroSimple {
+DEF car_CitroenCZero(16) CitroenCZero {
   translation 130.15 -110.55 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(88)"
 }
-DEF car_CitroenCZero(17) CitroenCZeroSimple {
+DEF car_CitroenCZero(17) CitroenCZero {
   translation 212.92 -141.57 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(89)"
 }
-DEF car_CitroenCZero(18) CitroenCZeroSimple {
+DEF car_CitroenCZero(18) CitroenCZero {
   translation 224.16 -147.03 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(90)"
 }
-DEF car_CitroenCZero(19) CitroenCZeroSimple {
+DEF car_CitroenCZero(19) CitroenCZero {
   translation 216.4 -151.931 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(91)"
 }
-DEF car_CitroenCZero(20) CitroenCZeroSimple {
+DEF car_CitroenCZero(20) CitroenCZero {
   translation 260.64 4.45929 0.4
   rotation 0 0 1 3.14159
   name "vehicle(92)"
 }
-DEF car_CitroenCZero(21) CitroenCZeroSimple {
+DEF car_CitroenCZero(21) CitroenCZero {
   translation 316.66 -7.8408 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(93)"
 }
-DEF car_CitroenCZero(22) CitroenCZeroSimple {
+DEF car_CitroenCZero(22) CitroenCZero {
   translation 326.49 5.30913 0.4
   rotation 0 0 1 3.14159
   name "vehicle(94)"
 }
-DEF car_CitroenCZero(23) CitroenCZeroSimple {
+DEF car_CitroenCZero(23) CitroenCZero {
   translation 212.3 -38.1306 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(95)"
 }
-DEF car_CitroenCZero(24) CitroenCZeroSimple {
+DEF car_CitroenCZero(24) CitroenCZero {
   translation 213.31 -84.8806 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(96)"
 }
-DEF car_CitroenCZero(25) CitroenCZeroSimple {
+DEF car_CitroenCZero(25) CitroenCZero {
   translation 216.78 -16.6405 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(97)"
 }
-DEF car_CitroenCZero(26) CitroenCZeroSimple {
+DEF car_CitroenCZero(26) CitroenCZero {
   translation 201.39 -85.3205 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(98)"
 }
-DEF car_CitroenCZero(27) CitroenCZeroSimple {
+DEF car_CitroenCZero(27) CitroenCZero {
   translation 205.61 -63.3205 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(99)"
 }
-DEF car_CitroenCZero(28) CitroenCZeroSimple {
+DEF car_CitroenCZero(28) CitroenCZero {
   translation 268.81 -38.9907 0.4
   rotation 0 0 1 3.14159
   name "vehicle(100)"
 }
-DEF car_CitroenCZero(29) CitroenCZeroSimple {
+DEF car_CitroenCZero(29) CitroenCZero {
   translation 273.2 -66.4708 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(101)"
 }
-DEF car_CitroenCZero(30) CitroenCZeroSimple {
+DEF car_CitroenCZero(30) CitroenCZero {
   translation 202.16 20.8395 0.4
   rotation 0 0 -1 1.5708
   name "vehicle(102)"
 }
-DEF car_CitroenCZero(31) CitroenCZeroSimple {
+DEF car_CitroenCZero(31) CitroenCZero {
   translation 216.48 35.5495 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(103)"
 }
-DEF car_CitroenCZero(32) CitroenCZeroSimple {
+DEF car_CitroenCZero(32) CitroenCZero {
   translation 168.17 3.9896 0.4
   rotation 0 0 1 3.14159
   name "vehicle(104)"
 }
-DEF car_CitroenCZero(33) CitroenCZeroSimple {
+DEF car_CitroenCZero(33) CitroenCZero {
   translation 147.11 1.17963 0.4
   rotation 0 0 1 3.14159
   name "vehicle(105)"
 }
-DEF car_CitroenCZero(34) CitroenCZeroSimple {
+DEF car_CitroenCZero(34) CitroenCZero {
   translation 111.55 -65.1702 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(106)"
 }
-DEF car_CitroenCZero(35) CitroenCZeroSimple {
+DEF car_CitroenCZero(35) CitroenCZero {
   translation 118.33 -68.2903 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(107)"
 }
-DEF car_CitroenCZero(36) CitroenCZeroSimple {
+DEF car_CitroenCZero(36) CitroenCZero {
   translation 128.38 -23.4403 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(108)"
 }
-DEF car_CitroenCZero(37) CitroenCZeroSimple {
+DEF car_CitroenCZero(37) CitroenCZero {
   translation 48.0002 62.0599 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(109)"
 }
-DEF car_CitroenCZero(38) CitroenCZeroSimple {
+DEF car_CitroenCZero(38) CitroenCZero {
   translation 95.8401 72.9598 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(110)"
 }
-DEF car_CitroenCZero(39) CitroenCZeroSimple {
+DEF car_CitroenCZero(39) CitroenCZero {
   translation 126.98 40.7697 0.4
   rotation 0 0 1 3.14159
   name "vehicle(111)"
 }
-DEF car_CitroenCZero(40) CitroenCZeroSimple {
+DEF car_CitroenCZero(40) CitroenCZero {
   translation 13.42 3.99001 0.4
   rotation 0 0 1 3.14159
   name "vehicle(112)"
 }
-DEF car_CitroenCZero(41) CitroenCZeroSimple {
+DEF car_CitroenCZero(41) CitroenCZero {
   translation 31.51 -5.15003 0.4
   rotation 0 0 1 3.14159
   name "vehicle(113)"
 }
-DEF car_lincolnMKZ(1) LincolnMKZSimple {
+DEF car_lincolnMKZ(1) LincolnMKZ {
   translation -18.09 31.96 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(32)"
 }
-DEF car_lincolnMKZ(2) LincolnMKZSimple {
+DEF car_lincolnMKZ(2) LincolnMKZ {
   translation -18.71 50.37 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(114)"
 }
-DEF car_lincolnMKZ(3) LincolnMKZSimple {
+DEF car_lincolnMKZ(3) LincolnMKZ {
   translation -14.45 47.61 0.4
   rotation 0 0 -1 1.5708
   name "vehicle(115)"
 }
-DEF car_lincolnMKZ(4) LincolnMKZSimple {
+DEF car_lincolnMKZ(4) LincolnMKZ {
   translation -51.11 1.79008 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(116)"
 }
-DEF car_lincolnMKZ(5) LincolnMKZSimple {
+DEF car_lincolnMKZ(5) LincolnMKZ {
   translation -6.46 -68.93 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(117)"
 }
-DEF car_lincolnMKZ(6) LincolnMKZSimple {
+DEF car_lincolnMKZ(6) LincolnMKZ {
   translation -10.24 -22.7399 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(118)"
 }
-DEF car_lincolnMKZ(7) LincolnMKZSimple {
+DEF car_lincolnMKZ(7) LincolnMKZ {
   translation -22.6201 -59.11 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(119)"
 }
-DEF car_lincolnMKZ(8) LincolnMKZSimple {
+DEF car_lincolnMKZ(8) LincolnMKZ {
   translation -14.6101 -70.86 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(120)"
 }
-DEF car_lincolnMKZ(9) LincolnMKZSimple {
+DEF car_lincolnMKZ(9) LincolnMKZ {
   translation 15.8997 -94.7601 0.4
   rotation 0 0 1 3.14159
   name "vehicle(121)"
 }
-DEF car_lincolnMKZ(10) LincolnMKZSimple {
+DEF car_lincolnMKZ(10) LincolnMKZ {
   translation 112.61 -100.05 0.4
   rotation 0 0 1 3.14159
   name "vehicle(122)"
 }
-DEF car_lincolnMKZ(11) LincolnMKZSimple {
+DEF car_lincolnMKZ(11) LincolnMKZ {
   translation 5.24975 -91.93 0.4
   rotation 0 0 1 3.14159
   name "vehicle(123)"
 }
-DEF car_lincolnMKZ(12) LincolnMKZSimple {
+DEF car_lincolnMKZ(12) LincolnMKZ {
   translation -6.45036 -158.92 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(124)"
 }
-DEF car_lincolnMKZ(13) LincolnMKZSimple {
+DEF car_lincolnMKZ(13) LincolnMKZ {
   translation -10.1303 -135.5 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(125)"
 }
-DEF car_lincolnMKZ(14) LincolnMKZSimple {
+DEF car_lincolnMKZ(14) LincolnMKZ {
   translation 47.12 -107.601 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(126)"
 }
-DEF car_lincolnMKZ(15) LincolnMKZSimple {
+DEF car_lincolnMKZ(15) LincolnMKZ {
   translation 150.29 -114.861 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(127)"
 }
-DEF car_lincolnMKZ(16) LincolnMKZSimple {
+DEF car_lincolnMKZ(16) LincolnMKZ {
   translation 164.09 -110.781 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(128)"
 }
-DEF car_lincolnMKZ(17) LincolnMKZSimple {
+DEF car_lincolnMKZ(17) LincolnMKZ {
   translation 220.51 -148.37 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(129)"
 }
-DEF car_lincolnMKZ(18) LincolnMKZSimple {
+DEF car_lincolnMKZ(18) LincolnMKZ {
   translation 213.09 -134.58 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(130)"
 }
-DEF car_lincolnMKZ(19) LincolnMKZSimple {
+DEF car_lincolnMKZ(19) LincolnMKZ {
   translation 223.86 -140.33 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(131)"
 }
-DEF car_lincolnMKZ(20) LincolnMKZSimple {
+DEF car_lincolnMKZ(20) LincolnMKZ {
   translation 241.97 0.899349 0.4
   rotation 0 0 1 3.14159
   name "vehicle(132)"
 }
-DEF car_lincolnMKZ(21) LincolnMKZSimple {
+DEF car_lincolnMKZ(21) LincolnMKZ {
   translation 262.99 1.03929 0.4
   rotation 0 0 1 3.14159
   name "vehicle(133)"
 }
-DEF car_lincolnMKZ(22) LincolnMKZSimple {
+DEF car_lincolnMKZ(22) LincolnMKZ {
   translation 250.81 4.87933 0.4
   rotation 0 0 1 3.14159
   name "vehicle(134)"
 }
-DEF car_lincolnMKZ(23) LincolnMKZSimple {
+DEF car_lincolnMKZ(23) LincolnMKZ {
   translation 224.15 -22.1506 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(135)"
 }
-DEF car_lincolnMKZ(24) LincolnMKZSimple {
+DEF car_lincolnMKZ(24) LincolnMKZ {
   translation 213.17 -19.1706 0.4
   rotation 0 0 1 1.57079
   name "vehicle(136)"
 }
-DEF car_lincolnMKZ(25) LincolnMKZSimple {
+DEF car_lincolnMKZ(25) LincolnMKZ {
   translation 219.94 -32.0306 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(137)"
 }
-DEF car_lincolnMKZ(26) LincolnMKZSimple {
+DEF car_lincolnMKZ(26) LincolnMKZ {
   translation 208.98 -83.62 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(138)"
 }
-DEF car_lincolnMKZ(27) LincolnMKZSimple {
+DEF car_lincolnMKZ(27) LincolnMKZ {
   translation 197.67 -20.2905 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(139)"
 }
-DEF car_lincolnMKZ(28) LincolnMKZSimple {
+DEF car_lincolnMKZ(28) LincolnMKZ {
   translation 298.83 -67.0209 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(140)"
 }
-DEF car_lincolnMKZ(29) LincolnMKZSimple {
+DEF car_lincolnMKZ(29) LincolnMKZ {
   translation 376.49 -67.2914 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(141)"
 }
-DEF car_lincolnMKZ(30) LincolnMKZSimple {
+DEF car_lincolnMKZ(30) LincolnMKZ {
   translation 197.8 42.7695 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(142)"
 }
-DEF car_lincolnMKZ(31) LincolnMKZSimple {
+DEF car_lincolnMKZ(31) LincolnMKZ {
   translation 208.79 30.4495 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(143)"
 }
-DEF car_lincolnMKZ(32) LincolnMKZSimple {
+DEF car_lincolnMKZ(32) LincolnMKZ {
   translation 141.12 1.36963 0.4
   rotation 0 0 1 3.14159
   name "vehicle(144)"
 }
-DEF car_lincolnMKZ(33) LincolnMKZSimple {
+DEF car_lincolnMKZ(33) LincolnMKZ {
   translation 154.72 -1.49038 0.4
   rotation 0 0 1 3.14159
   name "vehicle(145)"
 }
-DEF car_lincolnMKZ(34) LincolnMKZSimple {
+DEF car_lincolnMKZ(34) LincolnMKZ {
   translation 132.29 -18.6603 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(146)"
 }
-DEF car_lincolnMKZ(35) LincolnMKZSimple {
+DEF car_lincolnMKZ(35) LincolnMKZ {
   translation 99.28 -64.9002 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(147)"
 }
-DEF car_lincolnMKZ(36) LincolnMKZSimple {
+DEF car_lincolnMKZ(36) LincolnMKZ {
   translation 185.9 -64.6306 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(148)"
 }
-DEF car_lincolnMKZ(37) LincolnMKZSimple {
+DEF car_lincolnMKZ(37) LincolnMKZ {
   translation 47.2901 14.1699 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(149)"
 }
-DEF car_lincolnMKZ(38) LincolnMKZSimple {
+DEF car_lincolnMKZ(38) LincolnMKZ {
   translation 91.1701 42.6898 0.4
   rotation 0 0 1 3.14159
   name "vehicle(150)"
 }
-DEF car_lincolnMKZ(39) LincolnMKZSimple {
+DEF car_lincolnMKZ(39) LincolnMKZ {
   translation 128.54 21.3997 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(151)"
 }
-DEF car_lincolnMKZ(40) LincolnMKZSimple {
+DEF car_lincolnMKZ(40) LincolnMKZ {
   translation 7.33 4.83003 0.4
   rotation 0 0 1 3.14159
   name "vehicle(152)"
 }
-DEF car_lincolnMKZ(41) LincolnMKZSimple {
+DEF car_lincolnMKZ(41) LincolnMKZ {
   translation 36.64 5.51995 0.4
   rotation 0 0 1 3.14159
   name "vehicle(153)"
 }
-DEF car_bsnzs(1) MercedesBenzSprinterSimple {
+DEF car_bsnzs(1) MercedesBenzSprinter {
   translation -19 25.61 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
 }
-DEF car_bsnzs(2) MercedesBenzSprinterSimple {
+DEF car_bsnzs(2) MercedesBenzSprinter {
   translation -10.38 39.99 0.4
   rotation 0 0 1 1.5708
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(1)"
 }
-DEF car_bsnzs(3) MercedesBenzSprinterSimple {
+DEF car_bsnzs(3) MercedesBenzSprinter {
   translation -22.87 52.09 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(2)"
 }
-DEF car_bsnzs(4) MercedesBenzSprinterSimple {
+DEF car_bsnzs(4) MercedesBenzSprinter {
   translation -39.34 -4.75994 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(3)"
 }
-DEF car_bsnzs(5) MercedesBenzSprinterSimple {
+DEF car_bsnzs(5) MercedesBenzSprinter {
   translation -9.93001 -48.98 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(4)"
 }
-DEF car_bsnzs(6) MercedesBenzSprinterSimple {
+DEF car_bsnzs(6) MercedesBenzSprinter {
   translation -2.03 -23.2999 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(5)"
 }
-DEF car_bsnzs(7) MercedesBenzSprinterSimple {
+DEF car_bsnzs(7) MercedesBenzSprinter {
   translation -18.5201 -73.74 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(6)"
 }
-DEF car_bsnzs(8) MercedesBenzSprinterSimple {
+DEF car_bsnzs(8) MercedesBenzSprinter {
   translation -14.5101 -77.62 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(7)"
 }
-DEF car_bsnzs(9) MercedesBenzSprinterSimple {
+DEF car_bsnzs(9) MercedesBenzSprinter {
   translation 8.0999 -96.07 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(8)"
 }
-DEF car_bsnzs(10) MercedesBenzSprinterSimple {
+DEF car_bsnzs(10) MercedesBenzSprinter {
   translation 132.65 -100.33 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(9)"
 }
-DEF car_bsnzs(11) MercedesBenzSprinterSimple {
+DEF car_bsnzs(11) MercedesBenzSprinter {
   translation 21.4098 -92.46 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(10)"
 }
-DEF car_bsnzs(12) MercedesBenzSprinterSimple {
+DEF car_bsnzs(12) MercedesBenzSprinter {
   translation -7.16032 -168.5 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(11)"
 }
-DEF car_bsnzs(13) MercedesBenzSprinterSimple {
+DEF car_bsnzs(13) MercedesBenzSprinter {
   translation -1.92033 -143.71 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(12)"
 }
-DEF car_bsnzs(14) MercedesBenzSprinterSimple {
+DEF car_bsnzs(14) MercedesBenzSprinter {
   translation 164.65 -114.73 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(13)"
 }
-DEF car_bsnzs(15) MercedesBenzSprinterSimple {
+DEF car_bsnzs(15) MercedesBenzSprinter {
   translation 170.99 -107.661 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(14)"
 }
-DEF car_bsnzs(16) MercedesBenzSprinterSimple {
+DEF car_bsnzs(16) MercedesBenzSprinter {
   translation 70.9297 -114.98 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(15)"
 }
-DEF car_bsnzs(17) MercedesBenzSprinterSimple {
+DEF car_bsnzs(17) MercedesBenzSprinter {
   translation 213.01 -155.68 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(16)"
 }
-DEF car_bsnzs(18) MercedesBenzSprinterSimple {
+DEF car_bsnzs(18) MercedesBenzSprinter {
   translation 216.62 -135.63 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(17)"
 }
-DEF car_bsnzs(19) MercedesBenzSprinterSimple {
+DEF car_bsnzs(19) MercedesBenzSprinter {
   translation 201.31 -175.36 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(18)"
 }
-DEF car_bsnzs(20) MercedesBenzSprinterSimple {
+DEF car_bsnzs(20) MercedesBenzSprinter {
   translation 243.16 -3.21062 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(19)"
 }
-DEF car_bsnzs(21) MercedesBenzSprinterSimple {
+DEF car_bsnzs(21) MercedesBenzSprinter {
   translation 279.3 -11.7507 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(20)"
 }
-DEF car_bsnzs(22) MercedesBenzSprinterSimple {
+DEF car_bsnzs(22) MercedesBenzSprinter {
   translation 350.72 -3.41094 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(21)"
 }
-DEF car_bsnzs(23) MercedesBenzSprinterSimple {
+DEF car_bsnzs(23) MercedesBenzSprinter {
   translation 224.41 -57.6706 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(22)"
 }
-DEF car_bsnzs(24) MercedesBenzSprinterSimple {
+DEF car_bsnzs(24) MercedesBenzSprinter {
   translation 219.83 -42.0305 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(23)"
 }
-DEF car_bsnzs(25) MercedesBenzSprinterSimple {
+DEF car_bsnzs(25) MercedesBenzSprinter {
   translation 213.01 -27.6605 0.4
   rotation 0 0 1 1.57079
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(24)"
 }
-DEF car_bsnzs(26) MercedesBenzSprinterSimple {
+DEF car_bsnzs(26) MercedesBenzSprinter {
   translation 205.49 -83.07 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(25)"
 }
-DEF car_bsnzs(27) MercedesBenzSprinterSimple {
+DEF car_bsnzs(27) MercedesBenzSprinter {
   translation 197.93 -74.6405 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(26)"
 }
-DEF car_bsnzs(28) MercedesBenzSprinterSimple {
+DEF car_bsnzs(28) MercedesBenzSprinter {
   translation 273.64 -51.1507 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(27)"
 }
-DEF car_bsnzs(29) MercedesBenzSprinterSimple {
+DEF car_bsnzs(29) MercedesBenzSprinter {
   translation 330.18 -65.8411 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(28)"
 }
-DEF car_bsnzs(30) MercedesBenzSprinterSimple {
+DEF car_bsnzs(30) MercedesBenzSprinter {
   translation 197.99 24.5794 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(29)"
 }
-DEF car_bsnzs(31) MercedesBenzSprinterSimple {
+DEF car_bsnzs(31) MercedesBenzSprinter {
   translation 205.51 29.0594 0.4
   rotation 0 0 1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(30)"
 }
-DEF car_bsnzs(32) MercedesBenzSprinterSimple {
+DEF car_bsnzs(32) MercedesBenzSprinter {
   translation 141.37 -2.06033 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(31)"
 }
-DEF car_bsnzs(33) MercedesBenzSprinterSimple {
+DEF car_bsnzs(33) MercedesBenzSprinter {
   translation 155.13 4.69962 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(32)"
 }
-DEF car_bsnzs(34) MercedesBenzSprinterSimple {
+DEF car_bsnzs(34) MercedesBenzSprinter {
   translation 59.44 -65.0101 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(33)"
 }
-DEF car_bsnzs(35) MercedesBenzSprinterSimple {
+DEF car_bsnzs(35) MercedesBenzSprinter {
   translation 182.93 -68.1006 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(34)"
 }
-DEF car_bsnzs(36) MercedesBenzSprinterSimple {
+DEF car_bsnzs(36) MercedesBenzSprinter {
   translation 143.49 -40.7203 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(35)"
 }
-DEF car_bsnzs(37) MercedesBenzSprinterSimple {
+DEF car_bsnzs(37) MercedesBenzSprinter {
   translation 58.9301 43.0899 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(36)"
 }
-DEF car_bsnzs(38) MercedesBenzSprinterSimple {
+DEF car_bsnzs(38) MercedesBenzSprinter {
   translation 96.7901 19.3098 0.4
   rotation 0 0 -1 -1.5707953071795862
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(37)"
 }
-DEF car_bsnzs(39) MercedesBenzSprinterSimple {
+DEF car_bsnzs(39) MercedesBenzSprinter {
   translation 129.27 63.5397 0.4
   rotation 0 0 1 1.57079
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(38)"
 }
-DEF car_bsnzs(40) MercedesBenzSprinterSimple {
+DEF car_bsnzs(40) MercedesBenzSprinter {
   translation 189.57 42.2295 0.4
   rotation 0 0 1 -5.307179586466759e-06
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(39)"
 }
-DEF car_bsnzs(41) MercedesBenzSprinterSimple {
+DEF car_bsnzs(41) MercedesBenzSprinter {
   translation 106.45 -4.16021 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(40)"
 }
-DEF car_bsnzs(42) MercedesBenzSprinterSimple {
+DEF car_bsnzs(42) MercedesBenzSprinter {
   translation 44.85 -3.41003 0.4
   rotation 0 0 1 3.14159
   color 0.09 0 0
   name "Mercedes-Benz Sprinter(41)"
 }
-DEF car_toyota(1) ToyotaPriusSimple {
+DEF car_toyota(1) ToyotaPrius {
   translation -18.52 44.19 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(30)"
 }
-DEF car_toyota(2) ToyotaPriusSimple {
+DEF car_toyota(2) ToyotaPrius {
   translation -22.79 30.51 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(154)"
 }
-DEF car_toyota(3) ToyotaPriusSimple {
+DEF car_toyota(3) ToyotaPrius {
   translation -14.6 35.57 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(155)"
 }
-DEF car_toyota(4) ToyotaPriusSimple {
+DEF car_toyota(4) ToyotaPrius {
   translation -2.17 -30.1999 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(156)"
 }
-DEF car_toyota(5) ToyotaPriusSimple {
+DEF car_toyota(5) ToyotaPrius {
   translation -10.34 -13.89 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(157)"
 }
-DEF car_toyota(6) ToyotaPriusSimple {
+DEF car_toyota(6) ToyotaPrius {
   translation -58.6 -1.43987 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(158)"
 }
-DEF car_toyota(7) ToyotaPriusSimple {
+DEF car_toyota(7) ToyotaPrius {
   translation -22.6001 -65.33 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(159)"
 }
-DEF car_toyota(8) ToyotaPriusSimple {
+DEF car_toyota(8) ToyotaPrius {
   translation -14.2701 -84.97 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(160)"
 }
-DEF car_toyota(9) ToyotaPriusSimple {
+DEF car_toyota(9) ToyotaPrius {
   translation 5.72975 -103.23 0.4
   rotation 0 0 1 3.14159
   name "vehicle(161)"
 }
-DEF car_toyota(10) ToyotaPriusSimple {
+DEF car_toyota(10) ToyotaPrius {
   translation 175.07 -91.7004 0.4
   rotation 0 0 1 3.14159
   name "vehicle(162)"
 }
-DEF car_toyota(11) ToyotaPriusSimple {
+DEF car_toyota(11) ToyotaPrius {
   translation 11.6598 -92.04 0.4
   rotation 0 0 1 3.14159
   name "vehicle(163)"
 }
-DEF car_toyota(12) ToyotaPriusSimple {
+DEF car_toyota(12) ToyotaPrius {
   translation -6.1503 -141.26 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(164)"
 }
-DEF car_toyota(13) ToyotaPriusSimple {
+DEF car_toyota(13) ToyotaPrius {
   translation -6.49032 -152.73 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(165)"
 }
-DEF car_toyota(14) ToyotaPriusSimple {
+DEF car_toyota(14) ToyotaPrius {
   translation 157.12 -114.76 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(166)"
 }
-DEF car_toyota(15) ToyotaPriusSimple {
+DEF car_toyota(15) ToyotaPrius {
   translation 163.02 -107.021 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(167)"
 }
-DEF car_toyota(16) ToyotaPriusSimple {
+DEF car_toyota(16) ToyotaPrius {
   translation 112.18 -110.72 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(168)"
 }
-DEF car_toyota(17) ToyotaPriusSimple {
+DEF car_toyota(17) ToyotaPrius {
   translation 220.41 -134.54 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(169)"
 }
-DEF car_toyota(18) ToyotaPriusSimple {
+DEF car_toyota(18) ToyotaPrius {
   translation 220.51 -154.771 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(170)"
 }
-DEF car_toyota(19) ToyotaPriusSimple {
+DEF car_toyota(19) ToyotaPrius {
   translation 216.5 -145.33 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(171)"
 }
-DEF car_toyota(20) ToyotaPriusSimple {
+DEF car_toyota(20) ToyotaPrius {
   translation 277.02 1.01929 0.4
   rotation 0 0 1 3.14159
   name "vehicle(172)"
 }
-DEF car_toyota(21) ToyotaPriusSimple {
+DEF car_toyota(21) ToyotaPrius {
   translation 242.73 4.83936 0.4
   rotation 0 0 1 3.14159
   name "vehicle(173)"
 }
-DEF car_toyota(22) ToyotaPriusSimple {
+DEF car_toyota(22) ToyotaPrius {
   translation 264.23 -3.2507 0.4
   rotation 0 0 1 3.14159
   name "vehicle(174)"
 }
-DEF car_toyota(23) ToyotaPriusSimple {
+DEF car_toyota(23) ToyotaPrius {
   translation 216.39 -36.4605 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(175)"
 }
-DEF car_toyota(24) ToyotaPriusSimple {
+DEF car_toyota(24) ToyotaPrius {
   translation 216.68 -29.4406 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(176)"
 }
-DEF car_toyota(25) ToyotaPriusSimple {
+DEF car_toyota(25) ToyotaPrius {
   translation 220.05 -17.3006 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(177)"
 }
-DEF car_toyota(26) ToyotaPriusSimple {
+DEF car_toyota(26) ToyotaPrius {
   translation 201.45 -44.2905 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(178)"
 }
-DEF car_toyota(27) ToyotaPriusSimple {
+DEF car_toyota(27) ToyotaPrius {
   translation 208.67 -75.1405 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(179)"
 }
-DEF car_toyota(28) ToyotaPriusSimple {
+DEF car_toyota(28) ToyotaPrius {
   translation 234.91 -39.6207 0.4
   rotation 0 0 1 3.14159
   name "vehicle(180)"
 }
-DEF car_toyota(29) ToyotaPriusSimple {
+DEF car_toyota(29) ToyotaPrius {
   translation 352 -67.3409 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(181)"
 }
-DEF car_toyota(30) ToyotaPriusSimple {
+DEF car_toyota(30) ToyotaPrius {
   translation 198.38 33.0995 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(182)"
 }
-DEF car_toyota(31) ToyotaPriusSimple {
+DEF car_toyota(31) ToyotaPrius {
   translation 208.99 21.6395 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(183)"
 }
-DEF car_toyota(32) ToyotaPriusSimple {
+DEF car_toyota(32) ToyotaPrius {
   translation 139.32 4.26965 0.4
   rotation 0 0 1 3.14159
   name "vehicle(184)"
 }
-DEF car_toyota(33) ToyotaPriusSimple {
+DEF car_toyota(33) ToyotaPrius {
   translation 152.79 1.68964 0.4
   rotation 0 0 1 3.14159
   name "vehicle(185)"
 }
-DEF car_toyota(34) ToyotaPriusSimple {
+DEF car_toyota(34) ToyotaPrius {
   translation 117.46 -65.4002 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(186)"
 }
-DEF car_toyota(35) ToyotaPriusSimple {
+DEF car_toyota(35) ToyotaPrius {
   translation 177.63 -65.1405 0.4
   rotation 0 0 1 -5.307179586466759e-06
   name "vehicle(187)"
 }
-DEF car_toyota(36) ToyotaPriusSimple {
+DEF car_toyota(36) ToyotaPrius {
   translation 132.71 -44.1303 0.4
   rotation 0 0 1 1.57079
   name "vehicle(188)"
 }
-DEF car_toyota(37) ToyotaPriusSimple {
+DEF car_toyota(37) ToyotaPrius {
   translation 96.2201 56.5198 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(189)"
 }
-DEF car_toyota(38) ToyotaPriusSimple {
+DEF car_toyota(38) ToyotaPrius {
   translation 49.3101 30.7599 0.4
   rotation 0 0 1 -1.5707953071795862
   name "vehicle(190)"
 }
-DEF car_toyota(39) ToyotaPriusSimple {
+DEF car_toyota(39) ToyotaPrius {
   translation 132.73 52.2097 0.4
   rotation 0 0 -1 -1.5707953071795862
   name "vehicle(191)"
 }
-DEF car_toyota(40) ToyotaPriusSimple {
+DEF car_toyota(40) ToyotaPrius {
   translation 21.85 -5.06 0.4
   rotation 0 0 1 3.14159
   name "vehicle(192)"
 }
-DEF car_toyota(41) ToyotaPriusSimple {
+DEF car_toyota(41) ToyotaPrius {
   translation 7.91 -5.34997 0.4
   rotation 0 0 1 3.14159
   name "vehicle(193)"
