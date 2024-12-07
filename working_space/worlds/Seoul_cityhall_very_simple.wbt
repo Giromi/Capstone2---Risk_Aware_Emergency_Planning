@@ -1,0 +1,2975 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/humans/skin_animated_humans/protos/CharacterSkin.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/Road.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/RoadLine.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/traffic/protos/PedestrianCrossing.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/RandomBuilding.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/CommercialBuilding.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/Building.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/HollowBuilding.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/ResidentialTower.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/buildings/protos/SimpleBuilding.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Asphalt.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Pavement.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/trees/protos/SimpleTree.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/generic/Bus.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/range_rover/RangeRoverSportSVR.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/citroen/CitroenCZero.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/mercedes_benz/MercedesBenzSprinter.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/toyota/ToyotaPrius.proto"
+
+WorldInfo {
+  info [
+    "Accident in Seoul_CityHall"
+    "In this example BVH motions are played on FBX MakeHuman models."
+    "Author: Bae WooYeol <baewy56123949@gmail.com>"
+  ]
+  title "Seoul_CityHall"
+  ERP 0.6
+  basicTimeStep 100
+  lineScale 1
+  contactProperties [
+    ContactProperties {
+      coulombFriction [
+        8
+      ]
+      softCFM 1e-05
+      bumpSound ""
+      rollSound ""
+      slideSound ""
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.5489795005042323 -0.5544971469669091 -0.6254233942152161 4.268406463145436
+  position -31.669579236570875 -8.569437257179944 69.90478916480154
+  near 1
+  followSmoothness 0
+}
+TexturedBackground {
+  texture "dawn_cloudy_empty"
+}
+TexturedBackgroundLight {
+  texture "noon_cloudy_countryside"
+}
+Road {
+  name "road(1)"
+  startJunction "25"
+  endJunction "24"
+  width 13
+  numberOfLanes 4
+  numberOfForwardLanes 2
+  roadBorderHeight 0.02
+  roadBorderWidth [
+    33.5
+  ]
+  leftBorder FALSE
+  wayPoints [
+    0 0 0
+    127 0 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(2)"
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    62
+  ]
+  wayPoints [
+    130.5 -6.5 0
+    130.5 -27.5 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(3)"
+  width 13
+  numberOfLanes 4
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    21
+  ]
+  wayPoints [
+    134 0 0
+    196 0 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(4)"
+  width 13
+  numberOfLanes 1
+  lines []
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    3
+  ]
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    127 0 0
+    134 0 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(5)"
+  width 5
+  numberOfLanes 1
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    18
+  ]
+  wayPoints [
+    134 -30 0
+    140 -30 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(6)"
+  width 5
+  numberOfLanes 1
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    6
+  ]
+  wayPoints [
+    142.5 -32.55 0
+    142.5 -63 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(7)"
+  width 5
+  numberOfLanes 1
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    36
+  ]
+  rightBorder FALSE
+  wayPoints [
+    142.5 -27.5 0
+    142.5 -33 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(8)"
+  width 5
+  numberOfLanes 1
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    18.2
+  ]
+  rightBorder FALSE
+  wayPoints [
+    140 -30 0
+    145 -30 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(9)"
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    120
+  ]
+  leftBorder FALSE
+  wayPoints [
+    130.5 -27.5 0
+    130.5 -63 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Solid {
+  children [
+    Group {
+      children [
+        Group {
+        }
+        Group {
+        }
+        Group {
+        }
+      ]
+    }
+    DEF ROAD Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/asphalt/asphalt_base_color.jpg"
+              ]
+              filtering 5
+            }
+            roughnessMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/asphalt/asphalt_roughness.jpg"
+              ]
+              filtering 5
+            }
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/asphalt/asphalt_normal.jpg"
+              ]
+              filtering 5
+            }
+            normalMapFactor 1.5
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/asphalt/asphalt_occlusion.jpg"
+              ]
+              filtering 5
+            }
+          }
+          geometry DEF ROAD_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -25 -6.500000000000001 0
+                0 -6.499999999999999 0
+                -25 -20.625 0
+                0 -20.625 0
+                -25 -34.75 0
+                0 -34.75 0
+                -25 -48.875 0
+                0 -48.875 0
+                -25 -63 0
+                0 -63 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                -2.5 0
+                2.5 0
+                -2.5 2.825
+                2.5 2.825
+                -2.5 5.65
+                2.5 5.65
+                -2.5 8.475
+                2.5 8.475
+                -2.5 11.3
+                2.5 11.3
+              ]
+            }
+            coordIndex [
+              0, 2, 3, -1, 0, 3, 1, -1, 2, 4, 5, -1, 2, 5, 3, -1, 4, 6, 7, -1, 4, 7, 5, -1, 6, 8, 9, -1, 6, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, -1, 0, 3, 1, -1, 2, 4, 5, -1, 2, 5, 3, -1, 4, 6, 7, -1, 4, 7, 5, -1, 6, 8, 9, -1, 6, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road ground"
+      model "road"
+      recognitionColors [
+        0.2 0.2 0.2
+      ]
+    }
+    DEF LINES Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_base_color_dashed.png"
+              ]
+              filtering 5
+            }
+            roughness 0.7
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_normal.jpg"
+              ]
+              filtering 5
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_occlusion.jpg"
+              ]
+              filtering 5
+            }
+            textureTransform TextureTransform {
+              scale 1 0.2
+            }
+          }
+          geometry IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -20.90833333333333 -6.500000000000001 0.01
+                -20.758333333333333 -6.500000000000001 0.01
+                -20.90833333333333 -20.625 0.01
+                -20.758333333333333 -20.625 0.01
+                -20.90833333333333 -34.75 0.01
+                -20.758333333333333 -34.75 0.01
+                -20.90833333333333 -48.875 0.01
+                -20.758333333333333 -48.875 0.01
+                -20.90833333333333 -63 0.01
+                -20.758333333333333 -63 0.01
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 0
+                1 0
+                0 28.25
+                1 28.25
+                0 56.5
+                1 56.5
+                0 84.75
+                1 84.75
+                0 113
+                1 113
+              ]
+            }
+            coordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road line(-1)"
+      model "road line"
+      recognitionColors [
+        1 1 1
+      ]
+    }
+    DEF LINES Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_base_color_dashed.png"
+              ]
+              filtering 5
+            }
+            roughness 0.7
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_normal.jpg"
+              ]
+              filtering 5
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_occlusion.jpg"
+              ]
+              filtering 5
+            }
+            textureTransform TextureTransform {
+              scale 1 0.2
+            }
+          }
+          geometry IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -16.741666666666667 -6.5 0.01
+                -16.59166666666667 -6.5 0.01
+                -16.741666666666667 -20.625 0.01
+                -16.59166666666667 -20.625 0.01
+                -16.741666666666667 -34.75 0.01
+                -16.59166666666667 -34.75 0.01
+                -16.741666666666667 -48.875 0.01
+                -16.59166666666667 -48.875 0.01
+                -16.741666666666667 -63 0.01
+                -16.59166666666667 -63 0.01
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 0
+                1 0
+                0 28.25
+                1 28.25
+                0 56.5
+                1 56.5
+                0 84.75
+                1 84.75
+                0 113
+                1 113
+              ]
+            }
+            coordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road line(0)"
+      model "road line"
+      recognitionColors [
+        1 1 1
+      ]
+    }
+    DEF LINES Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColor 0.85 0.75 0.3
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_base_color.png"
+              ]
+              filtering 5
+            }
+            roughness 0.7
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_normal.jpg"
+              ]
+              filtering 5
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_occlusion.jpg"
+              ]
+              filtering 5
+            }
+            textureTransform TextureTransform {
+              scale 1 0.2
+            }
+          }
+          geometry IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -12.725 -6.5 0.01
+                -12.275 -6.5 0.01
+                -12.725 -20.625 0.01
+                -12.275 -20.625 0.01
+                -12.725 -34.75 0.01
+                -12.275 -34.75 0.01
+                -12.725 -48.875 0.01
+                -12.275 -48.875 0.01
+                -12.725 -63 0.01
+                -12.275 -63 0.01
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 0
+                2 0
+                0 9.416666666666668
+                2 9.416666666666668
+                0 18.833333333333336
+                2 18.833333333333336
+                0 28.250000000000004
+                2 28.250000000000004
+                0 37.66666666666667
+                2 37.66666666666667
+              ]
+            }
+            coordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road line(1)"
+      model "road line"
+      recognitionColors [
+        1 1 1
+      ]
+    }
+    DEF LINES Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_base_color_dashed.png"
+              ]
+              filtering 5
+            }
+            roughness 0.7
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_normal.jpg"
+              ]
+              filtering 5
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_occlusion.jpg"
+              ]
+              filtering 5
+            }
+            textureTransform TextureTransform {
+              scale 1 0.2
+            }
+          }
+          geometry IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -8.408333333333335 -6.5 0.01
+                -8.258333333333333 -6.5 0.01
+                -8.408333333333335 -20.625 0.01
+                -8.258333333333333 -20.625 0.01
+                -8.408333333333335 -34.75 0.01
+                -8.258333333333333 -34.75 0.01
+                -8.408333333333335 -48.875 0.01
+                -8.258333333333333 -48.875 0.01
+                -8.408333333333335 -63 0.01
+                -8.258333333333333 -63 0.01
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 0
+                1 0
+                0 28.25
+                1 28.25
+                0 56.5
+                1 56.5
+                0 84.75
+                1 84.75
+                0 113
+                1 113
+              ]
+            }
+            coordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road line(2)"
+      model "road line"
+      recognitionColors [
+        1 1 1
+      ]
+    }
+    DEF LINES Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_base_color_dashed.png"
+              ]
+              filtering 5
+            }
+            roughness 0.7
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_normal.jpg"
+              ]
+              filtering 5
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/textures/line_occlusion.jpg"
+              ]
+              filtering 5
+            }
+            textureTransform TextureTransform {
+              scale 1 0.2
+            }
+          }
+          geometry IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -4.241666666666665 -6.499999999999999 0.01
+                -4.091666666666667 -6.499999999999999 0.01
+                -4.241666666666665 -20.625 0.01
+                -4.091666666666667 -20.625 0.01
+                -4.241666666666665 -34.75 0.01
+                -4.091666666666667 -34.75 0.01
+                -4.241666666666665 -48.875 0.01
+                -4.091666666666667 -48.875 0.01
+                -4.241666666666665 -63 0.01
+                -4.091666666666667 -63 0.01
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 0
+                1 0
+                0 28.25
+                1 28.25
+                0 56.5
+                1 56.5
+                0 84.75
+                1 84.75
+                0 113
+                1 113
+              ]
+            }
+            coordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, 1, -1, 2, 4, 5, 3, -1
+              4, 6, 7, 5, -1, 6, 8, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road line(3)"
+      model "road line"
+      recognitionColors [
+        1 1 1
+      ]
+    }
+    DEF RIGHT_BORDER Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_base_color.jpg"
+              ]
+              filtering 5
+            }
+            roughness 1
+            roughnessMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_roughness.jpg"
+              ]
+            }
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_normal.jpg"
+              ]
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_occlusion.jpg"
+              ]
+            }
+          }
+          geometry DEF RIGHT_BORDER_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                -47 -6.500000000000002 0
+                -47 -6.500000000000002 0.12
+                -25 -6.500000000000001 0.12
+                -25 -6.500000000000001 0
+                -47 -20.625000000000004 0
+                -47 -20.625000000000004 0.12
+                -25 -20.625 0.12
+                -25 -20.625 0
+                -47 -34.75 0
+                -47 -34.75 0.12
+                -25 -34.75 0.12
+                -25 -34.75 0
+                -47 -48.875 0
+                -47 -48.875 0.12
+                -25 -48.875 0.12
+                -25 -48.875 0
+                -47 -63 0
+                -47 -63 0.12
+                -25 -63 0.12
+                -25 -63 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 22.24
+                0 22.12
+                0 0.12
+                0 0
+                14.125 22.24
+                14.125 22.12
+                14.125 0.12
+                14.125 0
+                28.25 22.24
+                28.25 22.12
+                28.25 0.12
+                28.25 0
+                42.375 22.24
+                42.375 22.12
+                42.375 0.12
+                42.375 0
+                56.5 22.24
+                56.5 22.12
+                56.5 0.12
+                56.5 0
+              ]
+            }
+            coordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            texCoordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road right border"
+      model "road border"
+      boundingObject USE RIGHT_BORDER_GEOMETRY
+      recognitionColors [
+        0.6 0.6 0.6
+      ]
+    }
+    DEF LEFT_BORDER Solid {
+      children [
+        Shape {
+          appearance PBRAppearance {
+            baseColorMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_base_color.jpg"
+              ]
+              filtering 5
+            }
+            roughness 1
+            roughnessMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_roughness.jpg"
+              ]
+            }
+            metalness 0
+            normalMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_normal.jpg"
+              ]
+            }
+            occlusionMap ImageTexture {
+              url [
+                "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/textures/pavement/braun_square_stone_pavement_occlusion.jpg"
+              ]
+            }
+          }
+          geometry DEF LEFT_BORDER_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                0 -6.499999999999999 0
+                0 -6.499999999999999 0.12
+                22 -6.499999999999998 0.12
+                22 -6.499999999999998 0
+                0 -20.625 0
+                0 -20.625 0.12
+                22 -20.624999999999996 0.12
+                22 -20.624999999999996 0
+                0 -34.75 0
+                0 -34.75 0.12
+                22 -34.75 0.12
+                22 -34.75 0
+                0 -48.875 0
+                0 -48.875 0.12
+                22 -48.875 0.12
+                22 -48.875 0
+                0 -63 0
+                0 -63 0.12
+                22 -63 0.12
+                22 -63 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 22.24
+                0 22.12
+                0 0.12
+                0 0
+                14.125 22.24
+                14.125 22.12
+                14.125 0.12
+                14.125 0
+                28.25 22.24
+                28.25 22.12
+                28.25 0.12
+                28.25 0
+                42.375 22.24
+                42.375 22.12
+                42.375 0.12
+                42.375 0
+                56.5 22.24
+                56.5 22.12
+                56.5 0.12
+                56.5 0
+              ]
+            }
+            coordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            texCoordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road left border"
+      model "road border"
+      boundingObject USE LEFT_BORDER_GEOMETRY
+      recognitionColors [
+        0.6 0.6 0.6
+      ]
+    }
+  ]
+  name "road(20)"
+  model "road"
+  locked TRUE
+}
+Road {
+  name "road(26)"
+  startJunction "25"
+  endJunction "24"
+  width 13
+  numberOfLanes 4
+  numberOfForwardLanes 2
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    43
+  ]
+  wayPoints [
+    -25 0 0
+    -400 0 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(25)"
+  width 25
+  numberOfLanes 6
+  lines [
+    RoadLine {
+    }
+    RoadLine {
+    }
+    RoadLine {
+      color 0.85 0.75 0.3
+      type "double"
+    }
+  ]
+  roadBorderHeight 0.02
+  roadBorderWidth [
+    45.5
+  ]
+  wayPoints [
+    -12.5 6.5 0
+    -12.5 90 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(27)"
+  width 25
+  numberOfLanes 1
+  numberOfForwardLanes 0
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    7.5
+  ]
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    -12.5 -7 0
+    -12.5 7 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(28)"
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    27
+  ]
+  wayPoints [
+    130.5 6.5 0
+    130.5 40 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(29)"
+  startJunction "25"
+  endJunction "24"
+  width 13
+  numberOfLanes 4
+  numberOfForwardLanes 2
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    3
+  ]
+  wayPoints [
+    100 0 0
+    127 0 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Road {
+  name "road(30)"
+  startJunction "25"
+  endJunction "24"
+  width 13
+  numberOfLanes 4
+  numberOfForwardLanes 2
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    3
+  ]
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    100 0 0
+    95 0 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+Solid {
+  children [
+    Group {
+      children [
+        RoadLine {
+        }
+      ]
+    }
+    DEF ROAD Solid {
+      children [
+        Shape {
+          appearance Asphalt {
+          }
+          geometry DEF ROAD_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                98.5 6.5 0
+                93.5 6.5 0
+                98.5 14.875 0
+                93.5 14.875 0
+                98.5 23.25 0
+                93.5 23.25 0
+                98.5 31.625 0
+                93.5 31.625 0
+                98.5 40 0
+                93.5 40 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                -0.5 0
+                0.5 0
+                -0.5 1.675
+                0.5 1.675
+                -0.5 3.35
+                0.5 3.35
+                -0.5 5.025
+                0.5 5.025
+                -0.5 6.7
+                0.5 6.7
+              ]
+            }
+            coordIndex [
+              0, 2, 3, -1, 0, 3, 1, -1, 2, 4, 5, -1, 2, 5, 3, -1, 4, 6, 7, -1, 4, 7, 5, -1, 6, 8, 9, -1, 6, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, -1, 0, 3, 1, -1, 2, 4, 5, -1, 2, 5, 3, -1, 4, 6, 7, -1, 4, 7, 5, -1, 6, 8, 9, -1, 6, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road ground"
+      model "road"
+      recognitionColors [
+        0.2 0.2 0.2
+      ]
+    }
+    DEF RIGHT_BORDER Solid {
+      children [
+        Shape {
+          appearance Pavement {
+          }
+          geometry DEF RIGHT_BORDER_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                104.5 6.499999999999999 0
+                104.5 6.499999999999999 0.12
+                98.5 6.5 0.12
+                98.5 6.5 0
+                104.5 14.875 0
+                104.5 14.875 0.12
+                98.5 14.875 0.12
+                98.5 14.875 0
+                104.5 23.25 0
+                104.5 23.25 0.12
+                98.5 23.25 0.12
+                98.5 23.25 0
+                104.5 31.625 0
+                104.5 31.625 0.12
+                98.5 31.625 0.12
+                98.5 31.625 0
+                104.5 40 0
+                104.5 40 0.12
+                98.5 40 0.12
+                98.5 40 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 6.24
+                0 6.12
+                0 0.12
+                0 0
+                8.375 6.24
+                8.375 6.12
+                8.375 0.12
+                8.375 0
+                16.75 6.24
+                16.75 6.12
+                16.75 0.12
+                16.75 0
+                25.125 6.24
+                25.125 6.12
+                25.125 0.12
+                25.125 0
+                33.5 6.24
+                33.5 6.12
+                33.5 0.12
+                33.5 0
+              ]
+            }
+            coordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            texCoordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road right border"
+      model "road border"
+      boundingObject USE RIGHT_BORDER_GEOMETRY
+      recognitionColors [
+        0.6 0.6 0.6
+      ]
+    }
+    DEF LEFT_BORDER Solid {
+      children [
+        Shape {
+          appearance Pavement {
+          }
+          geometry DEF LEFT_BORDER_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                93.5 6.5 0
+                93.5 6.5 0.12
+                87.5 6.500000000000001 0.12
+                87.5 6.500000000000001 0
+                93.5 14.875 0
+                93.5 14.875 0.12
+                87.5 14.875 0.12
+                87.5 14.875 0
+                93.5 23.25 0
+                93.5 23.25 0.12
+                87.5 23.25 0.12
+                87.5 23.25 0
+                93.5 31.625 0
+                93.5 31.625 0.12
+                87.5 31.625 0.12
+                87.5 31.625 0
+                93.5 40 0
+                93.5 40 0.12
+                87.5 40 0.12
+                87.5 40 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 6.24
+                0 6.12
+                0 0.12
+                0 0
+                8.375 6.24
+                8.375 6.12
+                8.375 0.12
+                8.375 0
+                16.75 6.24
+                16.75 6.12
+                16.75 0.12
+                16.75 0
+                25.125 6.24
+                25.125 6.12
+                25.125 0.12
+                25.125 0
+                33.5 6.24
+                33.5 6.12
+                33.5 0.12
+                33.5 0
+              ]
+            }
+            coordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            texCoordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road left border"
+      model "road border"
+      boundingObject USE LEFT_BORDER_GEOMETRY
+      recognitionColors [
+        0.6 0.6 0.6
+      ]
+    }
+  ]
+  name "road(31)"
+  model "road"
+  locked TRUE
+}
+Solid {
+  translation 0 0 -0.1
+  children [
+    Group {
+      children [
+        RoadLine {
+        }
+      ]
+    }
+    DEF ROAD Solid {
+      children [
+        Shape {
+          appearance Asphalt {
+          }
+          geometry DEF ROAD_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                50.5 6.5 0
+                45.5 6.5 0
+                50.5 14.875 0
+                45.5 14.875 0
+                50.5 23.25 0
+                45.5 23.25 0
+                50.5 31.625 0
+                45.5 31.625 0
+                50.5 40 0
+                45.5 40 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                -0.5 0
+                0.5 0
+                -0.5 1.675
+                0.5 1.675
+                -0.5 3.35
+                0.5 3.35
+                -0.5 5.025
+                0.5 5.025
+                -0.5 6.7
+                0.5 6.7
+              ]
+            }
+            coordIndex [
+              0, 2, 3, -1, 0, 3, 1, -1, 2, 4, 5, -1, 2, 5, 3, -1, 4, 6, 7, -1, 4, 7, 5, -1, 6, 8, 9, -1, 6, 9, 7, -1
+            ]
+            texCoordIndex [
+              0, 2, 3, -1, 0, 3, 1, -1, 2, 4, 5, -1, 2, 5, 3, -1, 4, 6, 7, -1, 4, 7, 5, -1, 6, 8, 9, -1, 6, 9, 7, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road ground"
+      model "road"
+      recognitionColors [
+        0.2 0.2 0.2
+      ]
+    }
+    DEF RIGHT_BORDER Solid {
+      children [
+        Shape {
+          appearance Pavement {
+          }
+          geometry DEF RIGHT_BORDER_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                87.5 6.499999999999997 0
+                87.5 6.499999999999997 0.12
+                50.5 6.5 0.12
+                50.5 6.5 0
+                87.5 14.874999999999998 0
+                87.5 14.874999999999998 0.12
+                50.5 14.875 0.12
+                50.5 14.875 0
+                87.5 23.249999999999996 0
+                87.5 23.249999999999996 0.12
+                50.5 23.25 0.12
+                50.5 23.25 0
+                87.5 31.624999999999996 0
+                87.5 31.624999999999996 0.12
+                50.5 31.625 0.12
+                50.5 31.625 0
+                87.5 40 0
+                87.5 40 0.12
+                50.5 40 0.12
+                50.5 40 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 37.24
+                0 37.12
+                0 0.12
+                0 0
+                8.375 37.24
+                8.375 37.12
+                8.375 0.12
+                8.375 0
+                16.75 37.24
+                16.75 37.12
+                16.75 0.12
+                16.75 0
+                25.125 37.24
+                25.125 37.12
+                25.125 0.12
+                25.125 0
+                33.5 37.24
+                33.5 37.12
+                33.5 0.12
+                33.5 0
+              ]
+            }
+            coordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            texCoordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road right border"
+      model "road border"
+      boundingObject USE RIGHT_BORDER_GEOMETRY
+      recognitionColors [
+        0.6 0.6 0.6
+      ]
+    }
+    DEF LEFT_BORDER Solid {
+      children [
+        Shape {
+          appearance Pavement {
+          }
+          geometry DEF LEFT_BORDER_GEOMETRY IndexedFaceSet {
+            coord Coordinate {
+              point [
+                45.5 6.5 0
+                45.5 6.5 0.12
+                8.5 6.500000000000003 0.12
+                8.5 6.500000000000003 0
+                45.5 14.875 0
+                45.5 14.875 0.12
+                8.5 14.875000000000002 0.12
+                8.5 14.875000000000002 0
+                45.5 23.25 0
+                45.5 23.25 0.12
+                8.5 23.250000000000004 0.12
+                8.5 23.250000000000004 0
+                45.5 31.625 0
+                45.5 31.625 0.12
+                8.5 31.625000000000004 0.12
+                8.5 31.625000000000004 0
+                45.5 40 0
+                45.5 40 0.12
+                8.5 40 0.12
+                8.5 40 0
+              ]
+            }
+            texCoord TextureCoordinate {
+              point [
+                0 37.24
+                0 37.12
+                0 0.12
+                0 0
+                8.375 37.24
+                8.375 37.12
+                8.375 0.12
+                8.375 0
+                16.75 37.24
+                16.75 37.12
+                16.75 0.12
+                16.75 0
+                25.125 37.24
+                25.125 37.12
+                25.125 0.12
+                25.125 0
+                33.5 37.24
+                33.5 37.12
+                33.5 0.12
+                33.5 0
+              ]
+            }
+            coordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            texCoordIndex [
+              0, 4, 5, 1, -1, 1, 5, 6, 2, -1, 2, 6, 7, 3, -1, 4, 8, 9, 5, -1, 5, 9, 10, 6, -1, 6, 10, 11, 7, -1, 8, 12, 13, 9, -1, 9, 13, 14, 10, -1, 10, 14, 15, 11, -1, 12, 16, 17, 13, -1, 13, 17, 18, 14, -1, 14, 18, 19, 15, -1, 0, 1, 2, 3, -1, 19, 18, 17, 16, -1
+            ]
+            creaseAngle 0.2
+          }
+          castShadows FALSE
+        }
+      ]
+      name "road left border"
+      model "road border"
+      boundingObject USE LEFT_BORDER_GEOMETRY
+      recognitionColors [
+        0.6 0.6 0.6
+      ]
+    }
+  ]
+  name "road(32)"
+  model "road"
+  locked TRUE
+}
+Road {
+  name "road(33)"
+  startJunction "25"
+  endJunction "24"
+  width 5
+  numberOfLanes 1
+  numberOfForwardLanes 2
+  roadBorderHeight 0.02
+  roadBorderWidth [
+    33.5
+  ]
+  rightBorder FALSE
+  leftBorder FALSE
+  wayPoints [
+    45.5 42.5 0
+    134 42.5 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+DEF GROUND Solid {
+  translation 0 0 -0.18
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 0.5
+        metalness 0
+        textureTransform TextureTransform {
+          scale 800 400
+        }
+      }
+      geometry DEF GROUND_PLANE Plane {
+        size 800 400
+      }
+    }
+  ]
+  boundingObject USE GROUND_PLANE
+  locked TRUE
+}
+Road {
+  name "road(37)"
+  startJunction "25"
+  endJunction "24"
+  width 5
+  numberOfLanes 1
+  numberOfForwardLanes 2
+  roadBorderHeight 0.12
+  roadBorderWidth [
+    33.5
+  ]
+  rightBorder FALSE
+  wayPoints [
+    196 42.5 0
+    134 42.5 0
+  ]
+  rightBorderBoundingObject TRUE
+  leftBorderBoundingObject TRUE
+}
+PedestrianCrossing {
+  translation 124.5 0 0
+  rotation 0 0 1 1.5708
+  size 13 5
+  enableBoundingObject FALSE
+}
+PedestrianCrossing {
+  translation 130.54 -9 0
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "pedestrian crossing(1)"
+  size 7 5
+  enableBoundingObject FALSE
+}
+PedestrianCrossing {
+  translation 130.5 -60 0
+  rotation 0 0 -1 -5.307179586466759e-06
+  name "pedestrian crossing(2)"
+  size 7 5
+  enableBoundingObject FALSE
+}
+PedestrianCrossing {
+  translation -6 14 0
+  rotation 0 0 1 3.14159
+  name "pedestrian crossing(6)"
+  scale 1 1 2
+  size 13 5
+  enableBoundingObject FALSE
+}
+PedestrianCrossing {
+  translation -19 14 0
+  rotation 0 0 1 3.14159
+  name "pedestrian crossing(7)"
+  scale 1 1 2
+  size 13 5
+  enableBoundingObject FALSE
+}
+PedestrianCrossing {
+  translation -30.09 -0.000567838 0
+  rotation 0 0 1 1.5708
+  name "pedestrian crossing(9)"
+  size 13 5
+  enableBoundingObject FALSE
+}
+PedestrianCrossing {
+  translation 193.12 0.000252057 0
+  rotation 0 0 1 1.5708
+  name "pedestrian crossing(17)"
+  size 13 5
+  enableBoundingObject FALSE
+}
+PedestrianCrossing {
+  translation 188.08 0.000233539 0
+  rotation 0 0 1 1.5708
+  name "pedestrian crossing(23)"
+  size 13 5
+  enableBoundingObject FALSE
+}
+DEF human_ROBERT(1) Robot {
+  translation 119.7399999999978 -8.681940001846142 -0.13098049163365422
+  rotation -2.537710599895042e-07 1.5028836620559192e-10 -0.9999999999999678 0.0011853071795864605
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert(1)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 80
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ROBERT(3) Robot {
+  translation 53.84760902209694 8.80546335152938 -0.1309802047324936
+  rotation -2.2013132092077225e-10 -3.7141421500518395e-07 -0.9999999999999309 0.001185307179583651
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert(3)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 80
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ROBERT(4) Robot {
+  translation 108.46218404696172 8.475701920614805 -0.13098040402834776
+  rotation 2.5592642876526808e-06 -1.5751734482400767e-08 -0.9999999999967248 0.0004163570818409338
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert(4)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 80
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ROBERT(6) Robot {
+  translation 188.10502273961848 8.99902311706833 -0.13098020407602395
+  rotation 3.8540373137933324e-10 -3.8586101627007335e-10 1 1.5696100000005708
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert(6)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 80
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ROBERT(8) Robot {
+  translation 196.93606401176652 49.04446584974656 -0.13098020472996452
+  rotation 0.16609365745337673 0.9861099821793512 -1.526270706190358e-10 3.141592653280238
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert(8)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 80
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ROBERT(9) Robot {
+  translation 3.759343797822365 -63.357693794323666 -0.13098020426258983
+  rotation 0.46660698423524893 0.8844647659815998 1.879081454489447e-10 3.1415926529789746
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert(9)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 80
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ROBERT(10) Robot {
+  translation 123.63100987999354 -26.120519772556687 -0.13098020464826
+  rotation 3.391953553808365e-10 3.3879598054435147e-10 -1 1.571975307179592
+  children [
+    CharacterSkin {
+      name "Robert"
+      model "Robert"
+    }
+  ]
+  name "robert(10)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 80
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controller "bvh_animation"
+  controllerArgs [
+    "-d"
+    "Robert"
+    "-f"
+    "../../motions/walk.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF tree(1) SimpleTree {
+  translation 12 -12 0
+  name "tree(110)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(2) SimpleTree {
+  translation 12 -17 0
+  name "tree(111)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(3) SimpleTree {
+  translation 12 -22 0
+  name "tree(112)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(4) SimpleTree {
+  translation 12 -27 0
+  name "tree(113)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(5) SimpleTree {
+  translation 12 -40 0
+  name "tree(114)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(6) SimpleTree {
+  translation 12 -45 0
+  name "tree(115)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(7) SimpleTree {
+  translation 12 -50 0
+  name "tree(116)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(8) SimpleTree {
+  translation 12 -55 0
+  name "tree(117)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(9) SimpleTree {
+  translation 12 -60 0
+  name "tree(118)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(32) SimpleTree {
+  translation 139 -62.5 0
+  name "tree(141)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(33) SimpleTree {
+  translation 147 -62.5 0
+  name "tree(142)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(40) SimpleTree {
+  translation 15 -9 0
+  name "tree(1)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(41) SimpleTree {
+  translation 20 -9 0
+  name "tree(2)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(42) SimpleTree {
+  translation 25 -9 0
+  name "tree(3)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(43) SimpleTree {
+  translation 30 -9 0
+  name "tree(4)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(44) SimpleTree {
+  translation 35 -9 0
+  name "tree(5)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(45) SimpleTree {
+  translation 40 -9 0
+  name "tree(6)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(46) SimpleTree {
+  translation 45 -9 0
+  name "tree(7)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(47) SimpleTree {
+  translation 50 -9 0
+  name "tree(8)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(48) SimpleTree {
+  translation 55 -9 0
+  name "tree(9)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(49) SimpleTree {
+  translation 60 -9 0
+  name "tree(10)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(50) SimpleTree {
+  translation 65 -9 0
+  name "tree(11)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(51) SimpleTree {
+  translation 70 -9 0
+  name "tree(12)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(52) SimpleTree {
+  translation 75 -9 0
+  name "tree(13)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(53) SimpleTree {
+  translation 80 -9 0
+  name "tree(14)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(54) SimpleTree {
+  translation 85 -9 0
+  name "tree(15)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(55) SimpleTree {
+  translation 90 -9 0
+  name "tree(16)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(56) SimpleTree {
+  translation 95 -9 0
+  name "tree(17)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(57) SimpleTree {
+  translation 105 -7 0
+  name "tree(19)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(58) SimpleTree {
+  translation 110 -7 0
+  name "tree(20)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(59) SimpleTree {
+  translation 115 -7 0
+  name "tree(21)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(60) SimpleTree {
+  translation 120 -7 0
+  name "tree(22)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(61) SimpleTree {
+  translation 126.5 -12 0
+  name "tree(23)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(62) SimpleTree {
+  translation 126.5 -17 0
+  name "tree(24)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(63) SimpleTree {
+  translation 126.5 -22 0
+  name "tree(25)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(64) SimpleTree {
+  translation 126.5 -27 0
+  name "tree(26)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(65) SimpleTree {
+  translation 126.5 -32 0
+  name "tree(27)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(66) SimpleTree {
+  translation 126.5 -37 0
+  name "tree(28)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(67) SimpleTree {
+  translation 126.5 -42 0
+  name "tree(29)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(68) SimpleTree {
+  translation 126.5 -47 0
+  name "tree(30)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(69) SimpleTree {
+  translation 126.5 -52 0
+  name "tree(31)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(70) SimpleTree {
+  translation 126.5 -57 0
+  name "tree(32)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(71) SimpleTree {
+  translation 134.5 -57 0
+  name "tree(33)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(71) SimpleTree {
+  translation 134.5 -52 0
+  name "tree(34)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(72) SimpleTree {
+  translation 134.5 -47 0
+  name "tree(35)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(73) SimpleTree {
+  translation 134.5 -42 0
+  name "tree(36)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(74) SimpleTree {
+  translation 134.5 -37 0
+  name "tree(37)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(75) SimpleTree {
+  translation 134.5 -27 0
+  name "tree(38)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(76) SimpleTree {
+  translation 134.5 -22 0
+  name "tree(39)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(77) SimpleTree {
+  translation 134.5 -17 0
+  name "tree(40)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(78) SimpleTree {
+  translation 134.5 -12 0
+  name "tree(41)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(79) SimpleTree {
+  translation 147 -18 0
+  name "tree(18)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(80) SimpleTree {
+  translation 147 -16 0
+  name "tree(42)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(81) SimpleTree {
+  translation 147 -14 0
+  name "tree(43)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(82) SimpleTree {
+  translation 149 -14 0
+  name "tree(44)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(83) SimpleTree {
+  translation 151 -14 0
+  name "tree(45)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(84) SimpleTree {
+  translation 153 -14 0
+  name "tree(46)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(85) SimpleTree {
+  translation 155 -14 0
+  name "tree(47)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(86) SimpleTree {
+  translation 179 -13 0
+  name "tree(48)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(87) SimpleTree {
+  translation 177 -13 0
+  name "tree(49)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(88) SimpleTree {
+  translation 194 -12 0
+  name "tree(50)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(89) SimpleTree {
+  translation 194 -15 0
+  name "tree(51)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(90) SimpleTree {
+  translation 194 -18 0
+  name "tree(52)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(91) SimpleTree {
+  translation 194 -21 0
+  name "tree(53)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(92) SimpleTree {
+  translation 194 -24 0
+  name "tree(54)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(93) SimpleTree {
+  translation 194 -27 0
+  name "tree(55)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(104) SimpleTree {
+  translation 187 -12 0
+  name "tree(66)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(105) SimpleTree {
+  translation 187 20 0
+  name "tree(149)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(106) SimpleTree {
+  translation 187 28 0
+  name "tree(150)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(107) SimpleTree {
+  translation 187 36 0
+  name "tree(151)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(112) SimpleTree {
+  translation 187 -20 0
+  name "tree(67)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(115) SimpleTree {
+  translation 194 22 0
+  name "tree(158)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(116) SimpleTree {
+  translation 194 25 0
+  name "tree(159)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(117) SimpleTree {
+  translation 194 28 0
+  name "tree(160)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(118) SimpleTree {
+  translation 194 31 0
+  name "tree(161)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(119) SimpleTree {
+  translation 194 34 0
+  name "tree(162)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(120) SimpleTree {
+  translation 194 37 0
+  name "tree(163)"
+  type "hackberry tree"
+  radius 1.5
+}
+DEF tree(155) SimpleTree {
+  translation 1 -10 0
+  name "tree(102)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(156) SimpleTree {
+  translation 1 -17 0
+  name "tree(103)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(157) SimpleTree {
+  translation 1 -24 0
+  name "tree(104)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(158) SimpleTree {
+  translation 1 -31 0
+  name "tree(105)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(159) SimpleTree {
+  translation 1 -38 0
+  name "tree(106)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(160) SimpleTree {
+  translation 1 -45 0
+  name "tree(107)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(161) SimpleTree {
+  translation 1 -52 0
+  name "tree(108)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF tree(161) SimpleTree {
+  translation 1 -59 0
+  name "tree(109)"
+  type "hackberry tree"
+  height 8
+  radius 3
+}
+DEF car_bus(1) Bus {
+  hidden translation_1 0 0 0
+  hidden rotation_1 -5.481466135934301e-13 0.9999999987375605 5.024817059752958e-05 2.9802322387695313e-08
+  hidden translation_2 0 0 0
+  hidden rotation_2 -5.62384756827572e-13 -0.9999999986711255 -5.155335997838975e-05 2.9802322387695313e-08
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 1 0 3.008115978466685e-06
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 3.008115978466685e-06
+  translation -22.99999999856195 -13.001006442973758 -0.16657285356537882
+  rotation 0.0015084122694411835 0.0015084138204371502 -0.9999977246874973 1.5707975825423572
+}
+DEF car_bus(10) Bus {
+  hidden translation_1 0 0 0
+  hidden rotation_1 -1.7504531727649853e-05 0.9954959542260838 0.09480403373849626 0.0003709489721564687
+  hidden translation_2 0 0 0
+  hidden rotation_2 6.666685471019979e-06 -0.9992339844327067 0.03913367233333108 0.0003409747006269186
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 0.9999999999999999 0 0.002815232919663713
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 0.0034300192745448047
+  translation 117.00089203064123 -21.990626823441644 0.2033992160277529
+  rotation -0.0007046049052721503 -4.7138947321965835e-05 -0.9999997506548924 1.5709910679142751
+  color 1 1 1
+  name "vehicle(23)"
+}
+DEF car_rangerover(1) RangeRoverSportSVR {
+  hidden translation_1 0 0 0
+  hidden rotation_1 -1.2713785238019245e-12 -0.999999999679018 -2.533700436408326e-05 9.884312124119402e-08
+  hidden translation_2 0 0 0
+  hidden rotation_2 -1.1110174707828172e-12 0.9999999997548835 2.2141207043908162e-05 9.884312124119402e-08
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 1 0 1.812804499357409e-07
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 1.812804499357409e-07
+  translation 15.000938249430508 -4.900020008960673 -0.18277747673877648
+  rotation 0.0088081637903576 -1.1653361184273423e-08 0.9999612073728873 3.141590000693445
+  name "vehicle(20)"
+}
+DEF car_rangerover(2) RangeRoverSportSVR {
+  hidden translation_1 0 0 0
+  hidden rotation_1 -1.2713828675200182e-12 -0.999999999679016 -2.5337090901868506e-05 9.884312124119402e-08
+  hidden translation_2 0 0 0
+  hidden rotation_2 -1.1110132165716588e-12 0.9999999997548854 2.2141122295643915e-05 9.884312124119402e-08
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 0.9999999999999999 0 1.812804499357409e-07
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 1.812804499357409e-07
+  translation 57.81093824943053 1.629899991039323 -0.18277747673877662
+  rotation 0.008808163790357601 -1.16533612166957e-08 0.9999612073728872 3.141590000693445
+  name "vehicle(21)"
+}
+DEF car_rangerover(4) RangeRoverSportSVR {
+  hidden translation_1 0 0 0
+  hidden rotation_1 -1.2713881306866244e-12 -0.9999999996790133 -2.5337195817434887e-05 9.884312124119402e-08
+  hidden translation_2 0 0 0
+  hidden rotation_2 -1.1110138625424034e-12 0.9999999997548851 2.2141135059585887e-05 9.884312124119402e-08
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 1 0 1.812804499357409e-07
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 1.812804499357409e-07
+  translation -18.17019998760242 38.24023824943052 -0.18277747673877645
+  rotation -0.00880782209689581 -0.008807789812657691 -0.9999224195448992 1.5708775826348138
+  name "vehicle(194)"
+}
+DEF car_bmw(8) BmwX5 {
+  hidden translation_1 0 0 0
+  hidden rotation_1 -8.885615425061183e-12 0.9999997525562743 0.000703482331181845 2.9802322387695313e-08
+  hidden translation_2 0 0 0
+  hidden rotation_2 -8.586906820049266e-12 -0.9999997689203391 -0.0006798229683857785 2.9802322387695313e-08
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 1 0 0.00015943199087688494
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 0.0001594320577275763
+  translation 170.25120766718362 7.639639996327379 0.4306947727003161
+  rotation 0.0024814728917204243 -3.789119584166337e-09 0.9999969211414043 3.141589999961387
+  color 0.5 0.26 0
+  name "vehicle(65)"
+}
+DEF car_CitroenCZero(1) CitroenCZero {
+  hidden translation_1 0 0 0
+  hidden rotation_1 3.0898076498147584e-12 0.9999999999999621 -2.755412999253506e-07 2.2427193132336696e-05
+  hidden translation_2 0 0 0
+  hidden rotation_2 -3.0563887634873295e-12 -0.999999999999963 -2.7213209069545037e-07 2.2462530544280803e-05
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 -1 0 0
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 1 0 0
+  translation -22.890019521826677 23.961289710787586 -0.0922909165351749
+  rotation -0.00028269682018206287 -0.0003349570983164471 -0.9999999039431204 1.5707756222916136
+  name "vehicle(74)"
+}
+DEF car_CitroenCZero(2) CitroenCZero {
+  hidden translation_1 0 0 0
+  hidden rotation_1 3.0896255184611008e-12 0.999999999999962 -2.7552505794390196e-07 2.2427193132336696e-05
+  hidden translation_2 0 0 0
+  hidden rotation_2 -3.0562356901150885e-12 -0.999999999999963 -2.7211846212911303e-07 2.2462530544280803e-05
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 -1 0 0
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 1 0 0
+  translation -43.81128971091956 4.730030475294541 -0.09229091653517474
+  rotation 0.08428442710591094 -0.9961804679619931 0.02281689283081368 0.0006200158786197799
+  name "vehicle(77)"
+}
+DEF car_CitroenCZero(3) CitroenCZero {
+  hidden translation_1 0 0 0
+  hidden rotation_1 3.0897517337817796e-12 0.999999999999962 -2.7553631348773445e-07 2.2427193132336696e-05
+  hidden translation_2 0 0 0
+  hidden rotation_2 -3.0565553923778136e-12 -0.9999999999999629 -2.721469277747876e-07 2.2462530544280803e-05
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 -1 0 0
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 1 0 0
+  translation -19.110119521826675 -52.29871028921243 -0.09229091653517466
+  rotation -0.000282696820182076 -0.00033495709831627644 -0.9999999039431204 1.5707756222916127
+  name "vehicle(79)"
+}
+DEF car_CitroenCZero(11) CitroenCZero {
+  hidden translation_1 0 0 0
+  hidden rotation_1 3.0896245488201324e-12 0.999999999999962 -2.755249703735375e-07 2.2427193132336696e-05
+  hidden translation_2 0 0 0
+  hidden rotation_2 -3.0562349794213557e-12 -0.9999999999999628 -2.721183993723262e-07 2.2462530544280803e-05
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 -1 0 0
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 1 0 0
+  translation 168.16128971086073 3.9896195234209597 -0.09229091653517393
+  rotation 0.00030882381033132603 2.6129299572951478e-05 0.9999999519725559 -3.1415755378978876
+  name "vehicle(104)"
+}
+DEF car_bsnzs(1) MercedesBenzSprinter {
+  hidden translation_1 0 0 0
+  hidden rotation_1 4.691604005972139e-13 -0.9999999999413146 1.0833775666529328e-05 8.429369702178807e-08
+  hidden translation_2 0 0 0
+  hidden rotation_2 4.772486421031262e-13 0.9999999999392742 -1.1020499418925934e-05 8.429369702178807e-08
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 -1 0 3.951953139088532e-05
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 1 0 3.951954262809211e-05
+  translation -10.37999999913352 39.98976801718092 0.15599066830354436
+  rotation 0.00028996519823988544 -0.00028996416027344884 0.9999999159204813 1.5708000840885548
+  color 0.09 0 0
+  name "Mercedes-Benz Sprinter(1)"
+}
+DEF car_bsnzs(7) MercedesBenzSprinter {
+  hidden translation_1 0 0 0
+  hidden rotation_1 4.693522696876383e-13 -0.9999999999412665 1.0838206307720905e-05 8.429369702178807e-08
+  hidden translation_2 0 0 0
+  hidden rotation_2 4.770383947430421e-13 0.9999999999393278 -1.10156443898251e-05 8.429369702178807e-08
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 -1 0 3.951953139088532e-05
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 1 0 3.951954262809211e-05
+  translation 96.79009999977781 19.309568017180908 0.15599066830354438
+  rotation 0.0002899651982395228 -0.00028996552102643 0.9999999159200867 1.5707953912685289
+  color 0.09 0 0
+  name "Mercedes-Benz Sprinter(37)"
+}
+DEF car_toyota(8) ToyotaPrius {
+  hidden translation_1 0 0 0
+  hidden rotation_1 1.8645626802408364e-12 0.9999999999294643 -1.187734980509776e-05 3.139869497076496e-07
+  hidden translation_2 0 0 0
+  hidden rotation_2 1.1160137343010463e-12 -0.9999999999747287 7.109353534181734e-06 3.139869497076496e-07
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 1 0 0.0006054570797549966
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 0.0006054574971036174
+  translation 139.317983710417 4.269557050768188 -0.19045371262024524
+  rotation 0.015176797118369683 -4.283567763312226e-07 0.999884825781972 3.141519903340139
+  name "vehicle(184)"
+}
+DEF car_toyota(9) ToyotaPrius {
+  hidden translation_1 0 0 0
+  hidden rotation_1 1.8644665528394704e-12 0.9999999999294715 -1.1876737604844797e-05 3.139869497076496e-07
+  hidden translation_2 0 0 0
+  hidden rotation_2 1.1163926644006946e-12 -0.9999999999747115 7.1117675118593994e-06 3.139869497076496e-07
+  hidden translation_3 0 0 0
+  hidden rotation_3 0 0.9999999999999999 0 0.0006054570797549966
+  hidden translation_4 0 0 0
+  hidden rotation_4 0 -1 0 0.0006054574971036174
+  translation 132.70990705122176 -44.12828371034394 -0.19045371262024416
+  rotation 0.015175173033506965 -0.015176085305834164 0.9997696737540066 1.5709502555424089
+  name "vehicle(188)"
+}
+DEF buliding(1) RandomBuilding {
+  translation 55 -35 0
+  name "building(1)"
+  floorHeight 8
+  floorNumber 4
+  corners [
+    40 25
+    40 -25
+    -40 -25
+    -40 25
+  ]
+  roofHeight 6
+}
+DEF building(4) Building {
+  translation 153 -25 0
+  rotation 0 0 1 -1.5707953071795862
+  name "building(2)"
+  corners [
+    10 5
+    10 -5
+    -10 -5
+    -10 5
+  ]
+  roofHeight 1
+}
+DEF building(11) SimpleBuilding {
+  translation 110 -40 0
+  name "building(2)"
+  floorNumber 5
+}
+DEF building_residential(1) ResidentialTower {
+  translation 58 16 0
+  rotation 0 0 1 -1.5707953071795862
+}
+DEF building_residential(2) ResidentialTower {
+  translation 67 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(1)"
+}
+DEF building_residential(3) ResidentialTower {
+  translation 76 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(2)"
+}
+DEF building_residential(4) ResidentialTower {
+  translation 85 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(3)"
+}
+DEF building_residential(5) ResidentialTower {
+  translation 108.08 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(4)"
+}
+DEF building_residential(6) ResidentialTower {
+  translation 117.62 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(5)"
+}
+DEF building_residential(7) ResidentialTower {
+  translation 141.35 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(6)"
+}
+DEF building_residential(8) ResidentialTower {
+  translation 150.61 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(7)"
+}
+DEF building_residential(9) ResidentialTower {
+  translation 160.09 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(8)"
+}
+DEF building_residential(10) ResidentialTower {
+  translation 169.25 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(9)"
+}
+DEF building_residential(11) ResidentialTower {
+  translation 179.3 16 0
+  rotation 0 0 1 -1.5707953071795862
+  name "residential tower(10)"
+}
+DEF building_commerial(1) CommercialBuilding {
+  translation 169 -25 0
+  name "commercial building(2)"
+}
+DEF building_commerial(2) CommercialBuilding {
+  translation 169 -47 0
+  name "commercial building(3)"
+}
+DEF building_hollow(1) HollowBuilding {
+  translation 24 27 0
+  name "hollow building(2)"
+}
+DEF building_hollow(2) HollowBuilding {
+  translation 24 58 0
+  name "hollow building(3)"
+}
+DEF human_SANDRA(1) Robot {
+  translation 40.2199 8.55032 -0.13061282871300617
+  rotation -6.584322257445431e-17 1.141441232678806e-16 1 -3.141585307179586
+  children [
+    CharacterSkin {
+      name "Sandra"
+    }
+  ]
+  name "sandra"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 50
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "Sandra"
+  ]
+  supervisor TRUE
+}
+DEF human_SANDRA(2) Robot {
+  translation 91.6372731953787 19.10030005316318 -0.13061270477944598
+  rotation -2.953983543499811e-10 -1.0879671189495638e-15 1 -3.1415853071795725
+  children [
+    CharacterSkin {
+      name "Sandra"
+    }
+  ]
+  name "sandra(1)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 50
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "Sandra"
+  ]
+  supervisor TRUE
+}
+DEF human_SANDRA(5) Robot {
+  translation 122.51355619376396 7.946812566640711 -0.13061270449420537
+  rotation 0.9999213329283928 -0.012543044076546064 2.7645765950282337e-10 3.141592653278302
+  children [
+    CharacterSkin {
+      name "Sandra"
+    }
+  ]
+  name "sandra(4)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 50
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "Sandra"
+  ]
+  supervisor TRUE
+}
+DEF human_SANDRA(7) Robot {
+  translation 192.2099999473881 11.540811409490786 -0.13061270455043472
+  rotation 0.00013300783831709227 3.5603519723157653e-10 0.9999999911544574 5.307179632508377e-06
+  children [
+    CharacterSkin {
+      name "Sandra"
+    }
+  ]
+  name "sandra(6)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 50
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "Sandra"
+  ]
+  supervisor TRUE
+}
+DEF human_SANDRA(9) Robot {
+  translation 50.700745284069264 -7.091746546946012 -0.1306128291021582
+  rotation 0.34998473110690453 0.9367554045704929 -4.3565940336048383e-10 3.141592653462371
+  children [
+    CharacterSkin {
+      name "Sandra"
+    }
+  ]
+  name "sandra(8)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 50
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "Sandra"
+  ]
+  supervisor TRUE
+}
+DEF human_SANDRA(10) Robot {
+  translation 123.75069091040514 -72.30276367768161 -0.13061270461281427
+  rotation -0.561733689970494 0.8273181138788955 8.571819917583634e-11 3.1415926529192646
+  children [
+    CharacterSkin {
+      name "Sandra"
+    }
+  ]
+  name "sandra(9)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 50
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "Sandra"
+  ]
+  supervisor TRUE
+}
+DEF human_SOPHIA(1) Robot {
+  translation 41.4365 7.75155 -0.130367778619625
+  rotation 3.2902558842128025e-11 -5.0911855058969796e-11 1 5.307179586632375e-06
+  children [
+    CharacterSkin {
+      name "Sophia"
+      model "Sophia"
+    }
+  ]
+  name "sophia"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Sophia"
+  ]
+  supervisor TRUE
+}
+DEF human_SOPHIA(3) Robot {
+  translation 73.34700001006487 7.521655862580173 -0.1303677044994539
+  rotation -2.9146413893434273e-10 -2.9146484780672966e-10 -0.9999999999999999 1.5707953071796061
+  children [
+    CharacterSkin {
+      name "Sophia"
+      model "Sophia"
+    }
+  ]
+  name "sophia(2)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Sophia"
+  ]
+  supervisor TRUE
+}
+DEF human_SOPHIA(7) Robot {
+  translation 155.74996209733106 8.422408837533673 -0.13036777902017405
+  rotation -0.7064206669599307 0.7077922303133081 3.192961878229333e-10 -3.1415926529219425
+  children [
+    CharacterSkin {
+      name "Sophia"
+      model "Sophia"
+    }
+  ]
+  name "sophia(6)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Sophia"
+  ]
+  supervisor TRUE
+}
+DEF human_SOPHIA(9) Robot {
+  translation 125.34839422568974 -8.988697077177283 -0.1303677048069931
+  rotation -0.42997426857574816 0.9028411423737571 -1.3167258316758702e-10 3.141592653384763
+  children [
+    CharacterSkin {
+      name "Sophia"
+      model "Sophia"
+    }
+  ]
+  name "sophia(8)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Sophia"
+  ]
+  supervisor TRUE
+}
+DEF human_SOPHIA(10) Robot {
+  translation 98.71649994727272 -9.26836391633847 -0.13036770456295987
+  rotation 0.00012359380336861753 2.85021517810353e-10 0.9999999923622858 5.30717962610472e-06
+  children [
+    CharacterSkin {
+      name "Sophia"
+      model "Sophia"
+    }
+  ]
+  name "sophia(9)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.3
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 1
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Sophia"
+  ]
+  supervisor TRUE
+}
+DEF human_ANTHONY(2) Robot {
+  translation 73.33071776568474 8.249809998094763 -0.1303677046086775
+  rotation -5.125747476301901e-10 7.069283608672746e-16 1 3.1415900000000003
+  children [
+    CharacterSkin {
+      name "Anthony"
+      model "Anthony"
+    }
+  ]
+  name "anthony(1)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.2
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Anthony"
+    "-f"
+    "../../motions/run.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ANTHONY(3) Robot {
+  translation 100.50000000061173 7.630479961041659 -0.13036770479870854
+  rotation 6.007598481508975e-10 -6.007606425233244e-10 0.9999999999999999 1.5707953071795864
+  children [
+    CharacterSkin {
+      name "Anthony"
+      model "Anthony"
+    }
+  ]
+  name "anthony(2)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.2
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Anthony"
+    "-f"
+    "../../motions/run.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ANTHONY(4) Robot {
+  translation 136.2999999962516 9.348573712614707 -0.13036770476261292
+  rotation -0.00019973002984862418 5.360880056336823e-10 -0.9999999800539575 5.307179692328604e-06
+  children [
+    CharacterSkin {
+      name "Anthony"
+      model "Anthony"
+    }
+  ]
+  name "anthony(3)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.2
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Anthony"
+    "-f"
+    "../../motions/run.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ANTHONY(9) Robot {
+  translation 4.3948793406428175 -59.9608845206105 -0.13036777887866455
+  rotation 8.913949300493794e-10 7.480968447009996e-11 -1 1.4315737679397071
+  children [
+    CharacterSkin {
+      name "Anthony"
+      model "Anthony"
+    }
+  ]
+  name "anthony(8)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.2
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Anthony"
+    "-f"
+    "../../motions/run.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF human_ANTHONY(10) Robot {
+  translation 62.8892194514054 -60.63009999819392 -0.13036770466172826
+  rotation 5.452089084993839e-10 -7.483215998450219e-16 1 3.1415900000000008
+  children [
+    CharacterSkin {
+      name "Anthony"
+      model "Anthony"
+    }
+  ]
+  name "anthony(9)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.2
+  }
+  physics Physics {
+    density -1
+    mass 30
+    centerOfMass [
+      0 0 0
+    ]
+  }
+  controllerArgs [
+    "-d"
+    "Anthony"
+    "-f"
+    "../../motions/run.bvh"
+    "-l"
+  ]
+  supervisor TRUE
+}
+DEF TeslaModel3 BmwX5 {
+  translation -51.11 0 0.4
+  name "vehicle(2)"
+  controller "TeslaModel3"
+  supervisor TRUE
+}

@@ -16,8 +16,9 @@ WorldInfo {
   basicTimeStep 10
 }
 Viewpoint {
-  orientation -0.43758465828031246 0.14904818302068634 0.8867380142837762 2.194699515909065
-  position 35.659467292295865 -38.27337936571238 41.9256230873685
+  orientation -0.4378691797300837 0.14683677398623093 0.886966483722931 2.203752971265004
+  position -23.457450726758847 -57.80719027698291 77.02973886792161
+  follow "vehicle"
 }
 TexturedBackground {
   texture "noon_cloudy_countryside"
@@ -36,5 +37,8 @@ DEF Checkboard Floor {
     }
   }
 }
-BmwX5 {
+DEF TeslaModel3 BmwX5 {
+  translation -99.18 0 0
+  controller "TeslaModel3"
+  supervisor TRUE
 }
