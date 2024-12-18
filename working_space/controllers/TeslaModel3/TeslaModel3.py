@@ -45,29 +45,45 @@ def webots_sim():
     tesla_state = make_situation(driver, dt)
     dt = driver.getBasicTimeStep() / 1000 # [s] 늘려야할 수도 있음
     tesla_state.update()
-    # grid_map = generate_grid_map("data/data.json")
 
-    grid_map = np.zeros((500, 500))
+    x_tmp = 24.9
+    y_tmp = 80 # webot -> grid map 보정값
+    scaling = 10
+    grid_map = generate_grid_map("data/data.json")
     first_iteration = True
     i = 0
     points_collision = request_to_LLM()
     while i < len(points_collision):
+        tesla_state.update()
+        print('direct cur postion :', tesla_state.get_position())
         start = np.array([tesla_state.x, tesla_state.y])
         goal = np.array([points_collision[i, X], points_collision[i, Y]])
-
         """ RRT* Path Planning """
-        # rrt_star = RRTStarPlanner(grid_map, start, goal, tesla_state.v)
-        # points_waypoint = rrt_star.plan()
-        # if points_waypoint is None:
-        #     print('No Path, Retry')
-        #     continue
+        start_point = [(start[X] + x_tmp) * scaling, (start[Y] + y_tmp) * scaling]
+        goal_point = [(goal[X] + x_tmp) * scaling, (goal[Y] + y_tmp) * scaling]
+        print('start_point:', start_point)
+        print('goal_point:', goal_point)
+        rrt_star = RRTStarPlanner(grid_map, start_point, goal_point, tesla_state.v)
+        #  [[0.00000000e+00 8.00000000e+02 0.00000000e+00]
+        #  [1.91000000e+02 9.00000000e+02 4.84135046e-01]
+        #  [2.26000000e+02 9.10000000e+02 0.00000000e+00]]
+        points_waypoint = rrt_star.plan()
+        if points_waypoint is None:
+            driver.step()
+            print('No Path, Retry')
+            print('path:', points_waypoint)
+            continue
+        points_waypoint[:, X] /= scaling
+        points_waypoint[:, Y] /= scaling
+        points_waypoint[:, X] -= x_tmp
+        points_waypoint[:, Y] -= y_tmp
 
         # """ 디버깅 용도 """
-        middle_point = np.array([(start[X] + points_collision[i, X]) / 2, 
-                                 (start[Y] + points_collision[i, Y]) / 2])
-        # 수기로 입력
-        points_waypoint = np.vstack([start, middle_point, points_collision[i]])
-        points_waypoint = np.hstack((points_waypoint, np.zeros((points_waypoint.shape[0], 1))))
+        # middle_point = np.array([(start[X] + points_collision[i, X]) / 2, 
+        #                          (start[Y] + points_collision[i, Y]) / 2])
+        # # 수기로 입력
+        # points_waypoint = np.vstack([start, middle_point, points_collision[i]])
+        # points_waypoint = np.hstack((points_waypoint, np.zeros((points_waypoint.shape[0], 1))))
 
         """ Spline2D Path Planning """
         spline2d_planner = Spline2dPlanner(points_waypoint, tesla_state.v * dt, 'linear')

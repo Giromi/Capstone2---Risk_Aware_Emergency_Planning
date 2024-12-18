@@ -45,8 +45,8 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation 0.5489795005042323 -0.5544971469669091 -0.6254233942152161 4.268406463145436
-  position -31.670998854047195 -8.711742324273143 70.99334812157362
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position -34.832090887281 -0.1501622920063442 69.55340536412224
   near 1
   follow "vehicle(2)"
   followSmoothness 0
@@ -2857,7 +2857,7 @@ DEF human_ANTHONY(10) Robot {
   supervisor TRUE
 }
 DEF TeslaModel3 BmwX5 {
-  translation -51.11 0 0.4
+  translation -36.45 0 0.4
   name "vehicle(2)"
   controller "TeslaModel3"
   supervisor TRUE
