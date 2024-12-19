@@ -305,3 +305,53 @@ def TEST_09(): # just 직진
 
 
         
+def webots_sim():
+    driver = Driver()   # 차량, 건물 및 object의 객체
+    dt = driver.getBasicTimeStep() / 1000
+    tesla_state = make_situation(driver, dt)
+    dt = driver.getBasicTimeStep() / 1000 # [s] 늘려야할 수도 있음
+    tesla_state.update()
+
+    x_tmp = 24.9
+    y_tmp = 80 # webot -> grid map 보정값
+    scaling = 10
+    grid_map = generate_grid_map("data/data.json")
+    first_iteration = True
+    i = 0
+    points_collision = request_to_LLM()
+    while i < len(points_collision):
+        tesla_state.update()
+        print('direct cur postion :', tesla_state.get_position())
+        start = np.array([tesla_state.x, tesla_state.y])
+        goal = np.array([points_collision[i, X], points_collision[i, Y]])
+        """ RRT* Path Planning """
+        start_point = [(start[X] + x_tmp) * scaling, (start[Y] + y_tmp) * scaling]
+        goal_point = [(goal[X] + x_tmp) * scaling, (goal[Y] + y_tmp) * scaling]
+        print('start_point:', start_point)
+        print('goal_point:', goal_point)
+        rrt_star = RRTStarPlanner(grid_map, start_point, goal_point, tesla_state.v)
+        #  [[0.00000000e+00 8.00000000e+02 0.00000000e+00]
+        #  [1.91000000e+02 9.00000000e+02 4.84135046e-01]
+        #  [2.26000000e+02 9.10000000e+02 0.00000000e+00]]
+        points_waypoint = rrt_star.plan()
+        if points_waypoint is None:
+            driver.step()
+            print('No Path, Retry')
+            print('path:', points_waypoint)
+            continue
+        points_waypoint[:, X] /= scaling
+        points_waypoint[:, Y] /= scaling
+        points_waypoint[:, X] -= x_tmp
+        points_waypoint[:, Y] -= y_tmp
+
+        """ Spline2D Path Planning """
+        spline2d_planner = Spline2dPlanner(points_waypoint, tesla_state.v * dt, 'linear')
+        points_path = spline2d_planner.calculate()
+
+        """ MPC Tracking """
+        mpc = MPCTracker(points_path, dt)
+        mpc.track(tesla_state)
+        # check_contact_to_ground(driver, tesla_state)
+
+        i += 1
+        first_iteration = False

@@ -156,3 +156,23 @@ if __name__ == '__main__':
     # rrt later
 """
 
+def pseudo():
+    grid_map = generate_grid_map("data.json")
+
+    points_collision = request_to_LLM(grid_map)
+    for cur_collision in points_collision:
+        """ Initializing """
+        start = np.array([tesla_state.x, tesla_state.y])
+        goal = np.array([cur_collision[X], cur_collision[Y]])
+
+        """ RRT* Path Planning """
+        rrt_star = RRTStarPlanner(grid_map, start, goal, tesla_state.v)
+        points_waypoint = rrt_star.plan()
+
+        """ Spline2D Path Planning """
+        spline2d_planner = Spline2dPlanner(points_waypoint, tesla_state.v * dt, 'linear')
+        points_path = spline2d_planner.calculate()
+
+        """ MPC Tracking """
+        mpc = MPCTracker(points_path, dt)
+        mpc.track(tesla_state)

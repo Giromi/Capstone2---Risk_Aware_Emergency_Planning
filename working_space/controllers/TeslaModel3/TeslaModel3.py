@@ -80,11 +80,11 @@ def webots_sim():
         points_waypoint[:, Y] -= y_tmp
 
         # """ 디버깅 용도 """
-        # middle_point = np.array([(start[X] + points_collision[i, X]) / 2, 
-        #                          (start[Y] + points_collision[i, Y]) / 2])
-        # # 수기로 입력
-        # points_waypoint = np.vstack([start, middle_point, points_collision[i]])
-        # points_waypoint = np.hstack((points_waypoint, np.zeros((points_waypoint.shape[0], 1))))
+        middle_point = np.array([(start[X] + points_collision[i, X]) / 2, 
+                                 (start[Y] + points_collision[i, Y]) / 2])
+        # 수기로 입력
+        points_waypoint = np.vstack([start, middle_point, points_collision[i]])
+        points_waypoint = np.hstack((points_waypoint, np.zeros((points_waypoint.shape[0], 1))))
 
         """ Spline2D Path Planning """
         spline2d_planner = Spline2dPlanner(points_waypoint, tesla_state.v * dt, 'linear')
