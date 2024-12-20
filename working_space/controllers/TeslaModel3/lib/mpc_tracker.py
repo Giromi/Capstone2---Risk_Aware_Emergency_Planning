@@ -89,13 +89,11 @@ class MPCTracker:
             if odelta is not None:
                 cur_delta = odelta[0]
                 tesla_state.set_steering_angle(-cur_delta)
-
             if self.check_goal(tesla_state, goal, target_index, len(cx)):
                 print("Goal")
                 break
             plot_interval(tesla_state, cur_delta, cx, cy, target_index)
-
-    
+        print('Traking End')
 
     def calculate_ref_trajectory(self, state, cx, cy, cyaw, dl, pind):
         z_ref = np.zeros((NX, HORIZON_T + 1))
@@ -150,7 +148,7 @@ class MPCTracker:
             ################
 
             du = sum(abs(od - pod))  # calc u change value
-            print(f"Iteration {i}: du={du}, od={od}")
+            # print(f"Iteration {i}: du={du}, od={od}")
             if du <= DU_TH:
                 break
         else:
@@ -178,7 +176,6 @@ class MPCTracker:
 
             if t != 0:
                 cost += cvxpy.quad_form(z_ref[:, t] - z[:, t], Q)
-
             A, B, C = self.get_linear_model_matrix(v_cur, z_bar[2, t], d_ref[0, t])
             constraints += [ z[:, t + 1] == A @ z[:, t] + B @ u[:, t] + C ]
 
@@ -245,12 +242,13 @@ class MPCTracker:
 
         isgoal = (d <= GOAL_DIS)
 
+        print(f"tind: {tind}, nind: {nind}")
         if abs(tind - nind) >= 5:
             isgoal = False
 
         # TODO : 최종적으로는 10km/h 이하로 속도가 떨어지면 종료
         # isstop = (abs(self.v) <= STOP_SPEED)
-
+        print(f"distance to goal: {d}")
         if isgoal: #and isstop:
             return True
         return False

@@ -59,31 +59,25 @@ def webots_sim():
         print('direct cur postion :', tesla_state.get_position())
         start = np.array([tesla_state.x, tesla_state.y])
         goal = np.array([points_collision[i, X], points_collision[i, Y]])
-        """ RRT* Path Planning """
-        start_point = [(start[X] + x_tmp) * scaling, (start[Y] + y_tmp) * scaling]
-        goal_point = [(goal[X] + x_tmp) * scaling, (goal[Y] + y_tmp) * scaling]
-        print('start_point:', start_point)
-        print('goal_point:', goal_point)
-        rrt_star = RRTStarPlanner(grid_map, start_point, goal_point, tesla_state.v)
-        #  [[0.00000000e+00 8.00000000e+02 0.00000000e+00]
-        #  [1.91000000e+02 9.00000000e+02 4.84135046e-01]
-        #  [2.26000000e+02 9.10000000e+02 0.00000000e+00]]
-        points_waypoint = rrt_star.plan()
-        if points_waypoint is None:
-            driver.step()
-            print('No Path, Retry')
-            print('path:', points_waypoint)
-            continue
-        points_waypoint[:, X] /= scaling
-        points_waypoint[:, Y] /= scaling
-        points_waypoint[:, X] -= x_tmp
-        points_waypoint[:, Y] -= y_tmp
+        # """ RRT* Path Planning """
+        # start_point = [(start[X] + x_tmp) * scaling, (start[Y] + y_tmp) * scaling]
+        # goal_point = [(goal[X] + x_tmp) * scaling, (goal[Y] + y_tmp) * scaling]
+        # print('start_point:', start_point)
+        # print('goal_point:', goal_point)
+        # rrt_star = RRTStarPlanner(grid_map, start_point, goal_point, tesla_state.v)
+        # points_waypoint = rrt_star.plan()
+        # if points_waypoint is None:
+        #     continue
+        # points_waypoint[:, X] /= scaling
+        # points_waypoint[:, Y] /= scaling
+        # points_waypoint[:, X] -= x_tmp
+        # points_waypoint[:, Y] -= y_tmp
 
         # """ 디버깅 용도 """
-        middle_point = np.array([(start[X] + points_collision[i, X]) / 2, 
-                                 (start[Y] + points_collision[i, Y]) / 2])
-        # 수기로 입력
-        points_waypoint = np.vstack([start, middle_point, points_collision[i]])
+        half_point = np.array([(start[X] + points_collision[i, X]) / 2, (start[Y] + points_collision[i, Y]) / 2])
+        quarter_point1 = np.array([(start[X] + half_point[X]) / 2, (start[Y] + half_point[Y]) / 2])
+        quarter_point2 = np.array([(goal[X] + half_point[X]) / 2, (goal[Y] + half_point[Y]) / 2])
+        points_waypoint = np.vstack([start, quarter_point1, half_point, quarter_point2, points_collision[i]])
         points_waypoint = np.hstack((points_waypoint, np.zeros((points_waypoint.shape[0], 1))))
 
         """ Spline2D Path Planning """
@@ -99,7 +93,6 @@ def webots_sim():
         """ MPC Tracking """
         mpc = MPCTracker(points_path, dt)
         mpc.track(tesla_state)
-        # check_contact_to_ground(driver, tesla_state)
 
         i += 1
         first_iteration = False

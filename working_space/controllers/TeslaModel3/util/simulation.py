@@ -15,9 +15,9 @@ collision_01 = np.array([ [30.0, 2.0],
                           [300.0, 0.0] ])
 
 collision_02 = np.array([ 
-                         [100.0, 10.0],
-                         [150.0, 10.0],
-                         [200.0, 0.0],
+                         [50.0, 10.0],
+                         [100.0, -10.0],
+                         [150.0, 0.0],
                         ])
 
 llm_01 = np.array([ [35, -5],
@@ -57,9 +57,9 @@ collision_low = np.array([ [50,-20],
 
 def request_to_LLM():
     # return llm_01
-    # return collision_02
+    return collision_02
     # return one_collision
-    return minsu_01
+    # return minsu_01
 
 ###############################################################################
 
@@ -71,13 +71,11 @@ def make_situation(driver, dt):
 
     standard_speed = TARGET_SPEED - 1 # [m/s]
     tesla_state.set_speed(TARGET_SPEED * 3.6) # [km/h]
-    print(f'[Moral Machine] : {standard_speed * 3.6:.2f}[km/h] 속도를 감지하겠습니다.')
+    print(f'[Moral Machine] : 가속 중입니다.')
     while driver.step() != -1 and tesla_state.v <= standard_speed: # [m/s]
         tesla_state.update()
-        # print(f'Target  speed (km/h): {tesla_state.get_target_seed() * 3.6}')
-        print(f'current speed (km/h): {tesla_state.v * 3.6}')
-        # print(f'current speed 2(km/h): {tesla_state.get_speed_km_h()}')
-    print('[Moral Machine] : 이제부터, 이 핸들은 제껍니다.')
+        # print(f'current speed (km/h): {tesla_state.v * 3.6}')
+    print('[Moral Machine] : 이제부터, 핸들은 제껍니다.')
     distance = np.linalg.norm([tesla_state.x - init_x, tesla_state.y - init_y])
     driver.simulationSetMode(driver.SIMULATION_MODE_PAUSE)
     print(f'Accuration distance : {distance}')

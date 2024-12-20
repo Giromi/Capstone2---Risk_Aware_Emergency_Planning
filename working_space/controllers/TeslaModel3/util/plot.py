@@ -9,7 +9,7 @@ def is_1st(label, first_iteration):
 def plot_init():
     ###################################################
     plt.close("all")
-    plt.figure(figsize=(5, 3))
+    plt.figure(figsize=(7, 5))
     plt.title(f'Path Planning and Tracking[km/h]', fontsize=16)
     plt.xlabel("X [m]", fontsize=12)
     plt.ylabel("Y [m]", fontsize=12)
@@ -78,7 +78,7 @@ def plot_interval(state, steer, cx, cy, target_index):
         state.plot_time = cur_t + PLOT_CAR_TICK
         plot_car(state.x, state.y, state.yaw, steer)
     plt.plot(state.x, state.y, "*")
-    plt.legend(loc="upper right", fontsize=10)      # 여기있어야 라벨 뜸
+    plt.legend(loc="upper right", fontsize=6)      # 여기있어야 라벨 뜸
     # plt.xlim(state.x - OFFSET, state.x + OFFSET)
     # plt.ylim(state.y - OFFSET, state.y + OFFSET)
     plt.pause(0.0001)                               # 이게 없으면 그래프가 멈춤

@@ -12,7 +12,7 @@ NU                  = 1                                 # [#] a = [accel, steer]
 R                   = np.diag([0.10])             # [-] input cost matrix([0.01, 0.01])
 Rd                  = np.diag([1.0])              # [-] input difference cost matrix([0.01, 1.0])
 NX                  = 3                                 # [#] x = x, number(4)
-Q                   = np.diag([1.0, 1.0, 1.50])    # [-] state cost matrix([1.0, 1.0, 0.5, 0.5])
+Q                   = np.diag([10.0, 10.0, 1.50])    # [-] state cost matrix([1.0, 1.0, 0.5, 0.5])
 MAX_TIME            = 500.0                             # max simulation time
 MAX_ITER            = 3                                 # [iter] Max iteration
 DU_TH               = 0.1                               # [] iteration finish param(0.1)
