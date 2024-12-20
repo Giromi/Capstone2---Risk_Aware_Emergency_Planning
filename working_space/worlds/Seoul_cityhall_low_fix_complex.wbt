@@ -27,6 +27,7 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/lincoln/LincolnMKZ.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/mercedes_benz/MercedesBenzSprinter.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/toyota/ToyotaPrius.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/devices/sick/protos/SickLms291.proto"
 
 WorldInfo {
   info [
@@ -51,9 +52,11 @@ WorldInfo {
   ]
 }
 Viewpoint {
-  orientation -0.5773501733131622 0.5773501118906166 0.5773505223650138 2.0943243537691902
-  position -18.472160634636886 -0.1502320395594765 99.02070524199505
+  orientation -0.33739658814238915 0.08269602835463845 0.9377232583253141 2.6896464944359115
+  position -5.751929112318886 -15.240310765017608 23.910475683930336
   near 1
+  follow "vehicle(1)"
+  followType "Mounted Shot"
   followSmoothness 0
 }
 TexturedBackground {
@@ -2476,6 +2479,47 @@ DEF TeslaModel3 BmwX5 {
   name "vehicle(1)"
   controller "TeslaModel3"
   supervisor TRUE
+  sensorsSlotFront [
+    SickLms291 {
+      translation 0.06 0 0
+    }
+  ]
+  sensorsSlotTop [
+    Camera {
+      translation 0.72 0 -0.05
+      children [
+        Pose {
+          translation -0.05 0 0
+          rotation 0 -1 0 1.5708
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0.8 0.8 0.8
+                roughness 1
+                metalness 0
+              }
+              geometry Cylinder {
+                height 0.1
+                radius 0.04
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1
+      width 128
+    }
+  ]
+  sensorsSlotCenter [
+    GPS {
+    }
+    Gyro {
+    }
+    Display {
+      width 200
+      height 150
+    }
+  ]
 }
 Road {
   name "road(27)"
@@ -3836,7 +3880,6 @@ DEF human_ROBERT(1) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -3867,7 +3910,6 @@ DEF human_ROBERT(2) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -3898,7 +3940,6 @@ DEF human_ROBERT(3) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -3929,7 +3970,6 @@ DEF human_ROBERT(4) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -3960,7 +4000,6 @@ DEF human_ROBERT(5) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -3991,7 +4030,6 @@ DEF human_ROBERT(6) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -4022,7 +4060,6 @@ DEF human_ROBERT(7) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -4053,7 +4090,6 @@ DEF human_ROBERT(8) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -4084,7 +4120,6 @@ DEF human_ROBERT(9) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -4115,7 +4150,6 @@ DEF human_ROBERT(10) Robot {
       0 0 1
     ]
   }
-  controller "bvh_animation"
   controllerArgs [
     "-d"
     "Robert"
@@ -4139,7 +4173,7 @@ DEF buliding_hotel Hotel {
   translation -50 -36 0
   rotation 0 0 1 4.692820414042842e-06
 }
-DEF buliding(1) RandomBuilding {
+DEF building(1) RandomBuilding {
   translation 55 -35 0
   name "building(1)"
   floorHeight 8
@@ -4152,7 +4186,7 @@ DEF buliding(1) RandomBuilding {
   ]
   roofHeight 6
 }
-DEF buliding(2) RandomBuilding {
+DEF building(2) RandomBuilding {
   translation 95 -78 -0.000330092
   rotation 0 1 0 4.692820414042842e-06
   name "building(2)"
@@ -4169,7 +4203,7 @@ DEF buliding(2) RandomBuilding {
   ]
   roofHeight 0
 }
-DEF buliding(3) RandomBuilding {
+DEF building(3) RandomBuilding {
   translation 318 -135 -0.00137054
   rotation 0 1 0 4.692820414042842e-06
   name "building(3)"
@@ -4518,7 +4552,7 @@ DEF human_SANDRA(2) Robot {
 }
 DEF human_SANDRA(3) Robot {
   translation 92.03309124932392 51.765621378437224 0.17902682436559136
-  rotation 0.9586023727380419 0.28474811848433973 -7.903358856973149e-07 -3.141590009940678
+  rotation -8.29262e-07 1.37748e-06 -1 2.56411
   children [
     CharacterSkin {
       name "Sandra"
@@ -4668,7 +4702,7 @@ DEF human_SANDRA(8) Robot {
 }
 DEF human_SANDRA(9) Robot {
   translation 50.70074526006654 -7.091746658279056 0.17902770236631527
-  rotation 0.34998473110642375 0.9367554045692044 -1.6585441610495742e-06 3.141592168497541
+  rotation 4.743699999945446e-06 7.058529999918824e-07 0.9999999999884996 -0.7151053071795861
   children [
     CharacterSkin {
       name "Sandra"

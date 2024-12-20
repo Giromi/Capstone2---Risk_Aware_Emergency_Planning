@@ -2,7 +2,6 @@ from util.debug import *
 from TEST import *
 
 """ Webots """
-from controller import Supervisor   # 차후에 webots on/off할 때 필요
 from vehicle import Driver
 
 """ Standard """
@@ -43,14 +42,37 @@ def check_contact_to_ground(driver, tesla_state):
 def webots_sim():
     driver = Driver()   # 차량, 건물 및 object의 객체
     dt = driver.getBasicTimeStep() / 1000
+
+    # camera = driver.getDevice('Camera')
+    # root = driver.getSelf()
+    # camera = driver.getDevice('Display')
+    # if root is None:
+    #     print('Camera is not found')
+    # print('Root:', root)
+    # print('DEF :', root.getDef())
+    # print('Field:', root.getField('sensorsSlotFront').getMFNode(0))
+    # sensor = root.getField('sensorsSlotTop')
+    # for s in sensor:
+    #     print('sensor:', s)
+    # return
+    # camera.enable(10)
+    driver.step()
+
     tesla_state = make_situation(driver, dt)
+    # print('Camera:', camera)
+    # display_width = camera.getWidth()
+    # display_height = camera.getHeight()
+    # display = driver.getDevice('display')
+    # print('Display:', display)
+
+
     dt = driver.getBasicTimeStep() / 1000 # [s] 늘려야할 수도 있음
     tesla_state.update()
 
     x_tmp = 24.9
     y_tmp = 80 # webot -> grid map 보정값
     scaling = 10
-    data = 'data_low.json'
+    data = 'data_high.json'
     grid_map = generate_grid_map("data/" + data)
     first_iteration = True
     i = 0
@@ -75,7 +97,7 @@ def webots_sim():
         rrt_star = RRTStarPlanner(grid_map, start_point, goal_point)
         points_waypoint = rrt_star.plan()
         if points_waypoint is None:
-            driver.step()
+            # driver.step()
             continue
         points_waypoint[:, X] /= scaling
         points_waypoint[:, Y] /= scaling
@@ -147,10 +169,11 @@ def webots_ideal():    # <Main 문>
         i += 1
         first_iteration = False
 if __name__ == '__main__':
+
     plot_init()
     webots_sim()
     # webots_ideal(driver, dt, ideal_state)
     # TEST_09()
 
-    # webots_json('data/data_low.json')
+    # webots_json('data/data_high.json')
     print('End of Program')
