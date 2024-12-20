@@ -51,8 +51,8 @@ def simplify_grid_map(json_file):
     grid_width = int((GRID_X_MAX - GRID_X_MIN) / GRID_RESOLUTION)
     grid_height = int((GRID_Y_MAX - GRID_Y_MIN) / GRID_RESOLUTION)
 
-    output = open('output.txt', 'w')
-    output.write('# min_x, min_y, max_x, max_y\n')
+    output = open('output_very_low.txt', 'w')
+    output.write('#coordinate: (min_x, min_y, max_x, max_y)\n')
     output.write(f'Map size: ({GRID_X_MIN}, {GRID_Y_MIN}, {GRID_X_MAX}, {GRID_Y_MAX}) \n\n')
     # output.write('# x, y, w, h\n')
 
@@ -84,5 +84,5 @@ def simplify_grid_map(json_file):
     output.close()
 
 if __name__ == "__main__":
-    simplify_grid_map('data.json')
+    simplify_grid_map('data_very_low.json')
 
