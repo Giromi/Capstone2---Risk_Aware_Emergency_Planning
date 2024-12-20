@@ -1,10 +1,10 @@
 #VRML_SIM R2023b utf8
 
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/road/protos/StraightRoadSegment.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Parquetry.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/vehicles/protos/bmw/BmwX5.proto"
 
 WorldInfo {
   info [
@@ -16,29 +16,29 @@ WorldInfo {
   basicTimeStep 10
 }
 Viewpoint {
-  orientation -0.4378691797300837 0.14683677398623093 0.886966483722931 2.203752971265004
-  position -23.457450726758847 -57.80719027698291 77.02973886792161
-  follow "vehicle"
-}
-TexturedBackground {
-  texture "noon_cloudy_countryside"
+  orientation -0.4314466068110771 0.1629124631384784 0.8873067985907477 2.1263551441694286
+  position 34.48080350467527 -41.00975813635062 45.23888701814161
+  follow "vehicle(1)"
 }
 TexturedBackgroundLight {
   texture "noon_cloudy_countryside"
 }
-DEF Checkboard Floor {
-  translation 750 0 0.01
-  name "floor(1)"
-  size 1500 70
-  tileSize 2 2
-  appearance Parquetry {
-    type "chequered"
-    textureTransform TextureTransform {
-    }
-  }
-}
 DEF TeslaModel3 BmwX5 {
-  translation -99.18 0 0
+  translation 1.96162 6.83504e-07 0.277582
+  rotation 8.135751061827657e-05 0.999999966619928 -0.0002452368214954858 0.0018098312146497767
+  name "vehicle(1)"
   controller "TeslaModel3"
   supervisor TRUE
+}
+Floor {
+  translation 350 0 -0.02
+  size 700 50
+  appearance Parquetry {
+    type "dark strip"
+  }
+}
+StraightRoadSegment {
+  width 50
+  numberOfLanes 6
+  length 700
 }
