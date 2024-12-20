@@ -39,6 +39,22 @@ minsu_01 = np.array([ [22.6, 11],
                       [50.0, -8],
                       [120.0, -8] ])
 
+collision_high = np.array([ [29.66, -5.95],
+                      [59.85, -9.15],
+                      [100.0, -50],
+                       [147.0, -35] ])
+
+collision_medium = np.array([ [35,-5],
+                            [70,-10],
+                            [120,0],
+                            [160,15],
+                            [200,-10] ])
+
+collision_low = np.array([ [50,-20],
+                            [120,-10],
+                            [180,-50],
+                            [250,-90] ])
+
 def request_to_LLM():
     # return llm_01
     # return collision_02
