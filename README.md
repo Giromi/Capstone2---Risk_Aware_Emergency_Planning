@@ -1,7 +1,10 @@
 # CapDi(2)
 
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/1ebba885-220a-48eb-8f43-2cec91d0f00c" />
 
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/bd899653-6e55-4294-a25b-f2cdd74bec73" />
 
+<img width="960" height="540" alt="image" src="https://github.com/user-attachments/assets/4c35b054-f083-4a2b-8baa-1fbce9e8fd4d" />
 
 Contributor
 
