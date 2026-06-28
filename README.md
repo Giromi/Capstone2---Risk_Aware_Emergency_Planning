@@ -8,7 +8,33 @@
 |:-------------------------------:|:----------------------------------------:|:--------------------------------:|
 | <img  src="https://github.com/user-attachments/assets/4cdb38a4-8ea7-4e62-b546-0f2862776f44" width="320" /> | <img src="https://github.com/user-attachments/assets/f5638ebe-cb58-4afb-a4b9-c601cb3e20ce" width="320"> | <img src="https://github.com/user-attachments/assets/54057715-ef0d-4411-ad6a-d5026eb24f6e" width="320"> |
 
+<table>
+<tr>
+<td align="center" width="33%">
 
+<b>🧠 LLM-Based Prompt Engineering</b><br><br>
+
+<img src="https://github.com/user-attachments/assets/4cdb38a4-8ea7-4e62-b546-0f2862776f44" height="220">
+
+</td>
+
+<td align="center" width="33%">
+
+<b>🌳 Motion Planning & Trajectory Tracking</b><br><br>
+
+<img src="https://github.com/user-attachments/assets/f5638ebe-cb58-4afb-a4b9-c601cb3e20ce" height="220">
+
+</td>
+
+<td align="center" width="33%">
+
+<b>🚑 End-to-End Emergency Planning</b><br><br>
+
+<img src="https://github.com/user-attachments/assets/54057715-ef0d-4411-ad6a-d5026eb24f6e" height="220">
+
+</td>
+</tr>
+</table>
 | Structured prompt engineering for LLM-based collision reasoning | Integration of Risk-Aware RRT*, Spline2D, and MPC | End-to-end validation under Sudden Unintended Acceleration |
 
 
