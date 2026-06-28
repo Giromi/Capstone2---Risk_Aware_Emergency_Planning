@@ -16,11 +16,11 @@
 ## Project Focus
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Assistive%20Navigation-0A66C2?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Computer%20Vision-2E8B57?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Path%20Planning-FF8C00?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Robot%20Control-6A5ACD?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Human--Robot%20Interaction-DC143C?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Autonomous%20Driving-0A66C2?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Large%20Language%20Models-2E8B57?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Motion%20Planning-FF8C00?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Model%20Predictive%20Control-6A5ACD?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Embodied%20AI-DC143C?style=for-the-badge" />
 </p>
 
 ## Table of Contents
